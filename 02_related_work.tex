@@ -1,0 +1,149 @@
+\section{Related work}
+
+\subsection{Reducing Capacitance Requirement}
+The need for reducing the energy consumption needed for power-loss protection
+arises in different contexts. A few studies reduce the total energy consumption
+by speeding up the back-up process at a power failure using the fast media. Guo
+et al. reduce the capacitance requirement by writing back the volatile buffer
+data into PRAM (Phase Change Random Access Memory), which is faster and uses
+lower power than NAND flash~\cite{GuoYZC13date}. They argue that this reduction
+enables to replace the supercapacitors that are suffering from serious aging
+problems with the regular capacitors, which have more reliable
+characteristics~\cite{huang2011life}. This consequently enhances the robustness
+of storage device.  As a similar approach, Smartbackup~\cite{HuangWQLS15hpcc}
+proposes dynamic NAND channel allocation and SLC (single-level cell) mode
+programs to make the dump process shorter at sudden power-off. It makes full
+use of available SSD channels and dynamically adjusts these channels based on
+the available power of the capacitor to exploit the nature of high parallelism
+on NAND flash arrays.  In addition, as the SLC mode program shows significantly
+shorter time than subsequent MLC, TLC, or QLC mode, it programs the target page
+to dump in SLC mode to achieve shorter time required for dumping process.
+%However, because of inherent trade-off imposed by SLC mode program, the size of
+%effective storage space decreases and this causes additional overhead for space
+%management.
+
+
+\begin{table}[tb]
+    \centering
+    \fontsize{11}{11}
+    \small
+	% Model Manufacturer Category PLP-Support Capacitor 
+    %\begin{tabular}{p{2.4cm}|p{1.3cm}|p{1.2cm}|l}
+    %\begin{tabular}{p{2.4cm}|p{2.4cm}|p{2.4cm}|p{2.4cm}|p{2.4cm}}
+    \begin{tabular}{|p{5cm}|l|}
+        % \hline
+        % \multirow{4}{*}{{\rotatebox{90}{\parbox{1.2cm}{\centering \footnotesize{Concurrency}}}}} 
+		\hline
+		\bf{Configuration} &
+        \bf{Size} & \hline \hline
+        Channel & 8x \\ \hline
+        Way & 4x \\ \hline
+        Die & 4x \\ \hline
+        Plane & 4x \\ \hline
+        Page Size & 4KB \\ \hline
+        SSD Capacity & 512GB \\ \hline
+    \end{tabular}
+    \caption{\textbf{SSD Configuration.}}
+    \label{tab:ssd_config}
+    % \vspace{-10pt}
+\end{table}
+
+\begin{table}[tb]
+    \centering
+    \fontsize{11}{11}
+    \small
+	% Model Manufacturer Category PLP-Support Capacitor 
+    %\begin{tabular}{p{2.4cm}|p{1.3cm}|p{1.2cm}|l}
+    %\begin{tabular}{p{2.4cm}|p{2.4cm}|p{2.4cm}|p{2.4cm}|p{2.4cm}}
+    \begin{tabular}{|p{5cm}|l|}
+        % \hline
+        % \multirow{4}{*}{{\rotatebox{90}{\parbox{1.2cm}{\centering \footnotesize{Concurrency}}}}} 
+		\hline
+        \bf{Data Type} &
+        \bf{Size} & \hline \hline
+        % \footnotesize{\bf{Ratio}} \\ \hline \hline
+	    {User Data Buffer} & {4MB} \\ \hline
+		{Mapping Table} & {512MB} \\ \hline
+		{Mapping Table Directory} & {512KB} \\ \hline 
+% 		\footnotesize{Mapping Table Directory} & \footnotesize{128KB} & \footnotesize{0.02}\% \\ \hline
+		{Metadata for Allocation} & {1MB} \\ \hline 
+		{Metadata for GC(Garbage Collection)} & {9MB}  \\ \hline 
+		{Total Buffer Memory} & {526.5MB} \\ \hline
+% 		\footnotesize{SSD Capacity} & \footnotesize{512GB} & -  \\ \hline
+    \end{tabular}
+    \caption{\textbf{Components of the SSD-internal buffer.}}
+    \label{tab:ssd_buff_comp}
+    \vspace{-10pt}
+\end{table}
+
+Another approach to reducing the capacitor size is protecting a part of the 
+volatile buffer. DRWB (Dual-Region Write Buffer) divides the internal-SSD
+buffer into small protected region (backed by a capacitor) and large
+unprotected region and when the data on unprotected region is updated, the 
+delta for the page is logged in the protected region~\cite{KimK15sac}.  With
+this differential logging, DRWB logically realizes the non-volatile buffer
+using a small size of capacitor. However, the proposed technique only regards
+the user data, having no consideration on the metadata such as mapping table, 
+despite that it actually accounts for most of the internal buffer of SSDs.  Furthermore,
+commercial SSDs typically do not cache read data in the buffer because the host
+memory can serve as a cache memory of the storage device. For these reasons,
+the effectiveness of DRWB may be limited in practical environment. 
+
+In line with this, Kang et al. present an SSD prototype with durable cache,
+called DuraSSD, to enhance the write performance in database and NoSQL systems.
+They observe that frequent cache flushing of SSD which is requested to
+guarantee the atomicity and durability of transactions, makes a long write
+latency and imposes a serious performance \HGLEE{degradation}~\cite{KangLMKO14sigmod}. To
+resolve the problem, they maintain the internal-SSD cache
+durable by using the partially protected DRAM with a small size of tantalum
+capacitors. DuraSSD maintains a group of user data pages and a page mapping
+table in DRAM cache; on the power-failure, it flushes all of the user data and
+dirty mapping entries into the dump area in flash memory, because flushing
+the entire mapping table requires excessive time and energy.  On recovery,
+Dura-SSD re-writes the user data in dump area to their permanent location in
+NAND flash with mapping table updates, and it merges dirty mapping entries with
+its permanent copy.
+
+Spartan-SSD shares similarities with DuraSSD in that they both selectively
+protect the user data, but as shown in the performance evaluation, it has
+notable differences. When the working-set size goes beyond the protected buffer
+size by capacitors, DuraSSD incurs a serious performance decrease, while
+Spartan-SSD invariantly provides excellent performance across the various
+workloads, even without any additional capacitors.
+
+
+\subsection{Maintaining Capacitor Aging}
+Another group of studies attack the capacitor aging problem.  Alcicek et al.
+demonstrate the ultracapacitor aging according to the temperature through
+experimental measurements~\cite{alcicek2007experimental} and Hannonen
+et al. present a method to detect the capacitor degradation using the
+variations of the output voltage at the dc-dc converter~\cite{TIA2016}. Gao et
+al. detect the current available capacitence and bound the number of dirty
+pages under the limit so as to prevent a data loss against the capacitor
+aging~\cite{GaoSDLXS18glvlsi, GaoSLLXYZ19tcad}. They run a periodic background
+write-back process to detect the dirty page budget dynamically, and activate
+the write-back process when the number of dirty pages approaches the budget
+closely. Spartan-SSD assumes an overly-charged capacitor enough to provide a
+sufficient capacitence during the SSD lifetime, which is like a commercial SSD.
+
+
+\subsection{Write Buffer in Scalable Storage}
+%% 은: 고용량 SSD 에서 제한된 write buffer 를 효율적으로 활용하고자 하는 연구. 
+%% RFLUSH 는 고용량 SSD 에서 write buffer 가 커질 거라는 거. 
+Some studies explore ways of using the internal write buffer efficiently in
+scalable SSDs. Chen et al. project that even the high capacity of SSDs will use
+the small size of write buffer because the capacitor that protects the buffer
+does not scale well due to the cost, size, and reliability
+constraints~\cite{ChenLZ19tc}. Nevertheless, they observe that the small sized
+write buffer can be effective for reducing write traffic in particular
+applications that perform journaling heavily. Motivated by this observation,
+they present the application-SSD co-design to reduce the data writes buffered
+for heavy logging/journaling applications. They propose to protect write-hot
+log/journal data with capacitors while the log/journal data being durable.  In
+addition, they propose NVMe interface extension for host to notify SSDs the
+ranges of write-hot LBAs for more efficient protection by capacitors with
+reduced complexity of hot/cold separation.  It reduced substantial amount of
+flash memory write traffic with few megabytes of capacitor-powered write
+buffer, but it is specific to heavy log/journal applications and requires
+change of application code to benefit from its scheme.
+
