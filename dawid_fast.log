@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  2 JUL 2021 16:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  2 JUL 2021 16:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -247,68 +247,82 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 7
  (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
+
+LaTeX Warning: Citation `samsung2011' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `anandtech18samsung' on page 1 undefined on input line 
+8.
+
+
+LaTeX Warning: Citation `busche2014design' on page 1 undefined on input line 10
+.
+
+
+LaTeX Warning: Citation `9365809' on page 1 undefined on input line 10.
+
 File: figure/dawid_ssd_archi.eps Graphic file (type eps)
 <figure/dawid_ssd_archi.eps> [1
 
 
-]) (./dawid_fast.bbl
-! Undefined control sequence.
-l.7   \url
-          {https://www.anandtech.com/show/12448/samsung-begins-mass-producti...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+]) (./02_related_work.tex
+
+LaTeX Warning: Citation `GuoYZC13date' on page 2 undefined on input line 9.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--9
-[]\OT1/ptm/m/sc/8 AnandTech\OT1/ptm/m/n/8 .  Sam-sung 30.72 TB
- []
+LaTeX Warning: Citation `huang2011life' on page 2 undefined on input line 12.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--9
-\OT1/ptm/m/n/8 SSDs: Mass pro-duc-tion of PM1643 be-gins.
- []
+LaTeX Warning: Citation `HuangWQLS15hpcc' on page 2 undefined on input line 13.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--9
-\OT1/ptm/m/n/8 https://www.anandtech.com/show/12448/samsung-begins-mass-
- []
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
 
-! Undefined control sequence.
-l.33   \url
-           {https://www.samsung.com/us/support/owners/product/128gb-ssd-830-...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Warning: Citation `KimK15sac' on page 2 undefined on input line 80.
+
+[2]
+
+LaTeX Warning: Citation `KangLMKO14sigmod' on page 3 undefined on input line 93
+.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--35
-[]\OT1/ptm/m/sc/8 Samsung\OT1/ptm/m/n/8 .  Sam-sung SSD 830 se-ries.
- []
+LaTeX Warning: Citation `alcicek2007experimental' on page 3 undefined on input 
+line 115.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--35
-\OT1/ptm/m/n/8 https://www.samsung.com/us/support/owners/product/128gb-
- []
+LaTeX Warning: Citation `TIA2016' on page 3 undefined on input line 117.
+
+
+LaTeX Warning: Citation `GaoSDLXS18glvlsi' on page 3 undefined on input line 12
+0.
+
+
+LaTeX Warning: Citation `GaoSLLXYZ19tcad' on page 3 undefined on input line 120
+.
+
+
+LaTeX Warning: Citation `ChenLZ19tc' on page 3 undefined on input line 134.
 
 )
+No file dawid_fast.bbl.
 
 Package endnotes Warning: No endnotes found (file dawid_fast.ent does not exist
 )
 (endnotes)                 on input line 122.
 
-[2] (./dawid_fast.aux) ) 
-Here is how much of TeX's memory you used:
- 1381 strings out of 480609
- 21121 string characters out of 5903655
- 264205 words of memory out of 5000000
- 17256 multiletter control sequences out of 15000+600000
- 545210 words of font info for 52 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 38i,8n,29p,462b,271s stack positions out of 5000i,500n,10000p,200000b,80000s
+[3] (./dawid_fast.aux)
 
-Output written on dawid_fast.dvi (2 pages, 10236 bytes).
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1383 strings out of 480609
+ 21183 string characters out of 5903655
+ 268205 words of memory out of 5000000
+ 17259 multiletter control sequences out of 15000+600000
+ 547233 words of font info for 57 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,9n,29p,462b,271s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on dawid_fast.dvi (3 pages, 17788 bytes).

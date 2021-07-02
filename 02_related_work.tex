@@ -22,7 +22,6 @@ to dump in SLC mode to achieve shorter time required for dumping process.
 %effective storage space decreases and this causes additional overhead for space
 %management.
 
-
 \begin{table}[tb]
     \centering
     \fontsize{11}{11}
@@ -34,8 +33,7 @@ to dump in SLC mode to achieve shorter time required for dumping process.
         % \hline
         % \multirow{4}{*}{{\rotatebox{90}{\parbox{1.2cm}{\centering \footnotesize{Concurrency}}}}} 
 		\hline
-		\bf{Configuration} &
-        \bf{Size} & \hline \hline
+		\bf{Configuration} & \bf{Size} \\ \hline \hline
         Channel & 8x \\ \hline
         Way & 4x \\ \hline
         Die & 4x \\ \hline
@@ -59,8 +57,7 @@ to dump in SLC mode to achieve shorter time required for dumping process.
         % \hline
         % \multirow{4}{*}{{\rotatebox{90}{\parbox{1.2cm}{\centering \footnotesize{Concurrency}}}}} 
 		\hline
-        \bf{Data Type} &
-        \bf{Size} & \hline \hline
+        \bf{Data Type} &  \bf{Size} \\ \hline \hline
         % \footnotesize{\bf{Ratio}} \\ \hline \hline
 	    {User Data Buffer} & {4MB} \\ \hline
 		{Mapping Table} & {512MB} \\ \hline
@@ -93,7 +90,7 @@ In line with this, Kang et al. present an SSD prototype with durable cache,
 called DuraSSD, to enhance the write performance in database and NoSQL systems.
 They observe that frequent cache flushing of SSD which is requested to
 guarantee the atomicity and durability of transactions, makes a long write
-latency and imposes a serious performance \HGLEE{degradation}~\cite{KangLMKO14sigmod}. To
+latency and imposes a serious performance degradation~\cite{KangLMKO14sigmod}. To
 resolve the problem, they maintain the internal-SSD cache
 durable by using the partially protected DRAM with a small size of tantalum
 capacitors. DuraSSD maintains a group of user data pages and a page mapping
