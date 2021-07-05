@@ -6,9 +6,9 @@ trc_dir=./perf_result
 
 #for vs in $version; do
 for wk in $workload; do
-	rfname="$wk".perf
+	rfname="$wk".dat
 	mv $rfname $rfname.bak
-	echo "buff-size orig dawid" > $rfname
+	echo "BUFF FIFO DAWID" > $rfname
 
 	for qs in $qsize; do
 		echo "$wk $qs ..."
@@ -19,6 +19,7 @@ for wk in $workload; do
 
 		dawid_iops=`grep -rn "IOPS" "$dawid_prefix"*.perf | awk '{print $2}' | sort -n | head -n 5 | tail -n 1`
 		orig_iops=`grep -rn "IOPS" "$orig_prefix"*.perf | awk '{print $2}' | sort -n | head -n 5 | tail -n 1`
+
 		
 		echo "$qs" "$orig_iops" "$dawid_iops" >> $rfname
 	done	
