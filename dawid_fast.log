@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2021.1.31)  12 JUL 2021 14:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  12 JUL 2021 15:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -168,78 +168,119 @@ File: lucenc.dfu 2007/09/05 UTF-8 support for dhucs
 (/usr/local/texlive/2020/texmf-dist/tex/latex/cjk-ko/kolabels-utf.sty
 Package: kolabels-utf 2015/03/20 v1.5 UTF-8 Hangul item labels
 )))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen141
+\captionmargin@=\dimen142
+\captionwidth=\dimen143
+\caption@tempdima=\dimen144
+\caption@indent=\dimen145
+\caption@parindent=\dimen146
+\caption@hangindent=\dimen147
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count178
+\c@continuedfloat=\count179
+)
+\c@KVtest=\count180
+\sf@farskip=\skip49
+\sf@captopadj=\dimen148
+\sf@capskip=\skip50
+\sf@nearskip=\skip51
+\c@subfigure=\count181
+\c@subfigure@save=\count182
+\c@lofdepth=\count183
+\c@subtable=\count184
+\c@subtable@save=\count185
+\c@lotdepth=\count186
+\sf@top=\skip52
+\sf@bottom=\skip53
+)
 (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 File: l3backend-dvips.def 2020-03-12 L3 backend support: dvips
 \l__pdf_internal_box=\box45
-\g__pdf_backend_object_int=\count178
+\g__pdf_backend_object_int=\count187
 \l__pdf_backend_content_box=\box46
 \l__pdf_backend_model_box=\box47
-\g__pdf_backend_annotation_int=\count179
-\g__pdf_backend_link_int=\count180
-\g__pdf_backend_link_sf_int=\count181
+\g__pdf_backend_annotation_int=\count188
+\g__pdf_backend_link_int=\count189
+\g__pdf_backend_link_sf_int=\count190
 )
-(./dawid_fast.aux)
+(./dawid_fast.aux
+
+LaTeX Warning: Label `fig_spartan_archi' multiply defined.
+
+)
 \openout1 = `dawid_fast.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 34.
 LaTeX Font Info:    Trying to load font information for LUC+nanummj on input li
-ne 32.
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
+ne 34.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
 File: lucnanummj.fd 2013/02/12 v0.1 Nanum Myeongjo font definitions
 )
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    ... okay on input line 34.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 3
-2.
+4.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-\big@size=\dimen141
+\big@size=\dimen149
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 48.
+ 50.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 48.
+ 50.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 48.
+ 50.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 48.
+ 50.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
 
 (./01_intro.tex
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 7
@@ -308,28 +349,33 @@ LaTeX Warning: Citation `ChenLZ19tc' on page 3 undefined on input line 134.
 File: expr/micro/sw.eps Graphic file (type eps)
  <expr/micro/sw.eps>
 File: expr/micro/rw.eps Graphic file (type eps)
- <expr/micro/rw.eps>)
+ <expr/micro/rw.eps>
+File: expr/micro/sw_wt.eps Graphic file (type eps)
+
+<expr/micro/sw_wt.eps>
+File: expr/micro/rw_wt.eps Graphic file (type eps)
+ <expr/micro/rw_wt.eps>)
 No file dawid_fast.bbl.
 
 Package endnotes Warning: No endnotes found (file dawid_fast.ent does not exist
 )
-(endnotes)                 on input line 122.
+(endnotes)                 on input line 124.
 
-[3] (./dawid_fast.aux)
+[3] [4] (./dawid_fast.aux)
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1395 strings out of 480609
- 21365 string characters out of 5903656
- 268205 words of memory out of 5000000
- 17266 multiletter control sequences out of 15000+600000
+ 2652 strings out of 480609
+ 43944 string characters out of 5903655
+ 294799 words of memory out of 5000000
+ 18511 multiletter control sequences out of 15000+600000
  547233 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,9n,29p,462b,271s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,9n,51p,462b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dawid_fast.dvi (3 pages, 18172 bytes).
+Output written on dawid_fast.dvi (4 pages, 18704 bytes).

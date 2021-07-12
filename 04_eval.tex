@@ -1,15 +1,48 @@
 \section{Performance Evaluation}
 
 
-\begin{figure}[t]
+\begin{figure*}[t]
     \centering{}
-    \includegraphics[width=0.4\textwidth]{expr/micro/sw.eps}
-    \includegraphics[width=0.4\textwidth]{expr/micro/rw.eps}
-    %\includegraphics[width=0.4\textwidth]{figure/dawid_ssd_archi.png}
-    \caption{\textbf{SSD architecture with Dawid buffer.}}
-    \label{fig_spartan_archi}
-\end{figure}
+	\subfloat[Sequential write] {
+	    \includegraphics[width=0.4\textwidth]{expr/micro/sw.eps}
+	} 
+	\subfloat[Random write] {
+	    \includegraphics[width=0.4\textwidth]{expr/micro/rw.eps}
+	} 
+    \caption{\textbf{IOPS for micro benchmarks.}}
+\end{figure*}
 
+
+\begin{figure*}[t]
+    \centering{}
+	\subfloat[Sequential write] {
+	    \includegraphics[width=0.4\textwidth]{expr/micro/sw_wt.eps}
+	} 
+	\subfloat[Random write] {
+	    \includegraphics[width=0.4\textwidth]{expr/micro/rw_wt.eps}
+	}
+    %\includegraphics[width=0.4\textwidth]{figure/dawid_ssd_archi.png}
+    \caption{\textbf{Write traffic for micro benchmarks.}}
+    \label{fig_spartan_archi}
+\end{figure*}
+
+
+%\iffalse
+%\begin{figure}[t]
+%    \centering{}
+%	\subfloat[Sequential write] {
+%	    \includegraphics[width=0.4\textwidth]{expr/micro/sw_wt.eps}
+%	} \\
+%	\subfloat[Random write] {
+%	    \includegraphics[width=0.4\textwidth]{expr/micro/rw_wt.eps}
+%	}
+%
+%    %\includegraphics[width=0.4\textwidth]{figure/dawid_ssd_archi.png}
+%    \caption{\textbf{Write traffic for micro benchmarks.}}
+%    \label{fig_spartan_archi}
+%\end{figure}
+%\endif
+%
 
 \subsection{Implementation}
 
