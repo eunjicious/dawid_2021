@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  2 JUL 2021 16:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2021.1.31)  12 JUL 2021 14:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -304,7 +304,11 @@ LaTeX Warning: Citation `GaoSLLXYZ19tcad' on page 3 undefined on input line 120
 
 LaTeX Warning: Citation `ChenLZ19tc' on page 3 undefined on input line 134.
 
-)
+) (./04_eval.tex
+File: expr/micro/sw.eps Graphic file (type eps)
+ <expr/micro/sw.eps>
+File: expr/micro/rw.eps Graphic file (type eps)
+ <expr/micro/rw.eps>)
 No file dawid_fast.bbl.
 
 Package endnotes Warning: No endnotes found (file dawid_fast.ent does not exist
@@ -315,14 +319,17 @@ Package endnotes Warning: No endnotes found (file dawid_fast.ent does not exist
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 1383 strings out of 480609
- 21183 string characters out of 5903655
+ 1395 strings out of 480609
+ 21365 string characters out of 5903656
  268205 words of memory out of 5000000
- 17259 multiletter control sequences out of 15000+600000
+ 17266 multiletter control sequences out of 15000+600000
  547233 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,9n,29p,462b,271s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dawid_fast.dvi (3 pages, 17788 bytes).
+Output written on dawid_fast.dvi (3 pages, 18172 bytes).

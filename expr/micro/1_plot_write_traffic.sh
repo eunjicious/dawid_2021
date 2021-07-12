@@ -1,5 +1,5 @@
 
-benchs="rw sw synths synthr synthz realw realf realw_1 realf_1"
+benchs="sw_wt rw_wt synths_wt synthr_wt synthz_wt realw_1_wt realf_1_wt"
 
 
 #for bench in $@;
@@ -9,7 +9,7 @@ do
 	outfile="$bench".eps
 	graphtitle="$bench"
 	
-	ylabel="IOPS"
+	ylabel="WRITE_TRAFFIC"
 	xlabel="Buff-Size(KB)"
 
 	ymax=$(cat "$bench".dat | awk '{print $2}'| sort -nr | head -n 1 | awk '{print $1 * 1.5}')
@@ -21,7 +21,7 @@ do
 	opt_list="$opt_list `echo '-'``echo 'e'` `echo gxlabel=\'$xlabel\'`"
 	opt_list="$opt_list `echo '-'``echo 'e'` `echo gymax=\'$ymax\'`"
 	
-	gnuplot $opt_list perf_iops.cfg && open $outfile
+	gnuplot $opt_list perf_write_traffic.cfg && open $outfile
 done
 
 
