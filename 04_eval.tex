@@ -8,8 +8,16 @@
 	} 
 	\subfloat[Random write] {
 	    \includegraphics[width=0.4\textwidth]{expr/micro/rw.eps}
-	} 
+	}
     \caption{\textbf{IOPS for micro benchmarks.}}
+    \centering{}
+	\subfloat[Filebench Webserver] { 
+	    \includegraphics[width=0.4\textwidth]{expr/micro/realw_1.eps}
+	}
+	\subfloat[Linkbench Run] { 
+	    \includegraphics[width=0.4\textwidth]{expr/micro/reallr_1.eps}
+	}
+    \caption{\textbf{IOPS for macro benchmarks.}} 
 \end{figure*}
 
 
@@ -23,6 +31,14 @@
 	}
     %\includegraphics[width=0.4\textwidth]{figure/dawid_ssd_archi.png}
     \caption{\textbf{Write traffic for micro benchmarks.}}
+    \centering{}
+	\subfloat[Filebench Webserver] { 
+	    \includegraphics[width=0.4\textwidth]{expr/micro/realw_1_wt.eps}
+	} 
+	\subfloat[Linkbench Run] { 
+	    \includegraphics[width=0.4\textwidth]{expr/micro/reallr_1_wt.eps}
+	}
+    \caption{\textbf{Write traffic for macro benchmarks.}} 
     \label{fig_spartan_archi}
 \end{figure*}
 

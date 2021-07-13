@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  12 JUL 2021 15:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2021.1.31)  13 JUL 2021 13:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -350,18 +350,28 @@ File: expr/micro/sw.eps Graphic file (type eps)
  <expr/micro/sw.eps>
 File: expr/micro/rw.eps Graphic file (type eps)
  <expr/micro/rw.eps>
-File: expr/micro/sw_wt.eps Graphic file (type eps)
+File: expr/micro/realw_1.eps Graphic file (type eps)
 
-<expr/micro/sw_wt.eps>
+<expr/micro/realw_1.eps>
+File: expr/micro/reallr_1.eps Graphic file (type eps)
+ <expr/micro/reallr_1.eps>
+File: expr/micro/sw_wt.eps Graphic file (type eps)
+ <expr/micro/sw_wt.eps>
 File: expr/micro/rw_wt.eps Graphic file (type eps)
- <expr/micro/rw_wt.eps>)
+
+<expr/micro/rw_wt.eps>
+File: expr/micro/realw_1_wt.eps Graphic file (type eps)
+ <expr/micro/realw_1_wt.eps>
+File: expr/micro/reallr_1_wt.eps Graphic file (type eps)
+
+<expr/micro/reallr_1_wt.eps>)
 No file dawid_fast.bbl.
 
 Package endnotes Warning: No endnotes found (file dawid_fast.ent does not exist
 )
 (endnotes)                 on input line 124.
 
-[3] [4] (./dawid_fast.aux)
+[3] [4] [5] (./dawid_fast.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -370,12 +380,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2652 strings out of 480609
- 43944 string characters out of 5903655
+ 2668 strings out of 480609
+ 44336 string characters out of 5903656
  294799 words of memory out of 5000000
- 18511 multiletter control sequences out of 15000+600000
+ 18523 multiletter control sequences out of 15000+600000
  547233 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 50i,9n,51p,462b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,9n,51p,462b,365s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dawid_fast.dvi (4 pages, 18704 bytes).
+Output written on dawid_fast.dvi (5 pages, 19464 bytes).
