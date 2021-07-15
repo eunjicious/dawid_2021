@@ -1,5 +1,33 @@
 \section{Performance Evaluation}
 
+%% CACHE_MISS
+\begin{table}
+    \centering
+    \fontsize{11}{11}
+    \begin{tabular}{| l | r | r | r | r | } %% KVS cache-ref cache-miss 
+    \hline
+    \footnotesize{\textbf{Workload}} & \footnotesize{\textbf{OPs}} & \footnotesize{\textbf{Footprint(Data)}}& \footnotesize{\textbf{Footprint(Index)}} \\
+    \hline \hline
+	
+%    \footnotesize{sequential} & \footnotesize{29,831} & \footnotesize{4,125} & \footnotesize{21,986} & \footnotesize{2,731} \\ \hline 
+%    \footnotesize{random} & \footnotesize{38,272} & \footnotesize{5,810} & \footnotesize{20,949} & \footnotesize{2,727} \\ \hline 
+%    \footnotesize{linkbench} & \footnotesize{9,238} & \footnotesize{4,368} & \footnotesize{4,844} & \footnotesize{1,938} \\ \hline 
+%    \footnotesize{TPC-C} & \footnotesize{38,732} & \footnotesize{29,529} & \footnotesize{8,389} & \footnotesize{4,092} \\ \hline 
+%    \footnotesize{Webserver} & \footnotesize{38,732} & \footnotesize{29,529} & \footnotesize{8,389} & \footnotesize{4,092} \\ \hline 
+%    \footnotesize{Fileserver} & \footnotesize{38,732} & \footnotesize{29,529} & \footnotesize{8,389} & \footnotesize{4,092} \\ \hline 
+    %\footnotesize{+overwrite} & \footnotesize{68,103} & \footnotesize{9,935} & \footnotesize{42,935} & \footnotesize{5,458} \\ \hline
+    %\footnotesize{+readrandom} & \footnotesize{77,341} & \footnotesize{14,303} & \footnotesize{47,779} & \footnotesize{7,396} \\ \hline
+    %\footnotesize{+seekrandom} & \footnotesize{116,073} & \footnotesize{43,832} & \footnotesize{56,168} & \footnotesize{11,488} \\ \hline
+    \end{tabular}
+    \vspace{5pt}
+    \caption{\textbf{Number of cache references and misses.}
+        \textbf{Ref(R)} is the number of cache references when running RocksDB; 
+        \textbf{Miss(R)}, the number of cache misses with RocksDB; 
+        \textbf{Ref(J)}, references with JFDB; and \textbf{Miss(J)}, misses with JFDB.
+    }    
+    \label{tab_cache_miss}
+\end{table}
+ 
 
 \begin{figure*}[t]
     \centering{}
