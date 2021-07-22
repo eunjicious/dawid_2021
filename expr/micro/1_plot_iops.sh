@@ -1,6 +1,6 @@
 
-benchs="rw sw synths synthr synthz realw realf realw_1 realf_1 reallr_1"
-
+#benchs="rw sw synths synthr synthz realw realf realw_1 realf_1 reallr_1 realtpc_1"
+benchs="realw_opt realf_opt reallr_opt realtpc_opt"
 
 #for bench in $@;
 for bench in $benchs;

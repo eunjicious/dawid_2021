@@ -1,5 +1,5 @@
 
-benchs="sw_wt rw_wt synths_wt synthr_wt synthz_wt realw_1_wt realf_1_wt reallr_1_wt"
+benchs="sw_wt rw_wt synths_wt synthr_wt synthz_wt realw_1_wt realf_1_wt reallr_1_wt realtpc_1_wt"
 
 
 #for bench in $@;
