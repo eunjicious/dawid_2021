@@ -1,6 +1,8 @@
 
 #benchs="rw sw synths synthr synthz realw realf realw_1 realf_1 reallr_1 realtpc_1"
-benchs="realw_opt realf_opt reallr_opt realtpc_opt"
+#benchs="realw_opt_1 realf_opt_1 reallr_opt_1 realtpc_opt_1"
+#benchs="realw_opt realf_opt reallr_opt realtpc_opt" 
+benchs="realtpc_gc"
 
 #for bench in $@;
 for bench in $benchs;
@@ -12,8 +14,9 @@ do
 	ylabel="IOPS"
 	xlabel="Buff-Size(KB)"
 
-	ymax=$(cat "$bench".dat | awk '{print $2}'| sort -nr | head -n 1 | awk '{print $1 * 1.5}')
-	
+	#ymax=$(cat "$bench".dat | awk '{print $2}'| sort -nr | head -n 1 | awk '{print $1 * 1.5}')
+	ymax=$(cat "$bench".dat | awk '{print $2}'|sort -nr | head -n 1 | awk '{print $1 * 2.0}')
+
 	opt_list="`echo '-'``echo 'e'` `echo datafile=\'$datafile\'`"
 	opt_list="$opt_list `echo '-'``echo 'e'` `echo outfile=\'$outfile\'`"
 	opt_list="$opt_list `echo '-'``echo 'e'` `echo gtitle=\'$graphtitle\'`"

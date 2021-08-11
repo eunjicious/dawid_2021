@@ -33,67 +33,87 @@
 \end{table}
  
 
+%\begin{figure*}[t]
+%    \centering{}
+%	\subfloat[Sequential write] {
+%	    \includegraphics[width=0.4\textwidth]{expr/micro/sw.eps}
+%	} 
+%	\subfloat[Random write] {
+%	    \includegraphics[width=0.4\textwidth]{expr/micro/rw.eps}
+%	}
+%    \caption{\textbf{IOPS for micro benchmarks.}}
+%    \centering{}
+%	\subfloat[Filebench Webserver] { 
+%	    \includegraphics[width=0.4\textwidth]{expr/micro/realw_1.eps}
+%	}
+%	\subfloat[Filebench Webserver Opt] { 
+%	    \includegraphics[width=0.4\textwidth]{expr/micro/realw_opt.eps} 
+%	} 
+%    \centering{}
+%	\subfloat[Linkbench Run] { 
+%	    \includegraphics[width=0.4\textwidth]{expr/micro/reallr_1.eps}
+%	}
+%	\subfloat[Linkbench Run Opt] { 
+%	    \includegraphics[width=0.4\textwidth]{expr/micro/reallr_opt.eps} 
+%	} 
+%    \centering{} 
+%	\subfloat[TPCC] { 
+%	    \includegraphics[width=0.4\textwidth]{expr/micro/realtpc_1.eps} 
+%	} 
+%	\subfloat[TPCC Opt] { 
+%	    \includegraphics[width=0.4\textwidth]{expr/micro/realtpc_opt.eps}
+%	} 
+%    \caption{\textbf{IOPS for macro benchmarks.}} 
+%\end{figure*}
+
+
+%\begin{figure*}[t]
+%    \centering{}
+%	\subfloat[Sequential write] {
+%	    \includegraphics[width=0.4\textwidth]{expr/micro/sw_wt.eps}
+%	} 
+%	\subfloat[Random write] {
+%	    \includegraphics[width=0.4\textwidth]{expr/micro/rw_wt.eps}
+%	}
+%    %\includegraphics[width=0.4\textwidth]{figure/dawid_ssd_archi.png}
+%    \caption{\textbf{Write traffic for micro benchmarks.}}
+%    \centering{}
+%	\subfloat[Filebench Webserver] { 
+%	    \includegraphics[width=0.4\textwidth]{expr/micro/realw_1_wt.eps}
+%	} 
+%	\subfloat[Linkbench Run] { 
+%	    \includegraphics[width=0.4\textwidth]{expr/micro/reallr_1_wt.eps}
+%	}
+%%    \caption{\textbf{Write traffic for macro benchmarks.}} 
+%%    \label{fig_spartan_archi}
+%
+%    \centering{} 
+%	\subfloat[TPCC] { 
+%	    \includegraphics[width=0.4\textwidth]{expr/micro/realtpc_1_wt.eps}
+%	} 
+%    \caption{\textbf{Write traffic for macro benchmarks.}}
+%    \label{fig_spartan_archi} 
+%\end{figure*}
+
 \begin{figure*}[t]
-    \centering{}
-	\subfloat[Sequential write] {
-	    \includegraphics[width=0.4\textwidth]{expr/micro/sw.eps}
-	} 
-	\subfloat[Random write] {
-	    \includegraphics[width=0.4\textwidth]{expr/micro/rw.eps}
-	}
-    \caption{\textbf{IOPS for micro benchmarks.}}
-    \centering{}
-	\subfloat[Filebench Webserver] { 
-	    \includegraphics[width=0.4\textwidth]{expr/micro/realw_1.eps}
-	}
-	\subfloat[Filebench Webserver Opt] { 
-	    \includegraphics[width=0.4\textwidth]{expr/micro/realw_opt.eps} 
-	} 
-    \centering{}
-	\subfloat[Linkbench Run] { 
-	    \includegraphics[width=0.4\textwidth]{expr/micro/reallr_1.eps}
-	}
-	\subfloat[Linkbench Run Opt] { 
-	    \includegraphics[width=0.4\textwidth]{expr/micro/reallr_opt.eps} 
-	} 
-    \centering{} 
-	\subfloat[TPCC] { 
-	    \includegraphics[width=0.4\textwidth]{expr/micro/realtpc_1.eps} 
-	} 
-	\subfloat[TPCC Opt] { 
-	    \includegraphics[width=0.4\textwidth]{expr/micro/realtpc_opt.eps}
-	} 
-    \caption{\textbf{IOPS for macro benchmarks.}} 
+	\centering{}
+		\subfloat[Random write]{ 
+		    \includegraphics[width=0.4\textwidth]{expr/micro/synthr_gc.eps}
+		}
+	\caption{\textbf{IOPs for micro benchmarks.}} 
+	
+	\centering{}
+		\subfloat[Linkbench_run]{
+ 		    \includegraphics[width=0.4\textwidth]{expr/micro/reallr_gc.eps}
+		}
+		\subfloat[TPCC_20]{ 
+		    \includegraphics[width=0.4\textwidth]{expr/micro/realtpc_gc.eps}
+		}
+	
+	\caption{\textbf{IOPs for macro benchmarks.}}
+	\label{fig_spartan_archi} 
 \end{figure*}
 
-
-\begin{figure*}[t]
-    \centering{}
-	\subfloat[Sequential write] {
-	    \includegraphics[width=0.4\textwidth]{expr/micro/sw_wt.eps}
-	} 
-	\subfloat[Random write] {
-	    \includegraphics[width=0.4\textwidth]{expr/micro/rw_wt.eps}
-	}
-    %\includegraphics[width=0.4\textwidth]{figure/dawid_ssd_archi.png}
-    \caption{\textbf{Write traffic for micro benchmarks.}}
-    \centering{}
-	\subfloat[Filebench Webserver] { 
-	    \includegraphics[width=0.4\textwidth]{expr/micro/realw_1_wt.eps}
-	} 
-	\subfloat[Linkbench Run] { 
-	    \includegraphics[width=0.4\textwidth]{expr/micro/reallr_1_wt.eps}
-	}
-%    \caption{\textbf{Write traffic for macro benchmarks.}} 
-%    \label{fig_spartan_archi}
-
-    \centering{} 
-	\subfloat[TPCC] { 
-	    \includegraphics[width=0.4\textwidth]{expr/micro/realtpc_1_wt.eps}
-	} 
-    \caption{\textbf{Write traffic for macro benchmarks.}}
-    \label{fig_spartan_archi} 
-\end{figure*}
 
 \begin{figure*}[t]
     \centering{}
