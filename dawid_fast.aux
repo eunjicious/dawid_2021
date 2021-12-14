@@ -3,42 +3,36 @@
 \citation{anandtech18samsung}
 \citation{busche2014design}
 \citation{9365809}
+\citation{samsung_ratio}
+\citation{ni2017hash}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textbf  {SSD architecture with Dawid buffer.}\relax }}{1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textbf  {SSD architecture with \texttt  {Dawid}{} buffer.}\relax }}{1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig_spartan_archi}{{1}{1}}
-\citation{GuoYZC13date}
-\citation{huang2011life}
-\citation{HuangWQLS15hpcc}
-\citation{KimK15sac}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Related work}{2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Reducing Capacitance Requirement}{2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces \textbf  {SSD Configuration.}\relax }}{2}\protected@file@percent }
-\newlabel{tab:ssd_config}{{1}{2}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces \textbf  {Components of the SSD-internal buffer.}\relax }}{2}\protected@file@percent }
-\newlabel{tab:ssd_buff_comp}{{2}{2}}
-\citation{KangLMKO14sigmod}
-\citation{alcicek2007experimental}
-\citation{TIA2016}
-\citation{GaoSDLXS18glvlsi}
-\citation{GaoSLLXYZ19tcad}
-\citation{ChenLZ19tc}
+\newlabel{fig_dawid_archi}{{1}{1}}
+\citation{jiang2011s}
+\citation{kim2017shrd}
+\citation{li2018case}
 \bibstyle{acm}
 \bibdata{sample}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Maintaining Capacitor Aging}{3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Write Buffer in Scalable Storage}{3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces \textbf  {Number of cache references and misses.} \textbf  {Ref(R)} is the number of cache references when running RocksDB; \textbf  {Miss(R)}, the number of cache misses with RocksDB; \textbf  {Ref(J)}, references with JFDB; and \textbf  {Miss(J)}, misses with JFDB. \relax }}{3}\protected@file@percent }
-\newlabel{tab_cache_miss}{{3}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Performance Evaluation}{3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Implementation}{3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Performance results}{3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textbf  {Workload Characteristic.}\relax }}{4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Random Write}}}{4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Linkbench}}}{4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {TPCC}}}{4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \textbf  {Workload Characteristic.}\relax }}{4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces \textbf  {Workload Characteristic.}\relax }}{4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Filebench Webserver}}}{4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Filebench Fileserver}}}{4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Linkbench Run}}}{4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {TPCC}}}{4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces \textbf  {Workload Characteristics.}\relax }}{2}\protected@file@percent }
+\newlabel{tab:wk_char}{{1}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textbf  {Hit ratio in protected mapping table pages.} \relax }}{3}\protected@file@percent }
+\newlabel{fig_hit_ratio}{{2}{3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Fileserver}}}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Webserver}}}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Linkbench}}}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {YCSB-00}}}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {YCSB-01}}}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {Systor-16LUN3}}}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces {Systor-16LUN4}}}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(h)}{\ignorespaces {Systor-18LUN3}}}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \textbf  {Write-back traffic of mapping table.} \relax }}{3}\protected@file@percent }
+\newlabel{fig_write_traffic}{{3}{3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Fileserver}}}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Webserver}}}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Linkbench}}}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {YCSB-00}}}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {YCSB-01}}}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {Systor-16LUN3}}}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces {Systor-16LUN4}}}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(h)}{\ignorespaces {Systor-18LUN3}}}{3}\protected@file@percent }

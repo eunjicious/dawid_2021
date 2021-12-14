@@ -1,0 +1,498 @@
+[25697] 01-08 07:56:18,703 INFO [RocksDB]RocksDB version: 5.14.2
+
+[25697] 01-08 07:56:18,709 INFO [RocksDB]Git sha rocksdb_build_git_sha:fc00d54a097e35332052f4c39c3229d413a023b6
+[25697] 01-08 07:56:18,709 INFO [RocksDB]Compile date Jan  8 2020
+[25697] 01-08 07:56:18,709 INFO [RocksDB]DB SUMMARY
+
+[25697] 01-08 07:56:18,709 INFO [RocksDB]SST files in /home/ubuntu/ardb/data/rocksdb dir, Total Num: 0, files: 
+
+[25697] 01-08 07:56:18,709 INFO [RocksDB]Write Ahead Log file in /home/ubuntu/ardb/data/rocksdb: 
+
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                        Options.error_if_exists: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                      Options.create_if_missing: 1
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                        Options.paranoid_checks: 1
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                                    Options.env: 0xbf86c0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                               Options.info_log: 0x7fd44963f8a0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]               Options.max_file_opening_threads: 16
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                             Options.statistics: (nil)
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                              Options.use_fsync: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                      Options.max_log_file_size: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                 Options.max_manifest_file_size: 18446744073709551615
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                  Options.log_file_time_to_roll: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                      Options.keep_log_file_num: 1000
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                   Options.recycle_log_file_num: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                        Options.allow_fallocate: 1
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                       Options.allow_mmap_reads: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                      Options.allow_mmap_writes: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                       Options.use_direct_reads: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                       Options.use_direct_io_for_flush_and_compaction: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]         Options.create_missing_column_families: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                             Options.db_log_dir: 
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                                Options.wal_dir: /home/ubuntu/ardb/data/rocksdb
+[25697] 01-08 07:56:18,709 INFO [RocksDB]               Options.table_cache_numshardbits: 6
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                     Options.max_subcompactions: 1
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                 Options.max_background_flushes: -1
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                        Options.WAL_ttl_seconds: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                      Options.WAL_size_limit_MB: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]            Options.manifest_preallocation_size: 4194304
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                    Options.is_fd_close_on_exec: 1
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                  Options.advise_random_on_open: 1
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                   Options.db_write_buffer_size: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                   Options.write_buffer_manager: 0x7fd449dfa7d0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]        Options.access_hint_on_compaction_start: 1
+[25697] 01-08 07:56:18,709 INFO [RocksDB] Options.new_table_reader_for_compaction_inputs: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]          Options.random_access_max_buffer_size: 1048576
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                     Options.use_adaptive_mutex: 1
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                           Options.rate_limiter: 0x7fd449638540
+[25697] 01-08 07:56:18,709 INFO [RocksDB]    Options.sst_file_manager.rate_bytes_per_sec: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                      Options.wal_recovery_mode: 2
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                 Options.enable_thread_tracking: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                 Options.enable_pipelined_write: 1
+[25697] 01-08 07:56:18,709 INFO [RocksDB]        Options.allow_concurrent_memtable_write: 1
+[25697] 01-08 07:56:18,709 INFO [RocksDB]     Options.enable_write_thread_adaptive_yield: 1
+[25697] 01-08 07:56:18,709 INFO [RocksDB]            Options.write_thread_max_yield_usec: 100
+[25697] 01-08 07:56:18,709 INFO [RocksDB]           Options.write_thread_slow_yield_usec: 3
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                              Options.row_cache: None
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                             Options.wal_filter: None
+[25697] 01-08 07:56:18,709 INFO [RocksDB]            Options.avoid_flush_during_recovery: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]            Options.allow_ingest_behind: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]            Options.preserve_deletes: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]            Options.two_write_queues: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]            Options.manual_wal_flush: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]            Options.max_background_jobs: 16
+[25697] 01-08 07:56:18,709 INFO [RocksDB]            Options.max_background_compactions: -1
+[25697] 01-08 07:56:18,709 INFO [RocksDB]            Options.avoid_flush_during_shutdown: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]          Options.writable_file_max_buffer_size: 1048576
+[25697] 01-08 07:56:18,709 INFO [RocksDB]            Options.delayed_write_rate : 52428800
+[25697] 01-08 07:56:18,709 INFO [RocksDB]            Options.max_total_wal_size: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]            Options.delete_obsolete_files_period_micros: 21600000000
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                  Options.stats_dump_period_sec: 10000000
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                         Options.max_open_files: 1024
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                         Options.bytes_per_sync: 1048576
+[25697] 01-08 07:56:18,709 INFO [RocksDB]                     Options.wal_bytes_per_sync: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]      Options.compaction_readahead_size: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]Compression algorithms supported:
+[25697] 01-08 07:56:18,709 INFO [RocksDB]	kZSTDNotFinalCompression supported: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]	kZSTD supported: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]	kXpressCompression supported: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]	kLZ4HCCompression supported: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]	kLZ4Compression supported: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]	kBZip2Compression supported: 0
+[25697] 01-08 07:56:18,709 INFO [RocksDB]	kZlibCompression supported: 1
+[25697] 01-08 07:56:18,709 INFO [RocksDB]	kSnappyCompression supported: 1
+[25697] 01-08 07:56:18,709 INFO [RocksDB]Fast CRC32 supported: Supported on x86
+[25697] 01-08 07:56:18,709 INFO [RocksDB][db/db_impl_open.cc:222] Creating manifest 1 
+
+[25697] 01-08 07:56:18,740 INFO [RocksDB][db/version_set.cc:3085] Recovering from manifest file: MANIFEST-000001
+
+[25697] 01-08 07:56:18,740 INFO [RocksDB][db/column_family.cc:475] --------------- Options for column family [default]:
+
+[25697] 01-08 07:56:18,740 INFO [RocksDB]              Options.comparator: ardb.comparator
+[25697] 01-08 07:56:18,740 INFO [RocksDB]          Options.merge_operator: ardb.merger
+[25697] 01-08 07:56:18,740 INFO [RocksDB]       Options.compaction_filter: None
+[25697] 01-08 07:56:18,740 INFO [RocksDB]       Options.compaction_filter_factory: ardb.compact_filter_factory
+[25697] 01-08 07:56:18,740 INFO [RocksDB]        Options.memtable_factory: SkipListFactory
+[25697] 01-08 07:56:18,740 INFO [RocksDB]           Options.table_factory: BlockBasedTable
+[25697] 01-08 07:56:18,740 INFO [RocksDB]           table_factory options:   flush_block_policy_factory: FlushBlockBySizePolicyFactory (0x7fd449c08018)
+  cache_index_and_filter_blocks: 0
+  cache_index_and_filter_blocks_with_high_priority: 0
+  pin_l0_filter_and_index_blocks_in_cache: 0
+  index_type: 0
+  hash_index_allow_collision: 1
+  checksum: 1
+  no_block_cache: 0
+  block_cache: 0x7fd449c81cf0
+  block_cache_name: LRUCache
+  block_cache_options:
+    capacity : 536870912
+    num_shard_bits : 6
+    strict_capacity_limit : 0
+    high_pri_pool_ratio: 0.000
+  block_cache_compressed: (nil)
+  persistent_cache: (nil)
+  block_size: 4096
+  block_size_deviation: 10
+  block_restart_interval: 16
+  index_block_restart_interval: 1
+  metadata_block_size: 4096
+  partition_filters: 0
+  use_delta_encoding: 1
+  filter_policy: rocksdb.BuiltinBloomFilter
+  whole_key_filtering: 1
+  verify_compression: 0
+  read_amp_bytes_per_bit: 0
+  format_version: 2
+  enable_index_compression: 1
+  block_align: 0
+
+[25697] 01-08 07:56:18,741 INFO [RocksDB]       Options.write_buffer_size: 268435456
+[25697] 01-08 07:56:18,741 INFO [RocksDB] Options.max_write_buffer_number: 6
+[25697] 01-08 07:56:18,741 INFO [RocksDB]       Options.compression[0]: NoCompression
+[25697] 01-08 07:56:18,741 INFO [RocksDB]       Options.compression[1]: NoCompression
+[25697] 01-08 07:56:18,741 INFO [RocksDB]       Options.compression[2]: Snappy
+[25697] 01-08 07:56:18,741 INFO [RocksDB]       Options.compression[3]: Snappy
+[25697] 01-08 07:56:18,741 INFO [RocksDB]       Options.compression[4]: Snappy
+[25697] 01-08 07:56:18,741 INFO [RocksDB]       Options.compression[5]: Snappy
+[25697] 01-08 07:56:18,741 INFO [RocksDB]       Options.compression[6]: Snappy
+[25697] 01-08 07:56:18,741 INFO [RocksDB]                 Options.bottommost_compression: Disabled
+[25697] 01-08 07:56:18,741 INFO [RocksDB]      Options.prefix_extractor: ardb.prefix_extractor
+[25697] 01-08 07:56:18,741 INFO [RocksDB]  Options.memtable_insert_with_hint_prefix_extractor: nullptr
+[25697] 01-08 07:56:18,741 INFO [RocksDB]            Options.num_levels: 7
+[25697] 01-08 07:56:18,741 INFO [RocksDB]       Options.min_write_buffer_number_to_merge: 2
+[25697] 01-08 07:56:18,741 INFO [RocksDB]    Options.max_write_buffer_number_to_maintain: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB]           Options.compression_opts.window_bits: -14
+[25697] 01-08 07:56:18,741 INFO [RocksDB]                 Options.compression_opts.level: -1
+[25697] 01-08 07:56:18,741 INFO [RocksDB]              Options.compression_opts.strategy: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB]        Options.compression_opts.max_dict_bytes: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB]        Options.compression_opts.zstd_max_train_bytes: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB]     Options.level0_file_num_compaction_trigger: 2
+[25697] 01-08 07:56:18,741 INFO [RocksDB]         Options.level0_slowdown_writes_trigger: 20
+[25697] 01-08 07:56:18,741 INFO [RocksDB]             Options.level0_stop_writes_trigger: 36
+[25697] 01-08 07:56:18,741 INFO [RocksDB]                  Options.target_file_size_base: 67108864
+[25697] 01-08 07:56:18,741 INFO [RocksDB]            Options.target_file_size_multiplier: 1
+[25697] 01-08 07:56:18,741 INFO [RocksDB]               Options.max_bytes_for_level_base: 536870912
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.level_compaction_dynamic_level_bytes: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB]         Options.max_bytes_for_level_multiplier: 10.000000
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.max_bytes_for_level_multiplier_addtl[0]: 1
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.max_bytes_for_level_multiplier_addtl[1]: 1
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.max_bytes_for_level_multiplier_addtl[2]: 1
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.max_bytes_for_level_multiplier_addtl[3]: 1
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.max_bytes_for_level_multiplier_addtl[4]: 1
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.max_bytes_for_level_multiplier_addtl[5]: 1
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.max_bytes_for_level_multiplier_addtl[6]: 1
+[25697] 01-08 07:56:18,741 INFO [RocksDB]      Options.max_sequential_skip_in_iterations: 8
+[25697] 01-08 07:56:18,741 INFO [RocksDB]                   Options.max_compaction_bytes: 1677721600
+[25697] 01-08 07:56:18,741 INFO [RocksDB]                       Options.arena_block_size: 33554432
+[25697] 01-08 07:56:18,741 INFO [RocksDB]  Options.soft_pending_compaction_bytes_limit: 68719476736
+[25697] 01-08 07:56:18,741 INFO [RocksDB]  Options.hard_pending_compaction_bytes_limit: 274877906944
+[25697] 01-08 07:56:18,741 INFO [RocksDB]      Options.rate_limit_delay_max_milliseconds: 100
+[25697] 01-08 07:56:18,741 INFO [RocksDB]               Options.disable_auto_compactions: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB]                       Options.compaction_style: kCompactionStyleLevel
+[25697] 01-08 07:56:18,741 INFO [RocksDB]                         Options.compaction_pri: kByCompensatedSize
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.compaction_options_universal.size_ratio: 1
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.compaction_options_universal.min_merge_width: 2
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.compaction_options_universal.max_merge_width: 4294967295
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.compaction_options_universal.max_size_amplification_percent: 200
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.compaction_options_universal.compression_size_percent: -1
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.compaction_options_universal.stop_style: kCompactionStopStyleTotalSize
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.compaction_options_fifo.max_table_files_size: 1073741824
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.compaction_options_fifo.allow_compaction: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB]Options.compaction_options_fifo.ttl: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB]                  Options.table_properties_collectors: 
+[25697] 01-08 07:56:18,741 INFO [RocksDB]                  Options.inplace_update_support: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB]                Options.inplace_update_num_locks: 10000
+[25697] 01-08 07:56:18,741 INFO [RocksDB]              Options.memtable_prefix_bloom_size_ratio: 0.000000
+[25697] 01-08 07:56:18,741 INFO [RocksDB]  Options.memtable_huge_page_size: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB]                          Options.bloom_locality: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB]                   Options.max_successive_merges: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB]               Options.optimize_filters_for_hits: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB]               Options.paranoid_file_checks: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB]               Options.force_consistency_checks: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB]               Options.report_bg_io_stats: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB]                              Options.ttl: 0
+[25697] 01-08 07:56:18,741 INFO [RocksDB][db/version_set.cc:3361] Recovered from manifest file:/home/ubuntu/ardb/data/rocksdb/MANIFEST-000001 succeeded,manifest_file_number is 1, next_file_number is 3, last_sequence is 0, log_number is 0,prev_log_number is 0,max_column_family is 0,min_log_number_to_keep is 0
+
+[25697] 01-08 07:56:18,741 INFO [RocksDB][db/version_set.cc:3369] Column family [default] (ID 0), log number is 0
+
+[25697] 01-08 07:56:18,745 INFO [RocksDB][db/db_impl_open.cc:1219] DB pointer 0x7fd4495be000
+[25697] 01-08 07:56:18,745 INFO Ardb init engine:rocksdb success.
+[25697] 01-08 07:56:18,747 INFO Ardb will accept connections on 0.0.0.0:16379
+[25697] 01-08 07:56:18,747 INFO Ardb started with version 0.10.0
+[25697] 01-08 07:56:19,748 INFO ========================Period Statistics Dump Begin===========================
+[25697] 01-08 07:56:19,749 INFO slave_sync_total_commands_processed:0
+[25697] 01-08 07:56:19,749 INFO slave_sync_instantaneous_ops_per_sec:0
+[25697] 01-08 07:56:19,749 INFO total_commands_processed:0
+[25697] 01-08 07:56:19,749 INFO instantaneous_ops_per_sec:0
+[25697] 01-08 07:56:19,749 INFO total_connections_received:0
+[25697] 01-08 07:56:19,749 INFO rejected_connections:0
+[25697] 01-08 07:56:19,749 INFO ========================Period Statistics Dump End===========================
+[25697] 01-08 07:56:30,905 INFO [RocksDB][db/version_set.cc:2847] Creating manifest 6
+
+[25697] 01-08 07:56:30,910 INFO [RocksDB][db/column_family.cc:475] --------------- Options for column family [0]:
+
+[25697] 01-08 07:56:30,911 INFO [RocksDB]              Options.comparator: ardb.comparator
+[25697] 01-08 07:56:30,911 INFO [RocksDB]          Options.merge_operator: ardb.merger
+[25697] 01-08 07:56:30,911 INFO [RocksDB]       Options.compaction_filter: None
+[25697] 01-08 07:56:30,911 INFO [RocksDB]       Options.compaction_filter_factory: ardb.compact_filter_factory
+[25697] 01-08 07:56:30,911 INFO [RocksDB]        Options.memtable_factory: SkipListFactory
+[25697] 01-08 07:56:30,911 INFO [RocksDB]           Options.table_factory: BlockBasedTable
+[25697] 01-08 07:56:30,911 INFO [RocksDB]           table_factory options:   flush_block_policy_factory: FlushBlockBySizePolicyFactory (0x7fd449c08018)
+  cache_index_and_filter_blocks: 0
+  cache_index_and_filter_blocks_with_high_priority: 0
+  pin_l0_filter_and_index_blocks_in_cache: 0
+  index_type: 0
+  hash_index_allow_collision: 1
+  checksum: 1
+  no_block_cache: 0
+  block_cache: 0x7fd449c81cf0
+  block_cache_name: LRUCache
+  block_cache_options:
+    capacity : 536870912
+    num_shard_bits : 6
+    strict_capacity_limit : 0
+    high_pri_pool_ratio: 0.000
+  block_cache_compressed: (nil)
+  persistent_cache: (nil)
+  block_size: 4096
+  block_size_deviation: 10
+  block_restart_interval: 16
+  index_block_restart_interval: 1
+  metadata_block_size: 4096
+  partition_filters: 0
+  use_delta_encoding: 1
+  filter_policy: rocksdb.BuiltinBloomFilter
+  whole_key_filtering: 1
+  verify_compression: 0
+  read_amp_bytes_per_bit: 0
+  format_version: 2
+  enable_index_compression: 1
+  block_align: 0
+
+[25697] 01-08 07:56:30,911 INFO [RocksDB]       Options.write_buffer_size: 268435456
+[25697] 01-08 07:56:30,911 INFO [RocksDB] Options.max_write_buffer_number: 6
+[25697] 01-08 07:56:30,911 INFO [RocksDB]       Options.compression[0]: NoCompression
+[25697] 01-08 07:56:30,911 INFO [RocksDB]       Options.compression[1]: NoCompression
+[25697] 01-08 07:56:30,911 INFO [RocksDB]       Options.compression[2]: Snappy
+[25697] 01-08 07:56:30,911 INFO [RocksDB]       Options.compression[3]: Snappy
+[25697] 01-08 07:56:30,911 INFO [RocksDB]       Options.compression[4]: Snappy
+[25697] 01-08 07:56:30,911 INFO [RocksDB]       Options.compression[5]: Snappy
+[25697] 01-08 07:56:30,911 INFO [RocksDB]       Options.compression[6]: Snappy
+[25697] 01-08 07:56:30,911 INFO [RocksDB]                 Options.bottommost_compression: Disabled
+[25697] 01-08 07:56:30,911 INFO [RocksDB]      Options.prefix_extractor: ardb.prefix_extractor
+[25697] 01-08 07:56:30,911 INFO [RocksDB]  Options.memtable_insert_with_hint_prefix_extractor: nullptr
+[25697] 01-08 07:56:30,911 INFO [RocksDB]            Options.num_levels: 7
+[25697] 01-08 07:56:30,911 INFO [RocksDB]       Options.min_write_buffer_number_to_merge: 2
+[25697] 01-08 07:56:30,911 INFO [RocksDB]    Options.max_write_buffer_number_to_maintain: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB]           Options.compression_opts.window_bits: -14
+[25697] 01-08 07:56:30,911 INFO [RocksDB]                 Options.compression_opts.level: -1
+[25697] 01-08 07:56:30,911 INFO [RocksDB]              Options.compression_opts.strategy: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB]        Options.compression_opts.max_dict_bytes: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB]        Options.compression_opts.zstd_max_train_bytes: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB]     Options.level0_file_num_compaction_trigger: 2
+[25697] 01-08 07:56:30,911 INFO [RocksDB]         Options.level0_slowdown_writes_trigger: 20
+[25697] 01-08 07:56:30,911 INFO [RocksDB]             Options.level0_stop_writes_trigger: 36
+[25697] 01-08 07:56:30,911 INFO [RocksDB]                  Options.target_file_size_base: 67108864
+[25697] 01-08 07:56:30,911 INFO [RocksDB]            Options.target_file_size_multiplier: 1
+[25697] 01-08 07:56:30,911 INFO [RocksDB]               Options.max_bytes_for_level_base: 536870912
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.level_compaction_dynamic_level_bytes: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB]         Options.max_bytes_for_level_multiplier: 10.000000
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.max_bytes_for_level_multiplier_addtl[0]: 1
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.max_bytes_for_level_multiplier_addtl[1]: 1
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.max_bytes_for_level_multiplier_addtl[2]: 1
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.max_bytes_for_level_multiplier_addtl[3]: 1
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.max_bytes_for_level_multiplier_addtl[4]: 1
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.max_bytes_for_level_multiplier_addtl[5]: 1
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.max_bytes_for_level_multiplier_addtl[6]: 1
+[25697] 01-08 07:56:30,911 INFO [RocksDB]      Options.max_sequential_skip_in_iterations: 8
+[25697] 01-08 07:56:30,911 INFO [RocksDB]                   Options.max_compaction_bytes: 1677721600
+[25697] 01-08 07:56:30,911 INFO [RocksDB]                       Options.arena_block_size: 33554432
+[25697] 01-08 07:56:30,911 INFO [RocksDB]  Options.soft_pending_compaction_bytes_limit: 68719476736
+[25697] 01-08 07:56:30,911 INFO [RocksDB]  Options.hard_pending_compaction_bytes_limit: 274877906944
+[25697] 01-08 07:56:30,911 INFO [RocksDB]      Options.rate_limit_delay_max_milliseconds: 100
+[25697] 01-08 07:56:30,911 INFO [RocksDB]               Options.disable_auto_compactions: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB]                       Options.compaction_style: kCompactionStyleLevel
+[25697] 01-08 07:56:30,911 INFO [RocksDB]                         Options.compaction_pri: kByCompensatedSize
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.compaction_options_universal.size_ratio: 1
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.compaction_options_universal.min_merge_width: 2
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.compaction_options_universal.max_merge_width: 4294967295
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.compaction_options_universal.max_size_amplification_percent: 200
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.compaction_options_universal.compression_size_percent: -1
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.compaction_options_universal.stop_style: kCompactionStopStyleTotalSize
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.compaction_options_fifo.max_table_files_size: 1073741824
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.compaction_options_fifo.allow_compaction: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB]Options.compaction_options_fifo.ttl: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB]                  Options.table_properties_collectors: 
+[25697] 01-08 07:56:30,911 INFO [RocksDB]                  Options.inplace_update_support: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB]                Options.inplace_update_num_locks: 10000
+[25697] 01-08 07:56:30,911 INFO [RocksDB]              Options.memtable_prefix_bloom_size_ratio: 0.000000
+[25697] 01-08 07:56:30,911 INFO [RocksDB]  Options.memtable_huge_page_size: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB]                          Options.bloom_locality: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB]                   Options.max_successive_merges: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB]               Options.optimize_filters_for_hits: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB]               Options.paranoid_file_checks: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB]               Options.force_consistency_checks: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB]               Options.report_bg_io_stats: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB]                              Options.ttl: 0
+[25697] 01-08 07:56:30,911 INFO [RocksDB][db/db_impl.cc:1396] Created column family [0] (ID 1)
+[25697] 01-08 07:56:30,913 INFO Create ColumnFamilyHandle with name:0 success.
+[25697] 01-08 07:56:37,705 INFO [RocksDB][db/db_impl_write.cc:1373] [0] New memtable created with log file: #9. Immutable memtables: 0.
+
+[25697] 01-08 07:56:45,632 INFO [RocksDB][db/db_impl_write.cc:1373] [0] New memtable created with log file: #10. Immutable memtables: 1.
+
+[25697] 01-08 07:56:45,633 INFO [RocksDB][db/db_impl_compaction_flush.cc:80] [JOB 2] Syncing log #3
+[25697] 01-08 07:56:46,111 INFO [RocksDB][db/db_impl_compaction_flush.cc:80] [JOB 2] Syncing log #9
+[25697] 01-08 07:56:47,577 INFO [RocksDB](Original Log Time 2020/01/08-07:56:45.633077) [db/db_impl_compaction_flush.cc:1424] Calling FlushMemTableToOutputFile with column family [0], flush slots available 4, compaction slots available 1, flush slots scheduled 1, compaction slots scheduled 0
+[25697] 01-08 07:56:47,577 INFO [RocksDB][db/flush_job.cc:301] [0] [JOB 2] Flushing memtable with next log file: 9
+
+[25697] 01-08 07:56:47,577 INFO [RocksDB][db/flush_job.cc:301] [0] [JOB 2] Flushing memtable with next log file: 10
+
+[25697] 01-08 07:56:47,577 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470207577383, "job": 2, "event": "flush_started", "num_memtables": 2, "num_entries": 3314319, "num_deletes": 0, "memory_usage": 517137008, "flush_reason": "Write Buffer Full"}
+[25697] 01-08 07:56:47,577 INFO [RocksDB][db/flush_job.cc:331] [0] [JOB 2] Level-0 flush table #11: started
+[25697] 01-08 07:56:54,369 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470214369074, "cf_name": "0", "job": 2, "event": "table_file_creation", "file_number": 11, "file_size": 322277045, "table_properties": {"data_size": 313124457, "index_size": 4200374, "filter_size": 4951172, "raw_key_size": 130427805, "raw_average_key_size": 42, "raw_value_size": 250825069, "raw_average_value_size": 81, "num_data_blocks": 78015, "num_entries": 3077590, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:56:54,369 INFO [RocksDB][db/flush_job.cc:371] [0] [JOB 2] Level-0 flush table #11: 322277045 bytes OK
+[25697] 01-08 07:56:54,371 INFO [RocksDB](Original Log Time 2020/01/08-07:56:54.370245) [db/memtable_list.cc:377] [0] Level-0 commit table #11 started
+[25697] 01-08 07:56:54,371 INFO [RocksDB](Original Log Time 2020/01/08-07:56:54.371659) [db/memtable_list.cc:409] [0] Level-0 commit table #11: memtable #1 done
+[25697] 01-08 07:56:54,371 INFO [RocksDB](Original Log Time 2020/01/08-07:56:54.371664) [db/memtable_list.cc:409] [0] Level-0 commit table #11: memtable #2 done
+[25697] 01-08 07:56:54,371 INFO [RocksDB](Original Log Time 2020/01/08-07:56:54.371677) EVENT_LOG_v1 {"time_micros": 1578470214371669, "job": 2, "event": "flush_finished", "output_compression": "NoCompression", "lsm_state": [1, 0, 0, 0, 0, 0, 0], "immutable_memtables": 0}
+[25697] 01-08 07:56:54,371 INFO [RocksDB](Original Log Time 2020/01/08-07:56:54.371699) [db/db_impl_compaction_flush.cc:177] [0] Level summary: base level 1 max bytes base 536870912 files[1 0 0 0 0 0 0] max score 0.60
+
+[25697] 01-08 07:56:54,371 INFO [RocksDB][db/db_impl_files.cc:342] [JOB 2] Try to delete WAL files size 391345934, prev total WAL file size 576795649, number of live WAL files 3.
+
+[25697] 01-08 07:56:55,451 INFO [RocksDB][db/db_impl_write.cc:1373] [0] New memtable created with log file: #12. Immutable memtables: 0.
+
+[25697] 01-08 07:57:05,149 INFO [RocksDB][db/db_impl_write.cc:1373] [0] New memtable created with log file: #13. Immutable memtables: 1.
+
+[25697] 01-08 07:57:05,149 INFO [RocksDB][db/db_impl_compaction_flush.cc:80] [JOB 3] Syncing log #10
+[25697] 01-08 07:57:06,366 INFO [RocksDB][db/db_impl_compaction_flush.cc:80] [JOB 3] Syncing log #12
+[25697] 01-08 07:57:07,953 INFO [RocksDB](Original Log Time 2020/01/08-07:57:05.149729) [db/db_impl_compaction_flush.cc:1424] Calling FlushMemTableToOutputFile with column family [0], flush slots available 4, compaction slots available 1, flush slots scheduled 1, compaction slots scheduled 0
+[25697] 01-08 07:57:07,953 INFO [RocksDB][db/flush_job.cc:301] [0] [JOB 3] Flushing memtable with next log file: 12
+
+[25697] 01-08 07:57:07,953 INFO [RocksDB][db/flush_job.cc:301] [0] [JOB 3] Flushing memtable with next log file: 13
+
+[25697] 01-08 07:57:07,953 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470227953219, "job": 3, "event": "flush_started", "num_memtables": 2, "num_entries": 3575612, "num_deletes": 0, "memory_usage": 520101480, "flush_reason": "Write Buffer Full"}
+[25697] 01-08 07:57:07,953 INFO [RocksDB][db/flush_job.cc:331] [0] [JOB 3] Level-0 flush table #14: started
+[25697] 01-08 07:57:14,554 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470234554193, "cf_name": "0", "job": 3, "event": "table_file_creation", "file_number": 14, "file_size": 347585921, "table_properties": {"data_size": 337708437, "index_size": 4535255, "filter_size": 5341186, "raw_key_size": 140708280, "raw_average_key_size": 42, "raw_value_size": 270596285, "raw_average_value_size": 81, "num_data_blocks": 84146, "num_entries": 3320209, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:57:14,554 INFO [RocksDB][db/flush_job.cc:371] [0] [JOB 3] Level-0 flush table #14: 347585921 bytes OK
+[25697] 01-08 07:57:14,557 INFO [RocksDB](Original Log Time 2020/01/08-07:57:14.555165) [db/memtable_list.cc:377] [0] Level-0 commit table #14 started
+[25697] 01-08 07:57:14,557 INFO [RocksDB](Original Log Time 2020/01/08-07:57:14.557007) [db/memtable_list.cc:409] [0] Level-0 commit table #14: memtable #1 done
+[25697] 01-08 07:57:14,557 INFO [RocksDB](Original Log Time 2020/01/08-07:57:14.557009) [db/memtable_list.cc:409] [0] Level-0 commit table #14: memtable #2 done
+[25697] 01-08 07:57:14,557 INFO [RocksDB](Original Log Time 2020/01/08-07:57:14.557040) EVENT_LOG_v1 {"time_micros": 1578470234557024, "job": 3, "event": "flush_finished", "output_compression": "NoCompression", "lsm_state": [2, 0, 0, 0, 0, 0, 0], "immutable_memtables": 0}
+[25697] 01-08 07:57:14,557 INFO [RocksDB](Original Log Time 2020/01/08-07:57:14.557056) [db/db_impl_compaction_flush.cc:177] [0] Level summary: base level 1 max bytes base 536870912 files[2 0 0 0 0 0 0] max score 1.25
+
+[25697] 01-08 07:57:14,557 INFO [RocksDB][db/db_impl_files.cc:342] [JOB 3] Try to delete WAL files size 422285922, prev total WAL file size 603794113, number of live WAL files 3.
+
+[25697] 01-08 07:57:14,557 WARN [RocksDB][db/db_impl.cc:491] ------- DUMPING STATS -------
+[25697] 01-08 07:57:14,557 WARN [RocksDB][db/db_impl.cc:492] 
+** DB Stats **
+Uptime(secs): 55.8 total, 55.8 interval
+Cumulative writes: 1203K writes, 8426K keys, 1202K commit groups, 1.0 writes per commit group, ingest: 0.93 GB, 17.00 MB/s
+Cumulative WAL: 1203K writes, 0 syncs, 1203822.00 writes per sync, written: 0.93 GB, 17.00 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 1203K writes, 8426K keys, 1202K commit groups, 1.0 writes per commit group, ingest: 949.04 MB, 17.00 MB/s
+Interval WAL: 1203K writes, 0 syncs, 1203822.00 writes per sync, written: 0.93 MB, 17.00 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sum      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0     
+[25697] 01-08 07:57:14,557 INFO [RocksDB][db/compaction_job.cc:1531] [0] [JOB 4] Compacting 2@0 files to L1, score 1.25
+[25697] 01-08 07:57:14,557 INFO [RocksDB][db/compaction_job.cc:1535] [0] Compaction start summary: Base version 4 Base level 0, inputs: [14(331MB) 11(307MB)]
+
+[25697] 01-08 07:57:14,557 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470234557432, "job": 4, "event": "compaction_started", "compaction_reason": "LevelL0FilesNum", "files_L0": [14, 11], "score": 1.24772, "input_data_size": 669862966}
+[25697] 01-08 07:57:15,902 INFO [RocksDB][db/db_impl_write.cc:1373] [0] New memtable created with log file: #16. Immutable memtables: 0.
+
+[25697] 01-08 07:57:16,031 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 4] Generated table #15: 1202236 keys, 69794002 bytes
+[25697] 01-08 07:57:16,031 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470236031826, "cf_name": "0", "job": 4, "event": "table_file_creation", "file_number": 15, "file_size": 69794002, "table_properties": {"data_size": 67112406, "index_size": 978364, "filter_size": 1702201, "raw_key_size": 57327683, "raw_average_key_size": 47, "raw_value_size": 27842827, "raw_average_value_size": 23, "num_data_blocks": 16599, "num_entries": 1202236, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:57:17,329 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 4] Generated table #17: 597556 keys, 68989359 bytes
+[25697] 01-08 07:57:17,330 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470237330005, "cf_name": "0", "job": 4, "event": "table_file_creation", "file_number": 17, "file_size": 68989359, "table_properties": {"data_size": 67112218, "index_size": 888173, "filter_size": 987937, "raw_key_size": 24597439, "raw_average_key_size": 41, "raw_value_size": 56767847, "raw_average_value_size": 95, "num_data_blocks": 16739, "num_entries": 597556, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:57:18,634 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 4] Generated table #18: 597539 keys, 68990353 bytes
+[25697] 01-08 07:57:18,634 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470238634214, "cf_name": "0", "job": 4, "event": "table_file_creation", "file_number": 18, "file_size": 68990353, "table_properties": {"data_size": 67112775, "index_size": 888620, "filter_size": 987927, "raw_key_size": 24596172, "raw_average_key_size": 41, "raw_value_size": 56766178, "raw_average_value_size": 94, "num_data_blocks": 16740, "num_entries": 597539, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:57:19,934 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 4] Generated table #19: 597523 keys, 68989143 bytes
+[25697] 01-08 07:57:19,934 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470239934535, "cf_name": "0", "job": 4, "event": "table_file_creation", "file_number": 19, "file_size": 68989143, "table_properties": {"data_size": 67111717, "index_size": 888497, "filter_size": 987898, "raw_key_size": 24594229, "raw_average_key_size": 41, "raw_value_size": 56764712, "raw_average_value_size": 95, "num_data_blocks": 16739, "num_entries": 597523, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:57:21,256 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 4] Generated table #20: 597514 keys, 68987671 bytes
+[25697] 01-08 07:57:21,256 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470241256512, "cf_name": "0", "job": 4, "event": "table_file_creation", "file_number": 20, "file_size": 68987671, "table_properties": {"data_size": 67110296, "index_size": 888461, "filter_size": 987883, "raw_key_size": 24593518, "raw_average_key_size": 41, "raw_value_size": 56763875, "raw_average_value_size": 95, "num_data_blocks": 16739, "num_entries": 597514, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:57:22,566 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 4] Generated table #21: 597526 keys, 68987112 bytes
+[25697] 01-08 07:57:22,566 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470242566471, "cf_name": "0", "job": 4, "event": "table_file_creation", "file_number": 21, "file_size": 68987112, "table_properties": {"data_size": 67109822, "index_size": 888360, "filter_size": 987899, "raw_key_size": 24595128, "raw_average_key_size": 41, "raw_value_size": 56764925, "raw_average_value_size": 94, "num_data_blocks": 16739, "num_entries": 597526, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:57:23,947 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 4] Generated table #22: 597539 keys, 68990491 bytes
+[25697] 01-08 07:57:23,947 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470243947032, "cf_name": "0", "job": 4, "event": "table_file_creation", "file_number": 22, "file_size": 68990491, "table_properties": {"data_size": 67112940, "index_size": 888593, "filter_size": 987927, "raw_key_size": 24597195, "raw_average_key_size": 41, "raw_value_size": 56766178, "raw_average_value_size": 94, "num_data_blocks": 16740, "num_entries": 597539, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:57:25,248 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 4] Generated table #23: 597525 keys, 68986901 bytes
+[25697] 01-08 07:57:25,248 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470245248228, "cf_name": "0", "job": 4, "event": "table_file_creation", "file_number": 23, "file_size": 68986901, "table_properties": {"data_size": 67109682, "index_size": 888283, "filter_size": 987905, "raw_key_size": 24595336, "raw_average_key_size": 41, "raw_value_size": 56764920, "raw_average_value_size": 95, "num_data_blocks": 16740, "num_entries": 597525, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:57:26,549 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 4] Generated table #24: 597515 keys, 68989718 bytes
+[25697] 01-08 07:57:26,549 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470246549230, "cf_name": "0", "job": 4, "event": "table_file_creation", "file_number": 24, "file_size": 68989718, "table_properties": {"data_size": 67111874, "index_size": 888905, "filter_size": 987908, "raw_key_size": 24594465, "raw_average_key_size": 41, "raw_value_size": 56763880, "raw_average_value_size": 94, "num_data_blocks": 16741, "num_entries": 597515, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:57:27,456 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 4] Generated table #25: 415325 keys, 47944776 bytes
+[25697] 01-08 07:57:27,456 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470247456343, "cf_name": "0", "job": 4, "event": "table_file_creation", "file_number": 25, "file_size": 47944776, "table_properties": {"data_size": 46641317, "index_size": 615798, "filter_size": 686631, "raw_key_size": 17044901, "raw_average_key_size": 41, "raw_value_size": 39455956, "raw_average_value_size": 95, "num_data_blocks": 11633, "num_entries": 415325, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:57:27,457 INFO [RocksDB][db/compaction_job.cc:1287] [0] [JOB 4] Compacted 2@0 files to L1 => 669649526 bytes
+[25697] 01-08 07:57:27,459 INFO [RocksDB](Original Log Time 2020/01/08-07:57:27.459052) [db/compaction_job.cc:685] [0] compacted to: base level 1 max bytes base 536870912 files[0 10 0 0 0 0 0] max score 1.25, MB/sec: 51.9 rd, 51.9 wr, level 1, files in(2, 0) out(10) MB in(638.8, 0.0) out(638.6), read-write-amplify(2.0) write-amplify(1.0) OK, records in: 6397799, records dropped: 1 output_compression: NoCompression
+
+[25697] 01-08 07:57:27,459 INFO [RocksDB](Original Log Time 2020/01/08-07:57:27.459065) EVENT_LOG_v1 {"time_micros": 1578470247459060, "job": 4, "event": "compaction_finished", "compaction_time_micros": 12900122, "output_level": 1, "num_output_files": 10, "total_output_size": 669649526, "num_input_records": 6397799, "num_output_records": 6397798, "num_subcompactions": 1, "output_compression": "NoCompression", "num_single_delete_mismatches": 0, "num_single_delete_fallthrough": 0, "lsm_state": [0, 10, 0, 0, 0, 0, 0]}
+[25697] 01-08 07:57:27,489 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470247489696, "job": 4, "event": "table_file_deletion", "file_number": 14}
+[25697] 01-08 07:57:27,518 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470247518547, "job": 4, "event": "table_file_deletion", "file_number": 11}
+[25697] 01-08 07:57:27,518 INFO [RocksDB][db/compaction_job.cc:1531] [0] [JOB 5] Compacting 1@1 files to L2, score 1.25
+[25697] 01-08 07:57:27,518 INFO [RocksDB][db/compaction_job.cc:1535] [0] Compaction start summary: Base version 5 Base level 1, inputs: [15(66MB)]
+
+[25697] 01-08 07:57:27,518 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470247518598, "job": 5, "event": "compaction_started", "compaction_reason": "LevelMaxLevelSize", "files_L1": [15], "score": 1.24732, "input_data_size": 69794002}
+[25697] 01-08 07:57:28,772 INFO [RocksDB][db/db_impl_write.cc:1373] [0] New memtable created with log file: #27. Immutable memtables: 1.
+
+[25697] 01-08 07:57:28,772 INFO [RocksDB][db/db_impl_compaction_flush.cc:80] [JOB 6] Syncing log #13
+[25697] 01-08 07:57:29,577 INFO [RocksDB][db/db_impl_compaction_flush.cc:80] [JOB 6] Syncing log #16
+[25697] 01-08 07:57:29,582 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 5] Generated table #26: 1202236 keys, 54179044 bytes
+[25697] 01-08 07:57:29,582 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470249582618, "cf_name": "0", "job": 5, "event": "table_file_creation", "file_number": 26, "file_size": 54179044, "table_properties": {"data_size": 51973235, "index_size": 978060, "filter_size": 1672633, "raw_key_size": 57327683, "raw_average_key_size": 47, "raw_value_size": 27842827, "raw_average_value_size": 23, "num_data_blocks": 16599, "num_entries": 1202236, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:57:31,416 INFO [RocksDB][db/compaction_job.cc:1287] [0] [JOB 5] Compacted 1@1 files to L2 => 54179044 bytes
+[25697] 01-08 07:57:31,418 INFO [RocksDB](Original Log Time 2020/01/08-07:57:28.772535) [db/db_impl_compaction_flush.cc:1424] Calling FlushMemTableToOutputFile with column family [0], flush slots available 4, compaction slots available 1, flush slots scheduled 1, compaction slots scheduled 1
+[25697] 01-08 07:57:31,418 INFO [RocksDB][db/flush_job.cc:301] [0] [JOB 6] Flushing memtable with next log file: 16
+
+[25697] 01-08 07:57:31,418 INFO [RocksDB][db/flush_job.cc:301] [0] [JOB 6] Flushing memtable with next log file: 27
+
+[25697] 01-08 07:57:31,418 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470251418352, "job": 6, "event": "flush_started", "num_memtables": 2, "num_entries": 3575575, "num_deletes": 0, "memory_usage": 520098808, "flush_reason": "Write Buffer Full"}
+[25697] 01-08 07:57:31,418 INFO [RocksDB][db/flush_job.cc:331] [0] [JOB 6] Level-0 flush table #28: started
+[25697] 01-08 07:57:31,418 INFO [RocksDB](Original Log Time 2020/01/08-07:57:31.418304) [db/compaction_job.cc:685] [0] compacted to: base level 1 max bytes base 536870912 files[0 9 1 0 0 0 0] max score 1.12, MB/sec: 17.9 rd, 13.9 wr, level 2, files in(1, 0) out(1) MB in(66.6, 0.0) out(51.7), read-write-amplify(1.8) write-amplify(0.8) OK, records in: 1202236, records dropped: 0 output_compression: Snappy
+
+[25697] 01-08 07:57:31,418 INFO [RocksDB](Original Log Time 2020/01/08-07:57:31.418339) EVENT_LOG_v1 {"time_micros": 1578470251418331, "job": 5, "event": "compaction_finished", "compaction_time_micros": 3897458, "output_level": 2, "num_output_files": 1, "total_output_size": 54179044, "num_input_records": 1202236, "num_output_records": 1202236, "num_subcompactions": 1, "output_compression": "Snappy", "num_single_delete_mismatches": 0, "num_single_delete_fallthrough": 0, "lsm_state": [0, 9, 1, 0, 0, 0, 0]}
+[25697] 01-08 07:57:31,418 INFO [RocksDB][db/compaction_job.cc:1531] [0] [JOB 7] Compacting 1@1 files to L2, score 1.12
+[25697] 01-08 07:57:31,418 INFO [RocksDB][db/compaction_job.cc:1535] [0] Compaction start summary: Base version 6 Base level 1, inputs: [22(65MB)]
+
+[25697] 01-08 07:57:31,418 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470251418973, "job": 7, "event": "compaction_started", "compaction_reason": "LevelMaxLevelSize", "files_L1": [22], "score": 1.11732, "input_data_size": 68990491}
+[25697] 01-08 07:57:34,153 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 7] Generated table #29: 597539 keys, 68588539 bytes
+[25697] 01-08 07:57:34,153 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470254153584, "cf_name": "0", "job": 7, "event": "table_file_creation", "file_number": 29, "file_size": 68588539, "table_properties": {"data_size": 67112940, "index_size": 888593, "filter_size": 987927, "raw_key_size": 24597195, "raw_average_key_size": 41, "raw_value_size": 56766178, "raw_average_value_size": 94, "num_data_blocks": 16740, "num_entries": 597539, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:57:34,157 INFO [RocksDB][db/compaction_job.cc:1287] [0] [JOB 7] Compacted 1@1 files to L2 => 68588539 bytes
+[25697] 01-08 07:57:34,158 INFO [RocksDB](Original Log Time 2020/01/08-07:57:34.158851) [db/compaction_job.cc:685] [0] compacted to: base level 1 max bytes base 536870912 files[0 8 2 0 0 0 0] max score 0.99, MB/sec: 25.2 rd, 25.0 wr, level 2, files in(1, 0) out(1) MB in(65.8, 0.0) out(65.4), read-write-amplify(2.0) write-amplify(1.0) OK, records in: 597539, records dropped: 0 output_compression: Snappy
+
+[25697] 01-08 07:57:34,158 INFO [RocksDB](Original Log Time 2020/01/08-07:57:34.158876) EVENT_LOG_v1 {"time_micros": 1578470254158859, "job": 7, "event": "compaction_finished", "compaction_time_micros": 2738169, "output_level": 2, "num_output_files": 1, "total_output_size": 68588539, "num_input_records": 597539, "num_output_records": 597539, "num_subcompactions": 1, "output_compression": "Snappy", "num_single_delete_mismatches": 0, "num_single_delete_fallthrough": 0, "lsm_state": [0, 8, 2, 0, 0, 0, 0]}
+[25697] 01-08 07:57:39,387 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470259387662, "cf_name": "0", "job": 6, "event": "table_file_creation", "file_number": 28, "file_size": 347678724, "table_properties": {"data_size": 337799985, "index_size": 4536308, "filter_size": 5341388, "raw_key_size": 140711030, "raw_average_key_size": 42, "raw_value_size": 270594373, "raw_average_value_size": 81, "num_data_blocks": 84166, "num_entries": 3320177, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:57:39,387 INFO [RocksDB][db/flush_job.cc:371] [0] [JOB 6] Level-0 flush table #28: 347678724 bytes OK
+[25697] 01-08 07:57:39,390 INFO [RocksDB](Original Log Time 2020/01/08-07:57:39.388715) [db/memtable_list.cc:377] [0] Level-0 commit table #28 started
+[25697] 01-08 07:57:39,390 INFO [RocksDB](Original Log Time 2020/01/08-07:57:39.390416) [db/memtable_list.cc:409] [0] Level-0 commit table #28: memtable #1 done
+[25697] 01-08 07:57:39,390 INFO [RocksDB](Original Log Time 2020/01/08-07:57:39.390417) [db/memtable_list.cc:409] [0] Level-0 commit table #28: memtable #2 done
+[25697] 01-08 07:57:39,390 INFO [RocksDB](Original Log Time 2020/01/08-07:57:39.390429) EVENT_LOG_v1 {"time_micros": 1578470259390424, "job": 6, "event": "flush_finished", "output_compression": "NoCompression", "lsm_state": [1, 8, 2, 0, 0, 0, 0], "immutable_memtables": 0}
+[25697] 01-08 07:57:39,390 INFO [RocksDB](Original Log Time 2020/01/08-07:57:39.390440) [db/db_impl_compaction_flush.cc:177] [0] Level summary: base level 1 max bytes base 536870912 files[1 8 2 0 0 0 0] max score 0.99
+
+[25697] 01-08 07:57:39,390 INFO [RocksDB][db/db_impl_files.cc:342] [JOB 6] Try to delete WAL files size 422286713, prev total WAL file size 558430509, number of live WAL files 3.
+
+[25697] 01-08 07:57:39,396 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470259396875, "job": 6, "event": "table_file_deletion", "file_number": 22}
+[25697] 01-08 07:57:39,426 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470259426517, "job": 6, "event": "table_file_deletion", "file_number": 15}
+[25697] 01-08 07:57:44,574 INFO [RocksDB][db/db_impl_write.cc:1373] [0] New memtable created with log file: #30. Immutable memtables: 0.
+
+[25697] 01-08 07:58:12,920 INFO [RocksDB][db/db_impl_write.cc:1373] [0] New memtable created with log file: #31. Immutable memtables: 1.
+
+[25697] 01-08 07:58:12,920 INFO [RocksDB][db/db_impl_compaction_flush.cc:80] [JOB 8] Syncing log #27
+[25697] 01-08 07:58:12,920 INFO [RocksDB][db/db_impl_compaction_flush.cc:80] [JOB 8] Syncing log #30
+[25697] 01-08 07:58:13,511 INFO [RocksDB](Original Log Time 2020/01/08-07:58:12.920230) [db/db_impl_compaction_flush.cc:1424] Calling FlushMemTableToOutputFile with column family [0], flush slots available 4, compaction slots available 1, flush slots scheduled 1, compaction slots scheduled 0
+[25697] 01-08 07:58:13,511 INFO [RocksDB][db/flush_job.cc:301] [0] [JOB 8] Flushing memtable with next log file: 30
+
+[25697] 01-08 07:58:13,511 INFO [RocksDB][db/flush_job.cc:301] [0] [JOB 8] Flushing memtable with next log file: 31
+
+[25697] 01-08 07:58:13,511 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470293511710, "job": 8, "event": "flush_started", "num_memtables": 2, "num_entries": 3575186, "num_deletes": 0, "memory_usage": 520101768, "flush_reason": "Write Buffer Full"}
+[25697] 01-08 07:58:13,511 INFO [RocksDB][db/flush_job.cc:331] [0] [JOB 8] Level-0 flush table #32: started
+[25697] 01-08 07:58:20,139 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470300139507, "cf_name": "0", "job": 8, "event": "table_file_creation", "file_number": 32, "file_size": 347584594, "table_properties": {"data_size": 337707373, "index_size": 4535612, "filter_size": 5340566, "raw_key_size": 140692182, "raw_average_key_size": 42, "raw_value_size": 270564040, "raw_average_value_size": 81, "num_data_blocks": 84143, "num_entries": 3319815, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:58:20,139 INFO [RocksDB][db/flush_job.cc:371] [0] [JOB 8] Level-0 flush table #32: 347584594 bytes OK
+[25697] 01-08 07:58:20,142 INFO [RocksDB](Original Log Time 2020/01/08-07:58:20.140644) [db/memtable_list.cc:377] [0] Level-0 commit table #32 started
+[25697] 01-08 07:58:20,142 INFO [RocksDB](Original Log Time 2020/01/08-07:58:20.141946) [db/memtable_list.cc:409] [0] Level-0 commit table #32: memtable #1 done
+[25697] 01-08 07:58:20,142 INFO [RocksDB](Original Log Time 2020/01/08-07:58:20.141958) [db/memtable_list.cc:409] [0] Level-0 commit table #32: memtable #2 done
+[25697] 01-08 07:58:20,142 INFO [RocksDB](Original Log Time 2020/01/08-07:58:20.141977) EVENT_LOG_v1 {"time_micros": 1578470300141962, "job": 8, "event": "flush_finished", "output_compression": "NoCompression", "lsm_state": [2, 8, 2, 0, 0, 0, 0], "immutable_memtables": 0}
+[25697] 01-08 07:58:20,142 INFO [RocksDB](Original Log Time 2020/01/08-07:58:20.141989) [db/db_impl_compaction_flush.cc:177] [0] Level summary: base level 1 max bytes base 536870912 files[2 8 2 0 0 0 0] max score 1.30
+
+[25697] 01-08 07:58:20,142 INFO [RocksDB][db/db_impl_files.cc:342] [JOB 8] Try to delete WAL files size 422237135, prev total WAL file size 473848843, number of live WAL files 3.
+
+[25697] 01-08 07:58:20,142 INFO [RocksDB][db/compaction_job.cc:1531] [0] [JOB 9] Compacting 2@0 + 8@1 files to L1, score 1.30
+[25697] 01-08 07:58:20,142 INFO [RocksDB][db/compaction_job.cc:1535] [0] Compaction start summary: Base version 9 Base level 0, inputs: [32(331MB) 28(331MB)], [17(65MB) 18(65MB) 19(65MB) 20(65MB) 21(65MB) 23(65MB) 24(65MB) 25(45MB)]
+
+[25697] 01-08 07:58:20,142 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470300142152, "job": 9, "event": "compaction_started", "compaction_reason": "LevelL0FilesNum", "files_L0": [32, 28], "files_L1": [17, 18, 19, 20, 21, 23, 24, 25], "score": 1.29503, "input_data_size": 1226128351}
+[25697] 01-08 07:58:21,566 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 9] Generated table #33: 1224954 keys, 69822656 bytes
+[25697] 01-08 07:58:21,566 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470301566814, "cf_name": "0", "job": 9, "event": "table_file_creation", "file_number": 33, "file_size": 69822656, "table_properties": {"data_size": 67111018, "index_size": 981664, "filter_size": 1728943, "raw_key_size": 58560365, "raw_average_key_size": 47, "raw_value_size": 26729833, "raw_average_value_size": 21, "num_data_blocks": 16592, "num_entries": 1224954, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:58:22,880 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 9] Generated table #34: 597598 keys, 68986796 bytes
+[25697] 01-08 07:58:22,880 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470302880979, "cf_name": "0", "job": 9, "event": "table_file_creation", "file_number": 34, "file_size": 68986796, "table_properties": {"data_size": 67109032, "index_size": 888721, "filter_size": 988012, "raw_key_size": 24599930, "raw_average_key_size": 41, "raw_value_size": 56771819, "raw_average_value_size": 95, "num_data_blocks": 16742, "num_entries": 597598, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:58:24,252 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 9] Generated table #35: 597624 keys, 68987741 bytes
+[25697] 01-08 07:58:24,252 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470304252891, "cf_name": "0", "job": 9, "event": "table_file_creation", "file_number": 35, "file_size": 68987741, "table_properties": {"data_size": 67110168, "index_size": 888511, "filter_size": 988031, "raw_key_size": 24598905, "raw_average_key_size": 41, "raw_value_size": 56774325, "raw_average_value_size": 95, "num_data_blocks": 16741, "num_entries": 597624, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:58:25,554 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 9] Generated table #36: 597595 keys, 68990847 bytes
+[25697] 01-08 07:58:25,554 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470305554976, "cf_name": "0", "job": 9, "event": "table_file_creation", "file_number": 36, "file_size": 68990847, "table_properties": {"data_size": 67112392, "index_size": 889386, "filter_size": 988038, "raw_key_size": 24597109, "raw_average_key_size": 41, "raw_value_size": 56771507, "raw_average_value_size": 94, "num_data_blocks": 16745, "num_entries": 597595, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:58:26,858 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 9] Generated table #37: 597630 keys, 68991004 bytes
+[25697] 01-08 07:58:26,858 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470306858228, "cf_name": "0", "job": 9, "event": "table_file_creation", "file_number": 37, "file_size": 68991004, "table_properties": {"data_size": 67112826, "index_size": 889086, "filter_size": 988061, "raw_key_size": 24600546, "raw_average_key_size": 41, "raw_value_size": 56774850, "raw_average_value_size": 95, "num_data_blocks": 16743, "num_entries": 597630, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:58:28,168 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 9] Generated table #38: 597613 keys, 68989560 bytes
+[25697] 01-08 07:58:28,168 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470308168914, "cf_name": "0", "job": 9, "event": "table_file_creation", "file_number": 38, "file_size": 68989560, "table_properties": {"data_size": 67111780, "index_size": 888718, "filter_size": 988031, "raw_key_size": 24596823, "raw_average_key_size": 41, "raw_value_size": 56773280, "raw_average_value_size": 95, "num_data_blocks": 16742, "num_entries": 597613, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:58:29,476 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 9] Generated table #39: 597625 keys, 68989539 bytes
+[25697] 01-08 07:58:29,476 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470309476298, "cf_name": "0", "job": 9, "event": "table_file_creation", "file_number": 39, "file_size": 68989539, "table_properties": {"data_size": 67111656, "index_size": 888787, "filter_size": 988065, "raw_key_size": 24599555, "raw_average_key_size": 41, "raw_value_size": 56774330, "raw_average_value_size": 94, "num_data_blocks": 16744, "num_entries": 597625, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:58:30,777 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 9] Generated table #40: 597586 keys, 68987050 bytes
+[25697] 01-08 07:58:30,777 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470310777618, "cf_name": "0", "job": 9, "event": "table_file_creation", "file_number": 40, "file_size": 68987050, "table_properties": {"data_size": 67109159, "index_size": 888864, "filter_size": 987996, "raw_key_size": 24595782, "raw_average_key_size": 41, "raw_value_size": 56770670, "raw_average_value_size": 95, "num_data_blocks": 16742, "num_entries": 597586, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
+[25697] 01-08 07:58:32,158 INFO [RocksDB][db/compaction_job.cc:1211] [0] [JOB 9] Generated table #41: 597643 keys, 68989908 bytes
+[25697] 01-08 07:58:32,158 INFO [RocksDB]EVENT_LOG_v1 {"time_micros": 1578470312158756, "cf_name": "0", "job": 9, "event": "table_file_creation", "file_number": 41, "file_size": 68989908, "table_properties": {"data_size": 67112445, "index_size": 888365, "filter_size": 988067, "raw_key_size": 24599676, "raw_average_key_size": 41, "raw_value_size": 56776103, "raw_average_value_size": 95, "num_data_blocks": 16742, "num_entries": 597643, "filter_policy_name": "rocksdb.BuiltinBloomFilter", "kDeletedKeys": "0", "kMergeOperands": "0"}}
