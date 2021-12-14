@@ -1,5 +1,74 @@
 \section{Related work}
 
+\textcolor{red}{This paper builds upon several prior work done on SSDs. In this section, we briefly outline them and discuss our work in relation to them.}
+
+\subsection{Reducing Memory Footprint}
+% SSD 맵핑 테이블의 쓰기 트래픽을 줄이려는 연구는 지난 십년간 연구의 단골 소재였다. 
+
+The large memory footprint of the mapping table has been a drawback for SSDs.
+Several works attempted to reduce the memory usage of the mapping table. 
+D-FTL performs on-demand paging for the mapping table using DRAM as a translation cache~\cite{gupta2009dftl}.
+It maintains the entire mapping table in flash memory, caching a subset of the translation information in the limited size of DRAM.
+This scheme trade-offs the performance with the memory usage for high-capacity SSDs and it can deliver a poor performance under the workloads with weak locality. 
+
+HP-FTL saves the internal memory space by adopting the hash-based mapping. In the page-level FTL, each entry of the mapping table is typically 4byte-long which represents the PPA (Physical Page Address) for the LPA (Logical Page Address)~\cite{ni2017hash}. 
+HP-FTL determines the physical block to place the incoming data using a hash function. To reduce a hash-collision, HP-FTL use multiple hash functions and each entry of the mapping table maintains the hash function ID effectively used and the physical page offset within the block. As an example, when 4 hash functions are used and a block consists of 64 pages, each entry requires 8-bit only. This size is one fourth of the original one. However, this approach significantly increases the GC(Garbage-Collection) overhead because it randomly scatters writes onto the contiguous LPNs. 
+In addition, the fully associative secondary mapping table, which is used to resolve the hash collision, offsets the benefit of the hash-based mapping by maintaining both LPA and PPA information in the table. 
+
+These works are orthogonal with capacitance-saving techniques that care about the persistence management of the buffered data within DRAM.
+% These works essentially subsume the reduction of required capacitance, but they are orthogonal with capacitance-saving techniques. because the latter one is associated with the persistence management of the buffered data, rather than reducing a DRAM capacity itself.
+% 메모리에 올라온 데이터들이 모두 영속성을 요구하는 것이 아니고 이걸 잘 관리하면 제한적인 DRAM 환경에서 성능까지 더 올릴 수 있음.
+\iffalse
+\EUNJI{DRAM 사이즈를 줄이는 것은 Battery 용량을 절약하는 것보다 상위 개념임. 위의 기법들을 적용해서 DRAM Size 를 엄청 줄인다면, 배터리로 DRAM을 전부 보호하면 됨. 그러나 internal memory usage 의 감소는 latency 증가나 GC overhead 증가 등의 비용이 수반되므로 고성능 SSD에서는 적용이 불가하고, 메모리 크기 감소에도 한계가 있음. 그렇기 때문에 Battery 를 줄이는 연구는 이러한 상황에서도 필요하고, 상기의 일부 연구들과는 orthogonal 함. }
+\fi
+
+\iffalse
+ HP-FTL 에서는 a few hash functions (예: 4개) 을 사용하고 mapping table entry 는 LPN에 해당하는 PPA를 찾기 위해 사용한 hash function id 를 기록. entry 크기를 획기적으로 감소시킴 (예: 1/8).
+(NAS ‘17): 해쉬 이용. 단순히 해쉬 테이블 하나 써서 하는게 아니라 LPN 갯수만큼 entry 를 유지하는 것은 기존 page-level mapping 과 동일한데 PPN 을 적는게 아니라 hash function 을 몇개 (예: 4개) 두고 해쉬값으로 block 을 선택 하고, 그 내부에서의 offset 만 저장. 즉 mapping table 각 entry 의 비트 갯수를 줄여서 맵핑 테이블 사이즈를 줄임. 
+단점: sequential lpn 조차도 여기저기 흩어짐. GC 할 때 성능 나쁨. 
+(윤아 학생 논문 참고하기).
+\fi
+
+
+\subsection{Reducing Write-back Traffic}
+우리 연구랑 가장 관련도가 높은 연구는 mapping table 의 write-back traffic 을 줄이는 연구로 볼 수 있음. SSD 내부 버퍼는 배터리로 보호되는 경우와 아예 배터리가 없는 경우로 양분해서 생각할 수 있는데, 배터리로 모두 보호되는 경우에는 구동되는 동안에는 write-back 이 필요없음. 배터리가 없는 경우에는 너무 늦지 않게 mapping table의 변경사항을 플래시 메모리에 적어 주어야 함. 그렇지 않으면 data loss 가 발생하거나 recovery 시 전체 SSD를 scan 해야 하는 상황이 발생함. 
+
+이에 write-back overhead 를 줄이기 위한 다앙햔 기법이 제안되었음. 디테일은 기법마다 차이가 있으나 실제 원리는 비슷함. 버퍼링을 통해 translation update 를 aggregate 시켜 flash memory 로 가는 쓰기량을 절감하는 방식임. 버퍼링 효과를 내는 방식으로 저널링을 쓰기도 하고, sequential LPN을 가상으로 부여하는 방법을 쓰기도 하는 것임. 
+
+\EUNJI{여기서부터는 introduction 에 쓰는 것도 좋아 보임.}
+우리가 제안하는 기법은 이 두 기법 사이에 있음. 보호가 가능한 분량 만큼에 대해서는 write-back 이 필요없으나, 해당 크기를 넘어서는 상황에서는 mapping table 의 효율적인 write-back 이 요구됨. 특히, 배터리가 전혀 없는  스토리지와 달리, 배터리로 보호되는 SSD는 버퍼에 쓰여진 데이터에 대해서도 모두 영속성을 보장하기 때문에 보호 가능한 범위를 벗어나는 순간 즉각적인 write-back 이 필요하다. 
+
+이러한 상황을 고려했을 때, 버퍼 관리 기법에서 추구해야할 특성은 두가지로 생각해볼 수 있다. 
+
+1) 매 순간 평균 dirty memory footprint 가 작아야 하고,  
+2) 버퍼링 write-back cost 를 줄일 수 있도록 최대한 updates 를 aggregate 시킬 수 있어야 함. 
+
+
+제안하는 기법은 상기 두 개의 목표를 달성하기 위해, 동일한 mapping table page 에 업데이트를 필요로하는 write 를 그룹핑하고, dirty memory footprint 의 증가를 가장 적게 일으키도록 write 
+4GB인데 4KB 단위로 맵핑 테이블 유지하면, 1M 개의 entry. 4byte 면 4MB 임. 
+
+\EUNJI{우리가 탐색하고자 하는 기법은 기존의 상황에서 배터리 제한적으로 보호되는 버퍼를 가정. constraint 가 하나 더 늘어남. 이 경우 write-back의 delay 발생 시 이미 사용자에게는 persistent 하다고 보장된 데이터를 loss 하거나 전체 SSD를 모두 scan 해야 하는 비용이 발생할 수 있어,  }
+% SSD 맵핑 테이블의 쓰기 트래픽을 줄이려는 연구는 지난 십년간 연구의 단골 소재였다. 
+\EUNJI{
+% Reducing the flush overhead of the mapping table has been extensively studied for a past decade. 
+% Those works have no consideration for the capacitor limitation, but they have a similarity to our work in that they buffer the updates for the translation pages to reduce the flush cost. 
+S-FTL holds the translation updates in DRAM and flushes the mapping table pages when the number of dirty entries of the page goes beyond the threshold~\cite{jiang2011s}.
+S-FTL (MSST ‘11): 캐슁 (페이지 단위) + extent 자료구조 
+SHRD (FAST ‘17): 호스트에서 저널링 하는 것과 비슷. 임시로 sequential LPN 할당 (저널 주소로 생각하면 됨) 하고 데이터를 특정 영역 (임시 Sequential LPN 이 나타낼 수 있는 최대 영역)에 씀. 이게 넘어가면 임시 LPN을 원래의 LPN으로 업데이트. 이 때 원래의 LPN을 sorting 해서 업데이트. (user request 에 write buffer 쓰지 않음.) ⇒ 어떻게 보면 우리 것과 비슷.  
+}
+
+% S-FTL (MSST ‘11): 더티 엔트리들을 모아서 메모리에 들고 있다가 각 페이지의 더티 엔트리가 일정 수준 이상이 되면 write-back (은: 메모리는 배터리로 보호되나?) . Cache 에 있던 mapping table 쓸 때에도 더티 페이지 신경 안쓰고 쫓아내고 나중에 다시 읽어왔을 때 기록 (은: 그러니까 해당 맵핑 테이블에 속한 애들이 메모리에 더티한 채로 있어도 일단 내쫓음.). 
+% ⇒ 캐쉬 크기 가변적. 언제 올라올지 모르고 완성도 낮음. 
+
+% 맵테이블의 write-back 오버헤드 줄이는 연구. 겉보기에는 다른데 사실은 다 Logging 기법을 이용해 버퍼링 효과를 높이는 방식임. 
+Spartan (ISLPED ‘20): 저널을 두고 mapping entry 를 저널에 썼다가 저널이 꽉차면 checkpoint or journal flush. 
+
+
+
+
+
+
+
 \subsection{Reducing Capacitance Requirement}
 The need for reducing the energy consumption needed for power-loss protection
 arises in different contexts. A few studies reduce the total energy consumption

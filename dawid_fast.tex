@@ -24,9 +24,9 @@
 \usepackage{kotex}
 \usepackage{graphicx}
 \usepackage{subfig}
+\usepackage{xcolor}
 
-\newcommand{\EUNJI}[1]{\textcolor{purple}{#1}}
-\newcommand{\JOHN}[1]{\textcolor{blue}{#1}}
+\newcommand{\EUNJI}[1]{\textcolor{blue}{#1}}
 \newcommand{\FOOTBF}[1]{\footnotesize{\bf{#1}}}
 \newcommand{\WHERETOGO}[1]{\textcolor{orange}{WHERETOGO: #1}}
 \newcommand{\ours}{\texttt{Dawid}}
@@ -37,10 +37,14 @@
 \date{}
 
 %make title bold and 14 pt font (Latex default is non-bold, 16 pt)
-\title{\Large \bf Wonderful : A Terrific Application and Fascinating Paper}
+% \title{\Large \bf Wonderful : A Terrific Application and Fascinating Paper}
+\title{\Large \bf Jonathan: A Cost-effective I/O Scheduling Scheme for SSDs under Capacitance Constraints}
 
 \author{
 {\rm Sanghyun Nam}\\
+Soongsil University
+\and
+{\rm Seungmin Shin}\\
 Soongsil University
 \and
 {\rm Eunji Lee}\\
@@ -55,15 +59,23 @@ Soongsil University
 
 
 \subsection*{Abstract}
-Enterprise-class SSDs realize a persistent internal buffer using the capacitors. 
+Enterprise-class SSDs realize a persistent buffer within device using the capacitors. 
 This approach reached a limit as the SSD density outpaces the scaling capability of the capacitors. 
-This paper presents a novel buffer architecture for SSDs under capacitance constraints, called \ours{}.
-Assuming that a portion of buffer 
-\ours{} schedules the write requests such that the number of dirty pages within buffer
-is minimized at a time window. This design significantly mitigates the additional flash writes 
-that are inevitable under capacitance constraints. We implemented \ours{} in an open-source SSD development 
+This paper presents a novel buffer architecture for SSDs under capacitance constraints. 
+We re-order the write requests in a way of minimizing the memory footprint 
+that needs protection. 
+% such that the number of dirty pages within buffer
+% is minimized at a time window. 
+This design reduces the required capacitance to ensure persistence in SSDs 
+at the modest performance loss. 
+% This design significantly mitigates the additional flash writes 
+% wherein the capacitors protect a portion of the buffer. 
+% caused by the limits of capacitance.
+\EUNJI{
+We implemented \ours{} in an open-source SSD development 
 framework. Performance evaluation shows that \ours{} has only 10\% more flash writes 
 than full-protection SSD, while the required capacitence is reduced by 70\%.
+}
 % capacitance limitation of SSD. 
 %SSD density scales up at the fast pace, but other components keep up with the speed. 
 
@@ -81,7 +93,7 @@ than full-protection SSD, while the required capacitence is reduced by 70\%.
 
 \input{01_intro}
 \input{02_related_work}
-%\input{03_dawid_design}
+\input{03_dawid_design}
 \input{04_eval}
 %\input{05_conclusion}
 
