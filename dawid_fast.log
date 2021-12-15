@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  14 DEC 2021 15:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2021.1.31)  15 DEC 2021 18:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -342,59 +342,95 @@ LaTeX Warning: Citation `li2018case' on page 2 undefined on input line 133.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
 
-Overfull \hbox (16.50095pt too wide) in paragraph at lines 8--29
+Overfull \hbox (13.04979pt too wide) in paragraph at lines 8--29
  [][] 
  []
 
-File: ./ycsb_graph/ycsb_16_a.eps Graphic file (type eps)
-<./ycsb_graph/ycsb_16_a.eps>
-File: ./ycsb_graph/ycsb_16_a.eps Graphic file (type eps)
- <./ycsb_graph/ycsb_16_a.eps>
-File: ./ycsb_graph/ycsb_16_a.eps Graphic file (type eps)
+File: ./hit-eps/fileserver_map.trc.rslt.eps Graphic file (type eps)
+<./hit-eps/fileserver_map.trc.rslt.eps>
+File: ./hit-eps/webserver_map.trc.rslt.eps Graphic file (type eps)
+ <./hit-eps/webserver_map.trc.rslt.eps>
+File: ./hit-eps/linkbench_r_map.trc.rslt.eps Graphic file (type eps)
 
-<./ycsb_graph/ycsb_16_a.eps>
-File: ./ycsb_graph/ycsb_16_a.eps Graphic file (type eps)
- <./ycsb_graph/ycsb_16_a.eps>
-Overfull \hbox (1.22011pt too wide) in paragraph at lines 39--48
+<./hit-eps/linkbench_r_map.trc.rslt.eps>
+File: ./hit-eps/ssdtrace-00.blk_w.trc.rslt.eps Graphic file (type eps)
+
+<./hit-eps/ssdtrace-00.blk_w.trc.rslt.eps>
+Overfull \hbox (1.22011pt too wide) in paragraph at lines 38--47
  [][][][][] 
  []
 
-File: ./ycsb_graph/ycsb_16_a.eps Graphic file (type eps)
-<./ycsb_graph/ycsb_16_a.eps>
-File: ./ycsb_graph/ycsb_16_a.eps Graphic file (type eps)
- <./ycsb_graph/ycsb_16_a.eps>
-File: ./ycsb_graph/ycsb_16_a.eps Graphic file (type eps)
+File: ./hit-eps/ssdtrace-01.blk_w.trc.rslt.eps Graphic file (type eps)
+<./hit-eps/ssdtrace-01.blk_w.trc.rslt.eps>
+File: ./hit-eps/2016021616-LUN3.csv_w.trc.rslt.eps Graphic file (type eps)
 
-<./ycsb_graph/ycsb_16_a.eps>
-File: ./ycsb_graph/ycsb_16_a.eps Graphic file (type eps)
- <./ycsb_graph/ycsb_16_a.eps>
-Overfull \hbox (1.22011pt too wide) in paragraph at lines 51--61
+<./hit-eps/2016021616-LUN3.csv_w.trc.rslt.eps>
+File: ./hit-eps/2016021616-LUN4.csv_w.trc.rslt.eps Graphic file (type eps)
+
+<./hit-eps/2016021616-LUN4.csv_w.trc.rslt.eps>
+File: ./hit-eps/2016021618-LUN3.csv_w.trc.rslt.eps Graphic file (type eps)
+
+<./hit-eps/2016021618-LUN3.csv_w.trc.rslt.eps>
+Overfull \hbox (1.22011pt too wide) in paragraph at lines 50--60
  [][][][][] 
  []
 
-File: ./ycsb_graph/ycsb_16_a.eps Graphic file (type eps)
-<./ycsb_graph/ycsb_16_a.eps>
-File: ./ycsb_graph/ycsb_16_a.eps Graphic file (type eps)
- <./ycsb_graph/ycsb_16_a.eps>
-File: ./ycsb_graph/ycsb_16_a.eps Graphic file (type eps)
+File: ./total-traffic/fileserver_map.trc.eps Graphic file (type eps)
+<./total-traffic/fileserver_map.trc.eps>
+File: ./total-traffic/webserver_map.trc.eps Graphic file (type eps)
 
-<./ycsb_graph/ycsb_16_a.eps>
-File: ./ycsb_graph/ycsb_16_a.eps Graphic file (type eps)
- <./ycsb_graph/ycsb_16_a.eps>
-Overfull \hbox (1.22011pt too wide) in paragraph at lines 77--86
+<./total-traffic/webserver_map.trc.eps>
+File: ./total-traffic/linkbench_r_map.trc.eps Graphic file (type eps)
+
+<./total-traffic/linkbench_r_map.trc.eps>
+File: ./total-traffic/ssdtrace-00.blk_w.trc.eps Graphic file (type eps)
+
+<./total-traffic/ssdtrace-00.blk_w.trc.eps>
+Overfull \hbox (1.22011pt too wide) in paragraph at lines 74--83
  [][][][][] 
  []
 
-File: ./ycsb_graph/ycsb_16_a.eps Graphic file (type eps)
-<./ycsb_graph/ycsb_16_a.eps>
-File: ./ycsb_graph/ycsb_16_a.eps Graphic file (type eps)
- <./ycsb_graph/ycsb_16_a.eps>
-File: ./ycsb_graph/ycsb_16_a.eps Graphic file (type eps)
+File: ./total-traffic/ssdtrace-01.blk_w.trc.eps Graphic file (type eps)
+<./total-traffic/ssdtrace-01.blk_w.trc.eps>
+File: ./total-traffic/2016021616-LUN3.csv_w.trc.eps Graphic file (type eps)
 
-<./ycsb_graph/ycsb_16_a.eps>
-File: ./ycsb_graph/ycsb_16_a.eps Graphic file (type eps)
- <./ycsb_graph/ycsb_16_a.eps>
-Overfull \hbox (1.22011pt too wide) in paragraph at lines 89--99
+<./total-traffic/2016021616-LUN3.csv_w.trc.eps>
+File: ./total-traffic/2016021616-LUN4.csv_w.trc.eps Graphic file (type eps)
+
+<./total-traffic/2016021616-LUN4.csv_w.trc.eps>
+File: ./total-traffic/2016021618-LUN3.csv_w.trc.eps Graphic file (type eps)
+
+<./total-traffic/2016021618-LUN3.csv_w.trc.eps>
+Overfull \hbox (1.22011pt too wide) in paragraph at lines 86--96
+ [][][][][] 
+ []
+
+File: ./map-traffic/fileserver_map.trc.eps Graphic file (type eps)
+<./map-traffic/fileserver_map.trc.eps>
+File: ./map-traffic/webserver_map.trc.eps Graphic file (type eps)
+ <./map-traffic/webserver_map.trc.eps>
+File: ./map-traffic/linkbench_r_map.trc.eps Graphic file (type eps)
+
+<./map-traffic/linkbench_r_map.trc.eps>
+File: ./map-traffic/ssdtrace-00.blk_w.trc.eps Graphic file (type eps)
+
+<./map-traffic/ssdtrace-00.blk_w.trc.eps>
+Overfull \hbox (1.22011pt too wide) in paragraph at lines 110--119
+ [][][][][] 
+ []
+
+File: ./map-traffic/ssdtrace-01.blk_w.trc.eps Graphic file (type eps)
+<./map-traffic/ssdtrace-01.blk_w.trc.eps>
+File: ./map-traffic/2016021616-LUN3.csv_w.trc.eps Graphic file (type eps)
+
+<./map-traffic/2016021616-LUN3.csv_w.trc.eps>
+File: ./map-traffic/2016021616-LUN4.csv_w.trc.eps Graphic file (type eps)
+
+<./map-traffic/2016021616-LUN4.csv_w.trc.eps>
+File: ./map-traffic/2016021618-LUN3.csv_w.trc.eps Graphic file (type eps)
+
+<./map-traffic/2016021618-LUN3.csv_w.trc.eps>
+Overfull \hbox (1.22011pt too wide) in paragraph at lines 122--132
  [][][][][] 
  []
 
@@ -405,21 +441,18 @@ Package endnotes Warning: No endnotes found (file dawid_fast.ent does not exist
 )
 (endnotes)                 on input line 137.
 
-[2] [3] (./dawid_fast.aux)
+[2] [3] [4] (./dawid_fast.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 3103 strings out of 480609
- 49034 string characters out of 5903655
- 303400 words of memory out of 5000000
- 18961 multiletter control sequences out of 15000+600000
+ 3189 strings out of 480609
+ 52664 string characters out of 5903656
+ 307400 words of memory out of 5000000
+ 19030 multiletter control sequences out of 15000+600000
  547781 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  50i,10n,51p,558b,392s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dawid_fast.dvi (3 pages, 14088 bytes).
+Output written on dawid_fast.dvi (4 pages, 16776 bytes).
