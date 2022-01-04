@@ -31,6 +31,24 @@
     % \vspace{-10pt}
 \end{table*}
 
+\begin{table*}[tb]
+    \centering
+    \fontsize{11}{11}
+    \small
+
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+		\hline
+		\bf{Workload} & \bf{Reqs.} & \bf{Footprint(D)} & \bf{Footprint(M)} & \bf{Total I/O(D)} &\bf{Total I/O(M)} &\bf{Map-data-ratio(Percentage)} \\ \hline \hline
+		random & 5000000 & GB & MB & 19.07GB & 18.88GB & 98.99\\ \hline 		
+		fileserver-300s & 1143106 & 1.14GB & 2.41MB & 4.36GB & 9.98MB & 0.22\\ \hline 		
+		fileserver-60s & 413613 & 1.04GB & 2.24MB & 1.58GB & 3.65MB & 0.23\\ \hline 		
+		linkbench-load & 3456185 & 3.19GB & 6.62MB & 13.18GB & 48.72MB & 0.36\\ \hline 		
+		linkbench-run & 3272243 & 3.41GB & 23.11MB & 12.48GB & 1.14GB & 9.11\\ \hline 		
+    \end{tabular}
+    \caption{\textbf{Workload Charateristics(filesystem aging).}}
+    \label{fs_aging} 
+\end{table*}	
+
 \begin{figure*}[!bt]
     \centering{}
     \subfloat[Fileserver]{
