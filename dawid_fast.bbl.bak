@@ -1,0 +1,36 @@
+\begin{thebibliography}{1}
+
+\bibitem{anandtech18samsung}
+{\sc AnandTech}.
+\newblock Samsung 30.72 {TB} {SSDs}: Mass production of {PM1643} begins.
+\newblock
+  \url{https://www.anandtech.com/show/12448/samsung-begins-mass-production-of-pm1643-sas-ssds-with-3072-tb-capacity},
+  2018.
+
+\bibitem{busche2014design}
+{\sc Busche, C., Vil{\`a}-Nadal, L., Yan, J., Miras, H.~N., Long, D.-L.,
+  Georgiev, V.~P., Asenov, A., Pedersen, R.~H., Gadegaard, N., Mirza, M.~M.,
+  et~al.}
+\newblock Design and fabrication of memory devices based on nanoscale
+  polyoxometalate clusters.
+\newblock {\em Nature 515}, 7528 (2014), 545--549.
+
+\bibitem{9365809}
+{\sc Park, J.-W., Kim, D., Ok, S., Park, J., Kwon, T., Lee, H., Lim, S., Jung,
+  S.-Y., Choi, H., Kang, T., Park, G., Yang, C.-W., Choi, J.-G., Ko, G., Shin,
+  J., Yang, I., Nam, J., Sohn, H., Hong, S.-I., Jeong, Y., Choi, S.-W., Choi,
+  C., Shin, H.-S., Lim, J., Youn, D., Nam, S., Lee, J., Ahn, M., Lee, H., Lee,
+  S., Park, J., Gwon, K., Jeong, W., Choi, J., Kim, J., and Jin, K.-W.}
+\newblock 30.1 a 176-stacked 512gb 3b/cell 3d-nand flash with 10.8gb/mm2
+  density with a peripheral circuit under cell array architecture.
+\newblock In {\em 2021 IEEE International Solid- State Circuits Conference
+  (ISSCC)\/} (2021), vol.~64, pp.~422--423.
+
+\bibitem{samsung2011}
+{\sc Samsung}.
+\newblock Samsung {SSD} 830 series.
+\newblock
+  \url{https://www.samsung.com/us/support/owners/product/128gb-ssd-830-series},
+  2011.
+
+\end{thebibliography}
