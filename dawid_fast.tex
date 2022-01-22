@@ -25,8 +25,13 @@
 \usepackage{graphicx}
 \usepackage{subfig}
 \usepackage{xcolor}
+\usepackage{comment}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[breaklinks]{hyperref}
+\def\UrlBreaks{\do\/\do-}
 
-\newcommand{\EUNJI}[1]{\textcolor{black}{#1}}
+\newcommand{\BSK}[1]{\textcolor{red}{#1}}
+\newcommand{\EUNJI}[1]{\textcolor{purple}{#1}}
 \newcommand{\FOOTBF}[1]{\footnotesize{\bf{#1}}}
 \newcommand{\WHERETOGO}[1]{\textcolor{orange}{WHERETOGO: #1}}
 \newcommand{\ours}{\texttt{Dawid}}
@@ -38,44 +43,51 @@
 
 %make title bold and 14 pt font (Latex default is non-bold, 16 pt)
 % \title{\Large \bf Wonderful : A Terrific Application and Fascinating Paper}
-\title{\Large \bf Dawid: A Cost-effective I/O Scheduling Scheme for SSDs under Capacitance Constraints}
-
+% \title{\Large \bf Dawid: A Cost-effective I/O Scheduling Scheme for SSDs under Capacitance Constraints}
+% \title{\Large \bf Least Increase of Dirtiness Scheduling for SSDs under Capacitance Constraints}
+\title{\Large \bf Overcoming Capacitance Constraints in SSD}
 \author{
-{\rm Sanghyun Nam}\\
-Soongsil University
-\and
-{\rm Seungmin Shin}\\
-Soongsil University
-\and
-{\rm Eunji Lee}\\
-Soongsil University
+{\rm Sanghyun Nam$^\dagger$, Seungmin Shin$^\dagger$, Sungjin Lee$^\ddagger$, Bryan S. Kim$^\ast$, Eunji Lee$^\dagger$}\\
+Soongsil University$^\dagger$, DGIST$^\ddagger$, Syracuse University$^\ast$
 }
 
+% \and
+% % {\rm Seungmin Shin}\\
+% % Soongsil University
+% % \and
+% {\rm Bryan S. Kim}\\
+% Syracuse University
+% \and
+% {\rm Sungjin Lee}\\
+% DGIST
+% \and
+% {\rm Eunji Lee}\\
+% Soongsil University
+% }
 \maketitle
 
 % Use the following at camera-ready time to suppress page numbers.
 % Comment it out when you first submit the paper for review.
 \thispagestyle{empty}
 
-
-\subsection*{Abstract}
-Enterprise-class SSDs realize a persistent buffer within device using the capacitors. 
-This approach reached a limit as the SSD density outpaces the scaling capability of the capacitors. 
-This paper presents a novel buffer architecture for SSDs under capacitance constraints. 
-We re-order the write requests in a way of minimizing the memory footprint 
-that needs protection. 
-% such that the number of dirty pages within buffer
-% is minimized at a time window. 
-This design reduces the required capacitance to ensure persistence in SSDs 
-at the modest performance loss. 
-% This design significantly mitigates the additional flash writes 
-% wherein the capacitors protect a portion of the buffer. 
-% caused by the limits of capacitance.
-\EUNJI{
-We implemented \ours{} in an open-source SSD development 
-framework. Performance evaluation shows that \ours{} has only 10\% more flash writes 
-than full-protection SSD, while the required capacitence is reduced by 70\%.
-}
+% \subsection*{Abstract}
+% Enterprise-class SSDs realize a persistent buffer within device using the capacitors. 
+% This approach reached a limit as the SSD density outpaces the scaling capability of the capacitors. 
+% This paper presents a novel buffer architecture for SSDs under capacitance constraints. 
+% We re-order the write requests in a way of minimizing the memory footprint 
+% that needs protection. 
+% % such that the number of dirty pages within buffer
+% % is minimized at a time window. 
+% This design reduces the required capacitance to ensure persistence in SSDs 
+% at the modest performance loss. 
+% % This design significantly mitigates the additional flash writes 
+% % wherein the capacitors protect a portion of the buffer. 
+% % caused by the limits of capacitance.
+% \EUNJI{
+% We implemented \ours{} in an open-source SSD development 
+% framework. Performance evaluation shows that \ours{} has only 10\% more flash writes 
+% than full-protection SSD, while the required capacitence is reduced by 70\%.
+% }
 % capacitance limitation of SSD. 
 %SSD density scales up at the fast pace, but other components keep up with the speed. 
 
@@ -90,51 +102,23 @@ than full-protection SSD, while the required capacitence is reduced by 70\%.
 
 % 맵핑 테이블 vs. 사용자 데이터 
 % ==> 맵핑 테이블의 flush 가 발생시키는 트래픽의 비중이 얼마나 되나? 
-
-\input{01_intro}
+% \vspace{-100pt}
+\input{00_poster}
+% \input{01_intro}
 %\input{02_related_work}
 %\input{03_analysis}
 %\input{03_dawid_design}
 %\input{04_eval}
 %\input{05_conclusion}
 
-\iffalse
-\section{This is Another Section}
-
-Some embedded literal typset code might 
-look like the following :
-
-{\tt \small
-\begin{verbatim}
-#include <iostream>
-using namespace std;
-main()
-{
-cout << "Hello world \n";
-return 0;
-}
-
-\end{verbatim}
-}
-
-Now we're going to cite somebody.  Watch for the cite tag.
-Here it comes~\cite{Einstein}.  
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-\fi
 
 
-{\footnotesize \bibliographystyle{acm}
-\bibliography{sample}}
+
+\bibliographystyle{plain}
+\bibliography{sample}
 
 
-\theendnotes
+%\theendnotes
 
 \end{document}
 
