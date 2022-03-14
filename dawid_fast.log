@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  14 MAR 2022 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  14 MAR 2022 14:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -603,28 +603,34 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 70.
 
-(./00_poster.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
+(./00_abstract.tex
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-File: figure/all-wt.eps Graphic file (type eps)
- <figure/all-wt.eps>
-File: figure/all-iops.eps Graphic file (type eps)
- <figure/all-iops.eps>
-Underfull \vbox (badness 2213) has occurred while \output is active []
+) (./01_intro.tex
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 6
+.
 
- [1
+(/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+
+Package natbib Warning: Citation `busche2014design' on page 1 undefined on inpu
+t line 9.
 
 
-])
-(./dawid_fast.bbl
+Package natbib Warning: Citation `9365809' on page 1 undefined on input line 9.
+
+
+) (./dawid_fast.bbl
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
 []\T1/ptm/m/n/10 AnandTech.  Sam-sung 30.72 TB SSDs:
  []
@@ -661,7 +667,10 @@ Underfull \hbox (badness 2221) in paragraph at lines 21--27
 .
  []
 
+[1
 
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 44--49
 []\T1/ptm/m/n/10 Samsung.  Sam-sung SSD 830 se-ries.
  []
@@ -682,25 +691,28 @@ Overfull \hbox (305.83655pt too wide) in paragraph at lines 51--56
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 126.
- [2
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
+[2
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
  (./dawid_fast.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 126.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 126.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 127.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 127.
 Package rerunfilecheck Info: File `dawid_fast.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
+(rerunfilecheck)             Checksum: A02D95553E30B97FF125B1AA17CF9044;47.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
  ) 
 Here is how much of TeX's memory you used:
- 9449 strings out of 480609
- 152227 string characters out of 5903655
- 460989 words of memory out of 5000000
- 25168 multiletter control sequences out of 15000+600000
- 562088 words of font info for 69 fonts, out of 8000000 for 9000
+ 9524 strings out of 480609
+ 153578 string characters out of 5903655
+ 460936 words of memory out of 5000000
+ 25220 multiletter control sequences out of 15000+600000
+ 567976 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 50i,10n,52p,487b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,9n,52p,298b,560s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dawid_fast.dvi (2 pages, 17412 bytes).
+Output written on dawid_fast.dvi (2 pages, 16116 bytes).
