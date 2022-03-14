@@ -53,10 +53,22 @@ imposes an intrinsic limitation on the current architecture wherein
 the entire buffer is protected by capacitors. 
 \fi
 
+This paper presents \ours{}, a novel SSD-internal DRAM management scheme 
+that allows the SSD capacity to scale beyond the slow growth of capacitors. 
+SSD-internal DRAM is used for 
+(1) caching translation information (also known as mapping table) and (2) buffering user writes. 
+In typical SSD designs, most of the capacitance is used for protecting the mapping table (to keep as many translation entries in DRAM) 
+and the buffer for user writes is kept at a minimal (just enough to hide the flash program latency)~\cite{KangLMKO14sigmod}. 
+However, in our design, we take a radically different approach. 
+We buffer more user writes so that mapping entry eviction becomes more efficient by aggregating dirty updates. 
+This substantially reduces the amount of mapping table-related write traffic, and in turn, improves the overall performance. 
+
+\iffalse
 This paper presents a device-internal buffer architecture called \ours{} 
 for the SSDs under capacitance constraints. 
 % which operates under capacitance constraints.
 % Fig.~\ref{fig_dawid_archi} shows the SSD architecture targeted in our study. 
+\fi
 \iffalse
 \textcolor{blue}{
 Historically, storage devices have been equipped with a small size of volatile buffer in front of the persistent disk. By using them as a read cache and a write buffer, they hide a long latency of the physical storage medium as well as mitigating an endurance limitation of the worn-out devices.
@@ -71,6 +83,7 @@ This property increases the buffering effect in SSD significantly, leading to bo
 \fi
 % To overcome this limitation without sacrificing performance, 
 % The reliance on capacitors, however, has reached its limit. 
+\iffalse
 \ours{} achieves a persistent buffer with small size of capacitance by answering the following two questions. 
 %(1) what not to protect under capacitance limitation and (2) how to reduce the overhead of ensuring persistence for unprotected data.
 First question is \textit{what not to protect under capacitance constraints}. The device-internal buffer is used for (1) caching translation information (i.e., mapping index) and (2) buffering user writes. 
@@ -85,15 +98,32 @@ Second question is thus \textit{how to reduce the cost of ensuring persistence f
 % \EUNJI{
 % 보호되지 못하는 데이터가 있을 때 버퍼를 어떻게 관리하면, 보호되지 못하는 데이터의 persistence 를 유지하기 위해 발생하는 비용을 적게 발생시킬 것인가? 에 대한 질문. }
 % \EUNJI{제안하는 기법: 부분적으로 보호되는 맵핑 테이블의 동기화 오버헤드를 줄이기 위해, 해당 비용을 최소로 증가시키도록 I/O 스케줄링을 하는 것임.}
-
+\fi
 %\section{Design of \ours{} Buffer}
 % \section{Least Increase of Dirtiness Scheduling}
+\iffalse
 A primary way of  reducing the superfluous writes caused by a capacitance limitation is to maintain the dirty memory footprint below a protected threshold as long as possible. When a dirty page overflow occurs, flushing is forced and write amplification increases.
 % The \ours{} buffer aims at minimizing the dirty memory footprint of the mapping table at any point in time.
-To this end, \ours{} aggregates and batches the requests whose mapping entry resides in the same page. \EUNJI{This policy reduces the dirty memory footprint of the mapping table at any point in time, amortizing the synchronization overhead across more requests. As such, \ours{} delivers less write traffic and higher IOPS than existing scheduling (e.g., FIFO) under capacitance constraints. \ours{} maintains two data structures: \textit{a zero-cost list} that holds the write requests whose mapping table page is in dirty state, and \textit{a max binary heap} that maintains the mapping table page indexes sorted by the number of associated write requests. 
+To this end, \ours{} aggregates and batches the requests whose mapping entry resides in the same page. This policy reduces the dirty memory footprint of the mapping table at any point in time, amortizing the synchronization overhead across more requests. As such, \ours{} delivers less write traffic and higher IOPS than existing scheduling (e.g., FIFO) under capacitance constraints. 
+\fi
+
+To realize this design, 
+\ours{} maintains two data structures: first, \textit{a zero-cost list} 
+that holds the write requests whose mapping entry is already in a dirty translation page, 
+and second, \textit{a max binary heap} that maintains the indexes to translation pages
+sorted by the number of buffered user write requests associated with that page. 
 % We term this policy Least Increase of Dirtiness (LID) scheduling.
-When NAND flash becomes idle, \ours{} sends a request from the (1) zero-cost list first and if it is empty, (2) from the max binary heap. 
-}  
+When there is sufficient bandwidth at underlying NAND flash subsystem for writes, 
+\ours{} first flushes user data from the  zero-cost list,
+and then persists the dirty translation pages as ordered by the max binary heap. 
+By doing so, each user write minimizes the number of eventual translation page write, 
+and each translation page write maximizes the number of persisted mapping entries. 
+\iffalse
+\BSK{What's policy on the maximum number of dirty translation pages? Dawid should also flush when that condition satisfies, right?}
+\EUNJI{FIFO로 flush 합니다. SSD 가 한번에 병렬적으로 쓸 수 있는 단위씩 보냅니다.}
+\fi
+ 
+
 \iffalse
 In this regard, the \ours{} buffer aims at minimizing the \textit{dirty memory footprint} of the mapping table at any point in time. To this end, \ours{} processes outstanding requests in the order that least increases the number of dirty pages in the mapping table. 
 This scheme not only reduces the number of flushes for the mapping table partially protected but also increases the efficiency of flush operation by aggregating more translation updates into the smaller translation pages.
@@ -113,19 +143,49 @@ small footprint in the buffer.
 % }
 % \EUNJI{For this architecture, the problem boils down to how to reduce the write traffic to persist the mapping table to flash memory under capacitance constraints.
 % \iffalse
+\iffalse
 Reducing the synchronization overhead of the mapping table is a well-known problem and has been extensively studied for a past decade~\cite{jiang2011s, kim2017shrd}. 
 However, they mostly focus on the SSDs without PLP, which have different properties to the PLP-SSDs with capacitance constraints. 
+\fi
 
-\EUNJI{\ours{} is built upon the current trend of increasing queue depth of the storage interfaces. SATA and SAS support a single queue with 32 and 245 commands, but NVMe has 
+\ours{} is built upon the current trend of increasing the queue depth of the storage interfaces. SATA and SAS support a single queue with 32 and 245 commands, but NVMe has 
 up to 65,535 queues with as many as 65,536 commands per queue. 
 This extension allows SSDs to further optimize the internal activities by taking advantage of the outstanding request information.
+
+
+\begin{figure}[t]
+    \centering{}
+    \subfloat[Write Traffic] {
+	    \includegraphics[width=0.4\textwidth]{figure/all-wt.eps}
+	} \\
+	\subfloat[IOPS] {
+	    \includegraphics[width=0.4\textwidth]{figure/all-iops.eps}
+	}
+	\caption{Fio benchmark results.}
+	\label{fig_fio}
+\end{figure}
+
+We implement \ours{} in \texttt{FEMU}, an open-source SSD development framework~\cite{li2018case}.
+We assume 1\% of the mapping table is protected via capacitors in a 64GB SSD. 
+%The 64GB SSD is using DRAM and assumes that 1\% of the mapping table is protected. 
+We measured the performance of \ours{} using fio benchmark~\cite{fio-bench},
+running 4KB sequential writes, 4KB random writes, 
+and the skewed read-write mixed workload that follows JESD219 using 8 threads. 
+A total of 90GB of data was written to the 30GB area.
+
+\EUNJI{
+Figure~\ref{fig_fio} compares IOPS and the write traffic of FIFO buffer management and \ours{}.
+For sequential writes, there are no prominent differences between FIFO and \ours{}. 
+However, \ours{} reduces the write traffic by 35\% and 46\% on average 
+for random writes and JESD219 workloads when the buffer size is 4MB and 4GB, respectively. 
+These workloads have a large footprint at a time window and thus buffering and scheduling them judiciously leads to a large reduction in mapping table persistence overhead.
+Consequently, IOPS of our design improves up to 18\% and 88\% for random write and JESD219, respectively.
 }
 
-We implement \ours{} in \texttt{FEMU}, an open-source SSD development framework~\cite{li2018case}. Fig. XX shows that \ours{} reduces the write traffic by up to 78\% and provides 25\% higher IOPS 
-compared to the FIFO scheduling when only 10\% of the mapping table is protected. 
-Compared to the full-protection architecture, \ours{} has has 20\% more writes and 
-9\% of performance overhead, while reducing the required capacitance by 90\%. 
-Fig.XX shows 
+% \EUNJI{
+% To extending this work, we plan to investigate the trade-offs between performance and capacitance.
+% }
+
 \iffalse
 To evaluate the effectiveness of \ours, we implement the proposed buffer design
 in \texttt{FEMU}, which is an open-source SSD development framework~\cite{li2018case}. The performance evaluation with various workloads 
@@ -135,28 +195,21 @@ Compared to the full-protection architecture, \ours{} has has 20\% more writes a
 9\% of performance overhead, while reducing the required capacitance by 90\%. 
 \fi
 
-\begin{figure}[t]
-    \centering{}
-    \includegraphics[width=0.20\textwidth]{shn-graph/rand-wt.eps}
-    \includegraphics[width=0.20\textwidth]{shn-graph/rand-iops.eps}
-    %\includegraphics[width=0.4\textwidth]{figure/dawid_ssd_archi.png}
-    \caption{\textbf{Write Traffic and IOPS (FIO-RAND).}}
-    \label{fig_dawid_archi}
-\end{figure}
-
-\begin{figure}[t]
-    \centering{}
-    \includegraphics[width=0.20\textwidth]{shn-graph/jesd-wt.eps}
-    \includegraphics[width=0.20\textwidth]{shn-graph/jesd-iops.eps}
-    %\includegraphics[width=0.4\textwidth]{figure/dawid_ssd_archi.png}
-    \caption{\textbf{Write Traffic and IOPS (FIO-JESD) .}}
-    \label{fig_dawid_archi}
-\end{figure}
+% \begin{figure}[t]
+%     \centering{}
+%     \includegraphics[width=0.20\textwidth]{shn-graph/rand-wt.eps}
+%     \includegraphics[width=0.20\textwidth]{shn-graph/rand-iops.eps}
+%     %\includegraphics[width=0.4\textwidth]{figure/dawid_ssd_archi.png}
+%     \caption{\textbf{Write Traffic and IOPS (FIO-RAND).}}
+%     \label{fig_dawid_archi}
+% \end{figure}
 
 % \begin{figure}[t]
 %     \centering{}
-%     \includegraphics[width=0.5\textwidth]{figure/iops_write_traffic.png}
+%     \includegraphics[width=0.20\textwidth]{shn-graph/jesd-wt.eps}
+%     \includegraphics[width=0.20\textwidth]{shn-graph/jesd-iops.eps}
 %     %\includegraphics[width=0.4\textwidth]{figure/dawid_ssd_archi.png}
-%     \caption{\textbf{IOPS and Write Traffic.}}
+%     \caption{\textbf{Write Traffic and IOPS (FIO-JESD) .}}
 %     \label{fig_dawid_archi}
 % \end{figure}
+
