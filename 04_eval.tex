@@ -153,3 +153,55 @@
 \subsection{Implementation}
 
 \subsection{Performance results}
+\begin{table}[tb]
+    \centering
+    \fontsize{11}{11}
+    \small
+	% Model Manufacturer Category PLP-Support Capacitor 
+    %\begin{tabular}{p{2.4cm}|p{1.3cm}|p{1.2cm}|l}
+    %\begin{tabular}{p{2.4cm}|p{2.4cm}|p{2.4cm}|p{2.4cm}|p{2.4cm}}
+    \begin{tabular}{|p{5cm}|l|}
+        % \hline
+        % \multirow{4}{*}{{\rotatebox{90}{\parbox{1.2cm}{\centering \footnotesize{Concurrency}}}}} 
+		\hline
+        \bf{Data Type} &  \bf{Size} \\ \hline \hline
+        % \footnotesize{\bf{Ratio}} \\ \hline \hline
+	    {User Data Buffer} & {4MB} \\ \hline
+		{Mapping Table} & {512MB} \\ \hline
+		{Mapping Table Directory} & {512KB} \\ \hline 
+% 		\footnotesize{Mapping Table Directory} & \footnotesize{128KB} & \footnotesize{0.02}\% \\ \hline
+		{Metadata for Allocation} & {1MB} \\ \hline 
+		{Metadata for GC(Garbage Collection)} & {9MB}  \\ \hline 
+		{Total Buffer Memory} & {526.5MB} \\ \hline
+% 		\footnotesize{SSD Capacity} & \footnotesize{512GB} & -  \\ \hline
+    \end{tabular}
+    \caption{\textbf{Components of the SSD-internal buffer.}}
+    \label{tab:ssd_buff_comp}
+    \vspace{-10pt}
+\end{table}
+
+
+
+\begin{table}[tb]
+    \centering
+    \fontsize{11}{11}
+    \small
+	% Model Manufacturer Category PLP-Support Capacitor 
+    %\begin{tabular}{p{2.4cm}|p{1.3cm}|p{1.2cm}|l}
+    %\begin{tabular}{p{2.4cm}|p{2.4cm}|p{2.4cm}|p{2.4cm}|p{2.4cm}}
+    \begin{tabular}{|p{5cm}|l|}
+        % \hline
+        % \multirow{4}{*}{{\rotatebox{90}{\parbox{1.2cm}{\centering \footnotesize{Concurrency}}}}} 
+		\hline
+		\bf{Configuration} & \bf{Size} \\ \hline \hline
+        Channel & 8x \\ \hline
+        Way & 4x \\ \hline
+        Die & 4x \\ \hline
+        Plane & 4x \\ \hline
+        Page Size & 4KB \\ \hline
+        SSD Capacity & 512GB \\ \hline
+    \end{tabular}
+    \caption{\textbf{SSD Configuration.}}
+    \label{tab:ssd_config}
+    % \vspace{-10pt}
+\end{table}
