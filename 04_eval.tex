@@ -1,5 +1,41 @@
 \section{Performance Evaluation}
 
+
+\begin{figure*}[t]
+    \centering{}
+	\subfloat[Sequential] { 
+	    \includegraphics[width=0.3\textwidth]{expr/micro_220517/perf/SEQ/perf_SEQ.eps}
+	} 
+	\subfloat[Random] { 
+	    \includegraphics[width=0.3\textwidth]{expr/micro_220517/perf/RAND/perf_RAND.eps}
+	} 
+	\subfloat[JESD] { 
+	    \includegraphics[width=0.3\textwidth]{expr/micro_220517/perf/JESD/perf_JESD.eps}
+	}
+    \caption{\textbf{IOPS}}
+\end{figure*} 
+
+
+
+\begin{figure*}[t]
+    \centering{}
+	\subfloat[Sequential] { 
+	    \includegraphics[width=0.3\textwidth]{expr/micro_220517/wt/perf_SEQ.eps}
+	} 
+	\subfloat[Random] { 
+	    \includegraphics[width=0.3\textwidth]{expr/micro_220517/wt/perf_RAND.eps}
+	} 
+	\subfloat[JESD] { 
+	    \includegraphics[width=0.3\textwidth]{expr/micro_220517/wt/perf_JESD.eps}
+	}
+    \caption{\textbf{Write Traffic}}
+\end{figure*} 
+
+
+
+
+
+\iffalse
 %% CACHE_MISS
 \begin{table}
     \centering
@@ -31,7 +67,7 @@
     }    
     \label{tab_cache_miss}
 \end{table}
- 
+\fi 
 
 %\begin{figure*}[t]
 %    \centering{}
