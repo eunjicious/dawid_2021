@@ -11,7 +11,7 @@ do
 	outfile="$bench".eps
 	graphtitle="$bench"
 	
-	ylabel="Number_Of_WriteTraffic"
+	ylabel="Write-traffic(GB)"
 	xlabel="Target"
 
 #ymax=$(cat "$bench".txt | awk '{print $2}'| sort -nr | head -n 1 | awk '{print $1 * 1.5}')
