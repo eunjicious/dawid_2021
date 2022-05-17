@@ -15,8 +15,17 @@ do
 #	xlabel="Target"
 
 #ymax=$(cat "$bench".txt | awk '{print $2}'| sort -nr | head -n 1 | awk '{print $1 * 1.5}')
-	ymax=$(cat "$bench".rslt | awk '{print $2}'|sort -nr | head -n 1 | awk '{print $1 * 1.15}')
-			
+	if [[ $bench == "JESD" ]] ; then
+		ymid=$(cat "$bench".rslt | awk '{print $2}'|sort -nr | head -n 1 | awk '{print $1 * 1.15}')
+		ymax=$(cat "$bench".rslt | awk '{print $4}'|sort -nr | head -n 1 | awk '{print $1 * 1.15}')
+	elif [[ $bench == "RAND" ]] ; then
+		ymid=$(cat "$bench".rslt | awk '{print $2}'|sort -nr | head -n 1 | awk '{print $1 * 1.15}')
+		ymax=$(cat "$bench".rslt | awk '{print $3}'|sort -nr | head -n 1 | awk '{print $1 * 2.5}')
+	elif [[ $bench == "SEQ" ]] ; then
+		ymid=$(cat "$bench".rslt | awk '{print $2}'|sort -nr | head -n 1 | awk '{print $1 * 1.15}')
+#ymax=$(cat "$bench".rslt | awk '{print $3}'|sort -nr | head -n 1 | awk '{print $1 * 1.15}')
+	fi		
+	
 	echo $ymax
 	opt_list="`echo '-'``echo 'e'` `echo datafile=\'$datafile\'`"
 	opt_list="$opt_list `echo '-'``echo 'e'` `echo outfile=\'$outfile\'`"
@@ -24,7 +33,7 @@ do
 	opt_list="$opt_list `echo '-'``echo 'e'` `echo gylabel=\'$ylabel\'`"
 	opt_list="$opt_list `echo '-'``echo 'e'` `echo gxlabel=\'$xlabel\'`"
 	opt_list="$opt_list `echo '-'``echo 'e'` `echo gymax=\'$ymax\'`"
-	
+	opt_list="$opt_list `echo '-'``echo 'e'` `echo gymid=\'$ymid\'`"
 	gnuplot $opt_list perf_wt.cfg && open $outfile
 
 done
