@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  14 MAR 2022 14:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  17 MAY 2022 16:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -609,21 +609,158 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 ) (./01_intro.tex
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 6
-.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
+0.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
 Package natbib Warning: Citation `busche2014design' on page 1 undefined on inpu
-t line 9.
+t line 43.
 
 
-Package natbib Warning: Citation `9365809' on page 1 undefined on input line 9.
+Package natbib Warning: Citation `9365809' on page 1 undefined on input line 43
+.
+
+) (./02_related_work.tex
+
+Package natbib Warning: Citation `gupta2009dftl' on page 1 undefined on input l
+ine 8.
+
+[1
 
 
-) (./dawid_fast.bbl
+]
+
+Package natbib Warning: Citation `jiang2011s' on page 2 undefined on input line
+ 17.
+
+
+Package natbib Warning: Citation `kim2017shrd' on page 2 undefined on input lin
+e 19.
+
+
+Package natbib Warning: Citation `GuoYZC13date' on page 2 undefined on input li
+ne 67.
+
+
+Package natbib Warning: Citation `huang2011life' on page 2 undefined on input l
+ine 70.
+
+
+Package natbib Warning: Citation `HuangWQLS15hpcc' on page 2 undefined on input
+ line 71.
+
+
+Package natbib Warning: Citation `KimK15sac' on page 2 undefined on input line 
+88.
+
+
+Package natbib Warning: Citation `ChenLZ19tc' on page 2 undefined on input line
+ 144.
+
+[2]
+
+Package natbib Warning: Citation `lee2021spartanssd' on page 3 undefined on inp
+ut line 157.
+
+) (./03_analysis.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+File: ./hit-eps/fileserver_map.trc.rslt.eps Graphic file (type eps)
+ <./hit-eps/fileserver_map.trc.rslt.eps>
+File: ./hit-eps/webserver_map.trc.rslt.eps Graphic file (type eps)
+
+<./hit-eps/webserver_map.trc.rslt.eps>
+File: ./hit-eps/linkbench_r_map.trc.rslt.eps Graphic file (type eps)
+
+<./hit-eps/linkbench_r_map.trc.rslt.eps>
+File: ./hit-eps/ssdtrace-00.blk_w.trc.rslt.eps Graphic file (type eps)
+
+<./hit-eps/ssdtrace-00.blk_w.trc.rslt.eps>
+File: ./hit-eps/ssdtrace-01.blk_w.trc.rslt.eps Graphic file (type eps)
+
+<./hit-eps/ssdtrace-01.blk_w.trc.rslt.eps>
+File: ./hit-eps/2016021616-LUN3.csv_w.trc.rslt.eps Graphic file (type eps)
+
+<./hit-eps/2016021616-LUN3.csv_w.trc.rslt.eps>
+File: ./hit-eps/2016021616-LUN4.csv_w.trc.rslt.eps Graphic file (type eps)
+
+<./hit-eps/2016021616-LUN4.csv_w.trc.rslt.eps>
+File: ./hit-eps/2016021618-LUN3.csv_w.trc.rslt.eps Graphic file (type eps)
+
+<./hit-eps/2016021618-LUN3.csv_w.trc.rslt.eps>
+File: ./total-traffic/fileserver_map.trc.eps Graphic file (type eps)
+
+<./total-traffic/fileserver_map.trc.eps>
+File: ./total-traffic/webserver_map.trc.eps Graphic file (type eps)
+
+<./total-traffic/webserver_map.trc.eps>
+File: ./total-traffic/linkbench_r_map.trc.eps Graphic file (type eps)
+
+<./total-traffic/linkbench_r_map.trc.eps>
+File: ./total-traffic/ssdtrace-00.blk_w.trc.eps Graphic file (type eps)
+
+<./total-traffic/ssdtrace-00.blk_w.trc.eps>
+File: ./total-traffic/ssdtrace-01.blk_w.trc.eps Graphic file (type eps)
+
+<./total-traffic/ssdtrace-01.blk_w.trc.eps>
+File: ./total-traffic/2016021616-LUN3.csv_w.trc.eps Graphic file (type eps)
+
+<./total-traffic/2016021616-LUN3.csv_w.trc.eps>
+File: ./total-traffic/2016021616-LUN4.csv_w.trc.eps Graphic file (type eps)
+
+<./total-traffic/2016021616-LUN4.csv_w.trc.eps>
+File: ./total-traffic/2016021618-LUN3.csv_w.trc.eps Graphic file (type eps)
+
+<./total-traffic/2016021618-LUN3.csv_w.trc.eps>
+File: ./map-traffic/fileserver_map.trc.eps Graphic file (type eps)
+
+<./map-traffic/fileserver_map.trc.eps>
+File: ./map-traffic/webserver_map.trc.eps Graphic file (type eps)
+ <./map-traffic/webserver_map.trc.eps>
+File: ./map-traffic/linkbench_r_map.trc.eps Graphic file (type eps)
+
+<./map-traffic/linkbench_r_map.trc.eps>
+File: ./map-traffic/ssdtrace-00.blk_w.trc.eps Graphic file (type eps)
+
+<./map-traffic/ssdtrace-00.blk_w.trc.eps>
+File: ./map-traffic/ssdtrace-01.blk_w.trc.eps Graphic file (type eps)
+
+<./map-traffic/ssdtrace-01.blk_w.trc.eps>
+File: ./map-traffic/2016021616-LUN3.csv_w.trc.eps Graphic file (type eps)
+
+<./map-traffic/2016021616-LUN3.csv_w.trc.eps>
+File: ./map-traffic/2016021616-LUN4.csv_w.trc.eps Graphic file (type eps)
+
+<./map-traffic/2016021616-LUN4.csv_w.trc.eps>
+File: ./map-traffic/2016021618-LUN3.csv_w.trc.eps Graphic file (type eps)
+
+<./map-traffic/2016021618-LUN3.csv_w.trc.eps>) (./03_dawid_design.tex
+File: figure/dawid_algo.eps Graphic file (type eps)
+
+<figure/dawid_algo.eps> [3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
+(./04_eval.tex
+File: expr/micro_220517/perf/SEQ/perf_SEQ.eps Graphic file (type eps)
+ <expr/micro_220517/perf/SEQ/perf_SEQ.eps>
+File: expr/micro_220517/perf/RAND/perf_RAND.eps Graphic file (type eps)
+
+<expr/micro_220517/perf/RAND/perf_RAND.eps>
+File: expr/micro_220517/perf/JESD/perf_JESD.eps Graphic file (type eps)
+
+<expr/micro_220517/perf/JESD/perf_JESD.eps>
+File: expr/micro_220517/wt/perf_SEQ.eps Graphic file (type eps)
+
+<expr/micro_220517/wt/perf_SEQ.eps>
+File: expr/micro_220517/wt/perf_RAND.eps Graphic file (type eps)
+ <expr/micro_220517/wt/perf_RAND.eps>
+File: expr/micro_220517/wt/perf_JESD.eps Graphic file (type eps)
+
+<expr/micro_220517/wt/perf_JESD.eps>) (./05_conclusion.tex) (./dawid_fast.bbl
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -646,6 +783,16 @@ Overfull \hbox (328.52673pt too wide) in paragraph at lines 4--9
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (61.02612pt too high) has occurred while \output is active []
+
+
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 11--14
 []\T1/ptm/m/n/10 Jens Axboe.  fio - flex-i-ble i/o tester.
  []
@@ -667,10 +814,7 @@ Underfull \hbox (badness 2221) in paragraph at lines 21--27
 .
  []
 
-[1
 
-
-]
 Underfull \hbox (badness 10000) in paragraph at lines 44--49
 []\T1/ptm/m/n/10 Samsung.  Sam-sung SSD 830 se-ries.
  []
@@ -695,24 +839,26 @@ Overfull \hbox (305.83655pt too wide) in paragraph at lines 51--56
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
-[2
-
-]
+[6] [7]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
  (./dawid_fast.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 127.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 127.
 Package rerunfilecheck Info: File `dawid_fast.out' has not changed.
-(rerunfilecheck)             Checksum: A02D95553E30B97FF125B1AA17CF9044;47.
+(rerunfilecheck)             Checksum: F4E3BEA016E366A0D5C91D4FB4F2EE5A;602.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
  ) 
 Here is how much of TeX's memory you used:
- 9524 strings out of 480609
- 153578 string characters out of 5903655
- 460936 words of memory out of 5000000
- 25220 multiletter control sequences out of 15000+600000
- 567976 words of font info for 89 fonts, out of 8000000 for 9000
+ 9645 strings out of 480609
+ 158153 string characters out of 5903655
+ 479219 words of memory out of 5000000
+ 25323 multiletter control sequences out of 15000+600000
+ 570112 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 50i,9n,52p,298b,560s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,10n,52p,1655b,550s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dawid_fast.dvi (2 pages, 16116 bytes).
+Output written on dawid_fast.dvi (7 pages, 58436 bytes).
