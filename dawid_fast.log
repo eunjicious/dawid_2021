@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  17 MAY 2022 19:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  17 MAY 2022 20:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -665,86 +665,12 @@ Package natbib Warning: Citation `ChenLZ19tc' on page 2 undefined on input line
 Package natbib Warning: Citation `lee2021spartanssd' on page 3 undefined on inp
 ut line 157.
 
-) (./03_analysis.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
-File: ./hit-eps/fileserver_map.trc.rslt.eps Graphic file (type eps)
- <./hit-eps/fileserver_map.trc.rslt.eps>
-File: ./hit-eps/webserver_map.trc.rslt.eps Graphic file (type eps)
-
-<./hit-eps/webserver_map.trc.rslt.eps>
-File: ./hit-eps/linkbench_r_map.trc.rslt.eps Graphic file (type eps)
-
-<./hit-eps/linkbench_r_map.trc.rslt.eps>
-File: ./hit-eps/ssdtrace-00.blk_w.trc.rslt.eps Graphic file (type eps)
-
-<./hit-eps/ssdtrace-00.blk_w.trc.rslt.eps>
-File: ./hit-eps/ssdtrace-01.blk_w.trc.rslt.eps Graphic file (type eps)
-
-<./hit-eps/ssdtrace-01.blk_w.trc.rslt.eps>
-File: ./hit-eps/2016021616-LUN3.csv_w.trc.rslt.eps Graphic file (type eps)
-
-<./hit-eps/2016021616-LUN3.csv_w.trc.rslt.eps>
-File: ./hit-eps/2016021616-LUN4.csv_w.trc.rslt.eps Graphic file (type eps)
-
-<./hit-eps/2016021616-LUN4.csv_w.trc.rslt.eps>
-File: ./hit-eps/2016021618-LUN3.csv_w.trc.rslt.eps Graphic file (type eps)
-
-<./hit-eps/2016021618-LUN3.csv_w.trc.rslt.eps>
-File: ./total-traffic/fileserver_map.trc.eps Graphic file (type eps)
-
-<./total-traffic/fileserver_map.trc.eps>
-File: ./total-traffic/webserver_map.trc.eps Graphic file (type eps)
-
-<./total-traffic/webserver_map.trc.eps>
-File: ./total-traffic/linkbench_r_map.trc.eps Graphic file (type eps)
-
-<./total-traffic/linkbench_r_map.trc.eps>
-File: ./total-traffic/ssdtrace-00.blk_w.trc.eps Graphic file (type eps)
-
-<./total-traffic/ssdtrace-00.blk_w.trc.eps>
-File: ./total-traffic/ssdtrace-01.blk_w.trc.eps Graphic file (type eps)
-
-<./total-traffic/ssdtrace-01.blk_w.trc.eps>
-File: ./total-traffic/2016021616-LUN3.csv_w.trc.eps Graphic file (type eps)
-
-<./total-traffic/2016021616-LUN3.csv_w.trc.eps>
-File: ./total-traffic/2016021616-LUN4.csv_w.trc.eps Graphic file (type eps)
-
-<./total-traffic/2016021616-LUN4.csv_w.trc.eps>
-File: ./total-traffic/2016021618-LUN3.csv_w.trc.eps Graphic file (type eps)
-
-<./total-traffic/2016021618-LUN3.csv_w.trc.eps>
-File: ./map-traffic/fileserver_map.trc.eps Graphic file (type eps)
-
-<./map-traffic/fileserver_map.trc.eps>
-File: ./map-traffic/webserver_map.trc.eps Graphic file (type eps)
- <./map-traffic/webserver_map.trc.eps>
-File: ./map-traffic/linkbench_r_map.trc.eps Graphic file (type eps)
-
-<./map-traffic/linkbench_r_map.trc.eps>
-File: ./map-traffic/ssdtrace-00.blk_w.trc.eps Graphic file (type eps)
-
-<./map-traffic/ssdtrace-00.blk_w.trc.eps>
-File: ./map-traffic/ssdtrace-01.blk_w.trc.eps Graphic file (type eps)
-
-<./map-traffic/ssdtrace-01.blk_w.trc.eps>
-File: ./map-traffic/2016021616-LUN3.csv_w.trc.eps Graphic file (type eps)
-
-<./map-traffic/2016021616-LUN3.csv_w.trc.eps>
-File: ./map-traffic/2016021616-LUN4.csv_w.trc.eps Graphic file (type eps)
-
-<./map-traffic/2016021616-LUN4.csv_w.trc.eps>
-File: ./map-traffic/2016021618-LUN3.csv_w.trc.eps Graphic file (type eps)
-
-<./map-traffic/2016021618-LUN3.csv_w.trc.eps>) (./03_dawid_design.tex
+) (./03_dawid_design.tex
 File: figure/dawid_algo.eps Graphic file (type eps)
+ <figure/dawid_algo.eps> [3]) (./04_eval.tex
+File: figure/dawid_ssd_archi_new.eps Graphic file (type eps)
 
-<figure/dawid_algo.eps> [3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-)
-(./04_eval.tex
+<figure/dawid_ssd_archi_new.eps>
 File: expr/micro_220517/perf/SEQ/perf_SEQ.eps Graphic file (type eps)
  <expr/micro_220517/perf/SEQ/perf_SEQ.eps>
 File: expr/micro_220517/perf/RAND/perf_RAND.eps Graphic file (type eps)
@@ -760,7 +686,14 @@ File: expr/micro_220517/wt/perf_RAND.eps Graphic file (type eps)
  <expr/micro_220517/wt/perf_RAND.eps>
 File: expr/micro_220517/wt/perf_JESD.eps Graphic file (type eps)
 
-<expr/micro_220517/wt/perf_JESD.eps>) (./05_conclusion.tex) (./dawid_fast.bbl
+<expr/micro_220517/wt/perf_JESD.eps>
+Underfull \hbox (badness 1590) in paragraph at lines 151--155
+\T1/ptm/m/n/10 mark [[]], run-ning 4KB se-quen-tial writes, 4KB ran-dom
+ []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 164.
+[4]) (./05_conclusion.tex) (./dawid_fast.bbl
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -783,16 +716,6 @@ Overfull \hbox (328.52673pt too wide) in paragraph at lines 4--9
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (61.02612pt too high) has occurred while \output is active []
-
-
-[5]
 Underfull \hbox (badness 10000) in paragraph at lines 11--14
 []\T1/ptm/m/n/10 Jens Axboe.  fio - flex-i-ble i/o tester.
  []
@@ -834,12 +757,14 @@ Overfull \hbox (305.83655pt too wide) in paragraph at lines 51--56
 [][][][][][]\T1/ptm/m/n/10 ,
  []
 
-)
+[5])
 
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
-[6] [7]
+[6
+
+]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
  (./dawid_fast.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 127.
@@ -849,12 +774,12 @@ Package rerunfilecheck Info: File `dawid_fast.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
  ) 
 Here is how much of TeX's memory you used:
- 9645 strings out of 480609
- 158153 string characters out of 5903655
- 479600 words of memory out of 5000000
- 25323 multiletter control sequences out of 15000+600000
+ 9551 strings out of 480609
+ 154429 string characters out of 5903655
+ 465288 words of memory out of 5000000
+ 25249 multiletter control sequences out of 15000+600000
  570112 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 50i,10n,52p,1655b,550s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,10n,52p,1655b,576s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dawid_fast.dvi (7 pages, 58444 bytes).
+Output written on dawid_fast.dvi (6 pages, 48144 bytes).
