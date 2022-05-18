@@ -28,5 +28,6 @@ for op in $OPERATION; do
 			#cat $pe"_fio_"$op"_"$ta"_1_16_2.wt" | awk '{print $3,$6,$9,$12}' >> $ofile
 			cat $pe"_fio_"$op"_"$ta"_1_16_2.wt" | awk '{printf("%.4f %.4f %.4f %.4f\n"), $3/262144,$6/262144,$9/262144,$12/262144}' >> $ofile
 		done
+		echo "target ud md gud gmd" >> $ofile
 	done
 done
