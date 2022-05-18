@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  18 MAY 2022 18:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  18 MAY 2022 20:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -681,13 +681,6 @@ File: figure/dawid_ssd_archi_new.eps Graphic file (type eps)
  <figure/dawid_ssd_archi_new.eps>
 File: figure/dawid_ds.eps Graphic file (type eps)
  <figure/dawid_ds.eps>
-
-LaTeX Warning: Text page 4 contains only floats.
-
-
-Underfull \vbox (badness 4967) has occurred while \output is active []
-
- [4]
 File: expr/micro_220517/perf/SEQ/perf_SEQ.eps Graphic file (type eps)
 
 <expr/micro_220517/perf/SEQ/perf_SEQ.eps>
@@ -705,15 +698,30 @@ File: expr/micro_220517/wt/result/RAND.eps Graphic file (type eps)
 File: expr/micro_220517/wt/result/JESD.eps Graphic file (type eps)
 
 <expr/micro_220517/wt/result/JESD.eps>
-Underfull \hbox (badness 1590) in paragraph at lines 206--210
+
+LaTeX Warning: Text page 4 contains only floats.
+
+
+Underfull \vbox (badness 4967) has occurred while \output is active []
+
+ [4]
+File: expr/macro_220517/perf/OLTP/perf_OLTP.eps Graphic file (type eps)
+
+<expr/macro_220517/perf/OLTP/perf_OLTP.eps>
+File: expr/macro_220517/perf/OLTP/perf_OLTP.eps Graphic file (type eps)
+
+<expr/macro_220517/perf/OLTP/perf_OLTP.eps>
+File: expr/macro_220517/wt/OLTP/graph/total.eps Graphic file (type eps)
+
+<expr/macro_220517/wt/OLTP/graph/total.eps>
+File: expr/macro_220517/wt/OLTP/graph/total.eps Graphic file (type eps)
+
+<expr/macro_220517/wt/OLTP/graph/total.eps> [5]
+Underfull \hbox (badness 1590) in paragraph at lines 164--168
 \T1/ptm/m/n/10 mark [[]], run-ning 4KB se-quen-tial writes, 4KB ran-dom
  []
 
-) (./05_conclusion.tex
-Underfull \vbox (badness 4254) has occurred while \output is active []
-
-)
-(./dawid_fast.bbl
+) (./05_conclusion.tex) (./dawid_fast.bbl
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -734,6 +742,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--9
 Overfull \hbox (328.52673pt too wide) in paragraph at lines 4--9
 [][][][][][]\T1/ptm/m/n/10 ,
  []
+
+
+Underfull \vbox (badness 2698) has occurred while \output is active []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 11--14
@@ -757,7 +768,7 @@ Underfull \hbox (badness 2221) in paragraph at lines 21--27
 .
  []
 
-
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 44--49
 []\T1/ptm/m/n/10 Samsung.  Sam-sung SSD 830 se-ries.
  []
@@ -782,32 +793,28 @@ Overfull \hbox (305.83655pt too wide) in paragraph at lines 51--56
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
-[5] [6]
+[7
+
+]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
  (./dawid_fast.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 127.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 127.
+Package rerunfilecheck Info: File `dawid_fast.out' has not changed.
+(rerunfilecheck)             Checksum: 3398C15E152ECC33DA746476FB7637A7;688.
 
-
-Package rerunfilecheck Warning: File `dawid_fast.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `dawid_fast.out':
-(rerunfilecheck)             Before: 1F8E9394FE66CFC346B10977EE177733;507
-(rerunfilecheck)             After:  DE99D61A4C036E319469BF3979831537;553.
 
 LaTeX Warning: There were undefined references.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
  ) 
 Here is how much of TeX's memory you used:
- 9539 strings out of 480609
- 154196 string characters out of 5903655
- 465140 words of memory out of 5000000
- 25233 multiletter control sequences out of 15000+600000
+ 9552 strings out of 480609
+ 154593 string characters out of 5903655
+ 464140 words of memory out of 5000000
+ 25242 multiletter control sequences out of 15000+600000
  564098 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 50i,10n,52p,1655b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,10n,52p,1655b,568s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dawid_fast.dvi (6 pages, 50284 bytes).
+Output written on dawid_fast.dvi (7 pages, 53964 bytes).
