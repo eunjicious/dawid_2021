@@ -1,6 +1,6 @@
 PROT FIFO DAWID
-prot1 255.349 1201.58 
-prot5 121.938 1128.57 
-prot10 119.388 1317.14 
-prot50 146.411 1314.42 
-prot100 206.246 1385.75 
+prot1 0 0 
+prot5 0 0 
+prot10 0 0 
+prot50 0 0 
+prot100 0 0 
