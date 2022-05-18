@@ -1,0 +1,10 @@
+FIFO ratio = 0.10 cache_size = 404 hit_ratio = 1.00 hit = 2987318 miss = 10890 evict = 10486 reqs = 2998208
+FIFO ratio = 0.20 cache_size = 808 hit_ratio = 1.00 hit = 2987330 miss = 10878 evict = 10070 reqs = 2998208
+FIFO ratio = 0.30 cache_size = 1212 hit_ratio = 1.00 hit = 2987341 miss = 10867 evict = 9655 reqs = 2998208
+FIFO ratio = 0.40 cache_size = 1616 hit_ratio = 1.00 hit = 2987350 miss = 10858 evict = 9242 reqs = 2998208
+FIFO ratio = 0.50 cache_size = 2020 hit_ratio = 1.00 hit = 2987359 miss = 10849 evict = 8829 reqs = 2998208
+FIFO ratio = 0.60 cache_size = 2424 hit_ratio = 1.00 hit = 2987366 miss = 10842 evict = 8418 reqs = 2998208
+FIFO ratio = 0.70 cache_size = 2828 hit_ratio = 1.00 hit = 2987380 miss = 10828 evict = 8000 reqs = 2998208
+FIFO ratio = 0.80 cache_size = 3231 hit_ratio = 1.00 hit = 2991099 miss = 7109 evict = 3878 reqs = 2998208
+FIFO ratio = 0.90 cache_size = 3635 hit_ratio = 1.00 hit = 2993012 miss = 5196 evict = 1561 reqs = 2998208
+FIFO ratio = 1.00 cache_size = 4039 hit_ratio = 1.00 hit = 2994168 miss = 4040 evict = 1 reqs = 2998208

@@ -1,0 +1,10 @@
+OPT ratio = 0.10 cache_size = 493 hit_ratio = 0.99 hit = 4069197 miss = 21043 evict = 20550 reqs = 4090240
+OPT ratio = 0.20 cache_size = 986 hit_ratio = 1.00 hit = 4076429 miss = 13811 evict = 12825 reqs = 4090240
+OPT ratio = 0.30 cache_size = 1479 hit_ratio = 1.00 hit = 4080598 miss = 9642 evict = 8163 reqs = 4090240
+OPT ratio = 0.40 cache_size = 1973 hit_ratio = 1.00 hit = 4083276 miss = 6964 evict = 4991 reqs = 4090240
+OPT ratio = 0.50 cache_size = 2466 hit_ratio = 1.00 hit = 4084990 miss = 5250 evict = 2784 reqs = 4090240
+OPT ratio = 0.60 cache_size = 2959 hit_ratio = 1.00 hit = 4085302 miss = 4938 evict = 1979 reqs = 4090240
+OPT ratio = 0.70 cache_size = 3453 hit_ratio = 1.00 hit = 4085302 miss = 4938 evict = 1485 reqs = 4090240
+OPT ratio = 0.80 cache_size = 3946 hit_ratio = 1.00 hit = 4085302 miss = 4938 evict = 992 reqs = 4090240
+OPT ratio = 0.90 cache_size = 4439 hit_ratio = 1.00 hit = 4085302 miss = 4938 evict = 499 reqs = 4090240
+OPT ratio = 1.00 cache_size = 4932 hit_ratio = 1.00 hit = 4085306 miss = 4934 evict = 2 reqs = 4090240

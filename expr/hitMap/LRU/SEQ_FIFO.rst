@@ -1,0 +1,10 @@
+LRU ratio = 0.10 cache_size = 450 hit_ratio = 1.00 hit = 3060333 miss = 12051 evict = 11601 reqs = 3072384
+LRU ratio = 0.20 cache_size = 900 hit_ratio = 1.00 hit = 3060343 miss = 12041 evict = 11141 reqs = 3072384
+LRU ratio = 0.30 cache_size = 1351 hit_ratio = 1.00 hit = 3060353 miss = 12031 evict = 10680 reqs = 3072384
+LRU ratio = 0.40 cache_size = 1801 hit_ratio = 1.00 hit = 3060354 miss = 12030 evict = 10229 reqs = 3072384
+LRU ratio = 0.50 cache_size = 2252 hit_ratio = 1.00 hit = 3060356 miss = 12028 evict = 9776 reqs = 3072384
+LRU ratio = 0.60 cache_size = 2702 hit_ratio = 1.00 hit = 3060357 miss = 12027 evict = 9325 reqs = 3072384
+LRU ratio = 0.70 cache_size = 3152 hit_ratio = 1.00 hit = 3060541 miss = 11843 evict = 8691 reqs = 3072384
+LRU ratio = 0.80 cache_size = 3603 hit_ratio = 1.00 hit = 3062709 miss = 9675 evict = 6072 reqs = 3072384
+LRU ratio = 0.90 cache_size = 4053 hit_ratio = 1.00 hit = 3066028 miss = 6356 evict = 2303 reqs = 3072384
+LRU ratio = 1.00 cache_size = 4503 hit_ratio = 1.00 hit = 3067878 miss = 4506 evict = 3 reqs = 3072384
