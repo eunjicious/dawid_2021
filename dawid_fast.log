@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  17 MAY 2022 20:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  18 MAY 2022 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -668,32 +668,38 @@ ut line 157.
 ) (./03_dawid_design.tex
 File: figure/dawid_algo.eps Graphic file (type eps)
  <figure/dawid_algo.eps> [3]) (./04_eval.tex
-File: figure/dawid_ssd_archi_new.eps Graphic file (type eps)
 
+Package natbib Warning: Citation `fig_dawid_archi' on page 4 undefined on input
+ line 7.
+
+File: figure/dawid_ssd_archi_new.eps Graphic file (type eps)
 <figure/dawid_ssd_archi_new.eps>
+File: figure/dawid_ds.eps Graphic file (type eps)
+ <figure/dawid_ds.eps>
 File: expr/micro_220517/perf/SEQ/perf_SEQ.eps Graphic file (type eps)
- <expr/micro_220517/perf/SEQ/perf_SEQ.eps>
+
+<expr/micro_220517/perf/SEQ/perf_SEQ.eps>
 File: expr/micro_220517/perf/RAND/perf_RAND.eps Graphic file (type eps)
 
 <expr/micro_220517/perf/RAND/perf_RAND.eps>
 File: expr/micro_220517/perf/JESD/perf_JESD.eps Graphic file (type eps)
 
 <expr/micro_220517/perf/JESD/perf_JESD.eps>
-File: expr/micro_220517/wt/perf_SEQ.eps Graphic file (type eps)
+File: expr/micro_220517/wt/result/SEQ.eps Graphic file (type eps)
 
-<expr/micro_220517/wt/perf_SEQ.eps>
-File: expr/micro_220517/wt/perf_RAND.eps Graphic file (type eps)
- <expr/micro_220517/wt/perf_RAND.eps>
-File: expr/micro_220517/wt/perf_JESD.eps Graphic file (type eps)
+<expr/micro_220517/wt/result/SEQ.eps>
+File: expr/micro_220517/wt/result/RAND.eps Graphic file (type eps)
+ <expr/micro_220517/wt/result/RAND.eps>
+File: expr/micro_220517/wt/result/JESD.eps Graphic file (type eps)
 
-<expr/micro_220517/wt/perf_JESD.eps>
-Underfull \hbox (badness 1590) in paragraph at lines 151--155
+<expr/micro_220517/wt/result/JESD.eps>
+Underfull \hbox (badness 1590) in paragraph at lines 175--179
 \T1/ptm/m/n/10 mark [[]], run-ning 4KB se-quen-tial writes, 4KB ran-dom
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 164.
-[4]) (./05_conclusion.tex) (./dawid_fast.bbl
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 188.
+) (./05_conclusion.tex) (./dawid_fast.bbl
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -715,7 +721,7 @@ Overfull \hbox (328.52673pt too wide) in paragraph at lines 4--9
 [][][][][][]\T1/ptm/m/n/10 ,
  []
 
-
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 11--14
 []\T1/ptm/m/n/10 Jens Axboe.  fio - flex-i-ble i/o tester.
  []
@@ -757,14 +763,12 @@ Overfull \hbox (305.83655pt too wide) in paragraph at lines 51--56
 [][][][][][]\T1/ptm/m/n/10 ,
  []
 
-[5])
+)
 
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
-[6
-
-]
+[5] [6]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
  (./dawid_fast.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 127.
@@ -774,12 +778,12 @@ Package rerunfilecheck Info: File `dawid_fast.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
  ) 
 Here is how much of TeX's memory you used:
- 9551 strings out of 480609
- 154429 string characters out of 5903655
- 465288 words of memory out of 5000000
- 25249 multiletter control sequences out of 15000+600000
+ 9558 strings out of 480609
+ 154545 string characters out of 5903655
+ 465276 words of memory out of 5000000
+ 25252 multiletter control sequences out of 15000+600000
  570112 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 50i,10n,52p,1655b,576s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,10n,52p,1655b,550s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dawid_fast.dvi (6 pages, 48144 bytes).
+Output written on dawid_fast.dvi (6 pages, 48660 bytes).

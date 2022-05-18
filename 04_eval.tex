@@ -4,6 +4,8 @@
 \subsection{Implementation}
 We implement \ours{} in \texttt{FEMU}, an open-source SSD development
 framework~\cite{li2018case}. 
+Fig.~\ref{fig_dawid_archi} shows the overall architecture of \ours{} SSD and
+its internal data structures. 
 
 To realize this design,  
 \ours{} maintains two data structures: first, \textit{a zero-cost list}  
@@ -19,10 +21,16 @@ and each translation page write maximizes the number of persisted mapping entrie
 
 \begin{figure}[t]
     \centering{}
-    \includegraphics[width=0.4\textwidth]{figure/dawid_ssd_archi_new.eps}
+	\subfloat[Architecture] { 
+    	\includegraphics[width=0.3\textwidth]{figure/dawid_ssd_archi_new.eps}
+	} \\
+	\subfloat[Data structures for FTL]{ 
+    	\includegraphics[width=0.4\textwidth]{figure/dawid_ds.eps}
+	}
+
     %\includegraphics[width=0.4\textwidth]{figure/dawid_ssd_archi.eps}
-    \caption{\textbf{Write traffic for micro benchmarks.}}
-    \label{fig_spartan_archi}
+    \caption{\textbf{Dawid-SSD.Architecturep}}
+    \label{fig_dawid_archi}
 \end{figure}
 
 
@@ -56,6 +64,22 @@ and each translation page write maximizes the number of persisted mapping entrie
 \begin{figure*}[t]
     \centering{}
 	\subfloat[Sequential] { 
+	    \includegraphics[width=0.3\textwidth]{expr/micro_220517/wt/result/SEQ.eps}
+	} 
+	\subfloat[Random] { 
+	    \includegraphics[width=0.3\textwidth]{expr/micro_220517/wt/result/RAND.eps}
+	} 
+	\subfloat[JESD] { 
+	    \includegraphics[width=0.3\textwidth]{expr/micro_220517/wt/result/JESD.eps}
+	}
+    \caption{\textbf{Write Traffic}}
+\end{figure*} 
+
+
+\iffalse
+\begin{figure*}[t]
+    \centering{}
+	\subfloat[Sequential] { 
 	    \includegraphics[width=0.3\textwidth]{expr/micro_220517/wt/perf_SEQ.eps}
 	} 
 	\subfloat[Random] { 
@@ -66,7 +90,7 @@ and each translation page write maximizes the number of persisted mapping entrie
 	}
     \caption{\textbf{Write Traffic}}
 \end{figure*} 
-
+\fi
 
 
 
