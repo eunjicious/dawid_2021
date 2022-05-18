@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  18 MAY 2022 20:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  18 MAY 2022 20:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -494,7 +494,11 @@ File: l3backend-dvips.def 2020-03-12 L3 backend support: dvips
 \g__pdf_backend_link_int=\count269
 \g__pdf_backend_link_sf_int=\count270
 )
-(./dawid_fast.aux)
+(./dawid_fast.aux
+
+LaTeX Warning: Label `fig_dawid_archi' multiply defined.
+
+)
 \openout1 = `dawid_fast.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
@@ -502,8 +506,7 @@ LaTeX Font Info:    ... okay on input line 40.
 LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 40.
 LaTeX Font Info:    Trying to load font information for OMS+pzccm on input line
  40.
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/omspzccm.fd
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
 LaTeX Font Info:    ... okay on input line 40.
@@ -676,9 +679,24 @@ LaTeX Warning: Reference `tab:ssd_buff_comp' on page 3 undefined on input line
 LaTeX Warning: Reference `tab:ssd_config' on page 3 undefined on input line 33.
 
 
-[3]) (./04_eval.tex
+[3]
+File: expr/hitMap/JESD_FIFO.eps Graphic file (type eps)
+ <expr/hitMap/JESD_FIFO.eps>
+File: expr/hitMap/JESD_DAWID.eps Graphic file (type eps)
+ <expr/hitMap/JESD_DAWID.eps>
+File: expr/hitMap/OLTP_FIFO.eps Graphic file (type eps)
+
+<expr/hitMap/OLTP_FIFO.eps>
+File: expr/hitMap/OLTP_DAWID.eps Graphic file (type eps)
+ <expr/hitMap/OLTP_DAWID.eps>
+File: expr/hitMap/JESD_FIFO.eps Graphic file (type eps)
+
+<expr/hitMap/JESD_FIFO.eps>
+File: expr/hitMap/JESD_FIFO.eps Graphic file (type eps)
+ <expr/hitMap/JESD_FIFO.eps>) (./04_eval.tex
 File: figure/dawid_ssd_archi_new.eps Graphic file (type eps)
- <figure/dawid_ssd_archi_new.eps>
+
+<figure/dawid_ssd_archi_new.eps>
 File: figure/dawid_ds.eps Graphic file (type eps)
  <figure/dawid_ds.eps>
 File: expr/micro_220517/perf/SEQ/perf_SEQ.eps Graphic file (type eps)
@@ -697,14 +715,7 @@ File: expr/micro_220517/wt/result/RAND.eps Graphic file (type eps)
  <expr/micro_220517/wt/result/RAND.eps>
 File: expr/micro_220517/wt/result/JESD.eps Graphic file (type eps)
 
-<expr/micro_220517/wt/result/JESD.eps>
-
-LaTeX Warning: Text page 4 contains only floats.
-
-
-Underfull \vbox (badness 4967) has occurred while \output is active []
-
- [4]
+<expr/micro_220517/wt/result/JESD.eps> [4]
 File: expr/macro_220517/perf/OLTP/perf_OLTP.eps Graphic file (type eps)
 
 <expr/macro_220517/perf/OLTP/perf_OLTP.eps>
@@ -716,7 +727,7 @@ File: expr/macro_220517/wt/OLTP/graph/total.eps Graphic file (type eps)
 <expr/macro_220517/wt/OLTP/graph/total.eps>
 File: expr/macro_220517/wt/OLTP/graph/total.eps Graphic file (type eps)
 
-<expr/macro_220517/wt/OLTP/graph/total.eps> [5]
+<expr/macro_220517/wt/OLTP/graph/total.eps>
 Underfull \hbox (badness 1590) in paragraph at lines 164--168
 \T1/ptm/m/n/10 mark [[]], run-ning 4KB se-quen-tial writes, 4KB ran-dom
  []
@@ -743,10 +754,7 @@ Overfull \hbox (328.52673pt too wide) in paragraph at lines 4--9
 [][][][][][]\T1/ptm/m/n/10 ,
  []
 
-
-Underfull \vbox (badness 2698) has occurred while \output is active []
-
-
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 11--14
 []\T1/ptm/m/n/10 Jens Axboe.  fio - flex-i-ble i/o tester.
  []
@@ -768,7 +776,7 @@ Underfull \hbox (badness 2221) in paragraph at lines 21--27
 .
  []
 
-[6]
+
 Underfull \hbox (badness 10000) in paragraph at lines 44--49
 []\T1/ptm/m/n/10 Samsung.  Sam-sung SSD 830 se-ries.
  []
@@ -793,28 +801,29 @@ Overfull \hbox (305.83655pt too wide) in paragraph at lines 51--56
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
-[7
-
-]
+[6] [7]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
  (./dawid_fast.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 127.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 127.
 Package rerunfilecheck Info: File `dawid_fast.out' has not changed.
-(rerunfilecheck)             Checksum: 3398C15E152ECC33DA746476FB7637A7;688.
+(rerunfilecheck)             Checksum: 4D9E4CB4FF07678D2CDC4481445F4580;753.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
  ) 
 Here is how much of TeX's memory you used:
- 9552 strings out of 480609
- 154593 string characters out of 5903655
- 464140 words of memory out of 5000000
- 25242 multiletter control sequences out of 15000+600000
+ 9570 strings out of 480609
+ 155033 string characters out of 5903655
+ 465215 words of memory out of 5000000
+ 25255 multiletter control sequences out of 15000+600000
  564098 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 50i,10n,52p,1655b,568s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,10n,52p,1655b,546s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dawid_fast.dvi (7 pages, 53964 bytes).
+Output written on dawid_fast.dvi (7 pages, 55536 bytes).
