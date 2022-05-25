@@ -109,7 +109,8 @@ Next, the write requests \texttt{W(4)}, \texttt{W(6)}, and \texttt{W(7)} are pro
 Because their address mapping entries are located in the same page of the mapping table, the cost of flushing them 
 is reduced to one third. 
 With this policy, LIDF can reduce the footprint of mapping table updates within time intervals, thereby delivering only two flushes of the mapping table for the same task. 
- 
+
+\iffalse
 \subsection{Eviction Policy}
 \begin{figure}[t!]
     \centering{}
@@ -128,5 +129,5 @@ With this policy, LIDF can reduce the footprint of mapping table updates within 
     \caption{\textbf{Write hit ratio for the protected range in a mapping table.}}
     \label{fig_dawid_archi}
 \end{figure}
-
+\fi
 

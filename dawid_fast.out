@@ -5,9 +5,8 @@
 \BOOKMARK [1][-]{section.3}{Design}{}% 5
 \BOOKMARK [2][-]{subsection.3.1}{Overview}{section.3}% 6
 \BOOKMARK [2][-]{subsection.3.2}{Least Increase of Dirtiness Scheduling}{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.3}{Eviction Policy}{section.3}% 8
-\BOOKMARK [1][-]{section.4}{Implementation}{}% 9
-\BOOKMARK [1][-]{section.5}{Evaluation}{}% 10
-\BOOKMARK [2][-]{subsection.5.1}{Micro-benchmark}{section.5}% 11
-\BOOKMARK [2][-]{subsection.5.2}{Real-world benchmark}{section.5}% 12
-\BOOKMARK [1][-]{section.6}{Conclusion}{}% 13
+\BOOKMARK [1][-]{section.4}{Implementation}{}% 8
+\BOOKMARK [1][-]{section.5}{Evaluation}{}% 9
+\BOOKMARK [2][-]{subsection.5.1}{Micro-benchmark}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.2}{Real-world benchmark}{section.5}% 11
+\BOOKMARK [1][-]{section.6}{Conclusion}{}% 12
