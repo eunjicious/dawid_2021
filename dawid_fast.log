@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  18 MAY 2022 20:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  25 MAY 2022 18:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -698,15 +698,29 @@ File: figure/dawid_ssd_archi_new.eps Graphic file (type eps)
 <figure/dawid_ssd_archi_new.eps>
 File: figure/dawid_ds.eps Graphic file (type eps)
  <figure/dawid_ds.eps>
-File: expr/micro_220517/perf/SEQ/perf_SEQ.eps Graphic file (type eps)
+File: expr/all_220525/perf/RAND_1G/perf_RAND_1G.eps Graphic file (type eps)
 
-<expr/micro_220517/perf/SEQ/perf_SEQ.eps>
-File: expr/micro_220517/perf/RAND/perf_RAND.eps Graphic file (type eps)
+<expr/all_220525/perf/RAND_1G/perf_RAND_1G.eps>
+File: expr/all_220525/perf/JESD_1G/perf_JESD_1G.eps Graphic file (type eps)
 
-<expr/micro_220517/perf/RAND/perf_RAND.eps>
-File: expr/micro_220517/perf/JESD/perf_JESD.eps Graphic file (type eps)
+<expr/all_220525/perf/JESD_1G/perf_JESD_1G.eps>
+File: expr/all_220525/perf/TPCC_1G/perf_OLTP_1G.eps Graphic file (type eps)
 
-<expr/micro_220517/perf/JESD/perf_JESD.eps>
+<expr/all_220525/perf/TPCC_1G/perf_OLTP_1G.eps>
+File: expr/all_220525/perf/RAND_1G/wt.eps Graphic file (type eps)
+
+<expr/all_220525/perf/RAND_1G/wt.eps>
+File: expr/all_220525/perf/JESD_1G/wt.eps Graphic file (type eps)
+ <expr/all_220525/perf/JESD_1G/wt.eps>
+File: expr/all_220525/perf/JESD_40M/perf_JESD_40M.eps Graphic file (type eps)
+
+<expr/all_220525/perf/JESD_40M/perf_JESD_40M.eps>
+File: expr/all_220525/perf/JESD_40M/perf_JESD_40M.eps Graphic file (type eps)
+
+<expr/all_220525/perf/JESD_40M/perf_JESD_40M.eps>
+File: expr/all_220525/perf/TPCC_40M/perf_OLTP_40M.eps Graphic file (type eps)
+
+<expr/all_220525/perf/TPCC_40M/perf_OLTP_40M.eps>
 File: expr/micro_220517/wt/result/SEQ.eps Graphic file (type eps)
 
 <expr/micro_220517/wt/result/SEQ.eps>
@@ -730,7 +744,7 @@ File: expr/macro_220517/wt/OLTP/graph/total.eps Graphic file (type eps)
 File: expr/macro_220517/wt/OLTP/graph/total.eps Graphic file (type eps)
 
 <expr/macro_220517/wt/OLTP/graph/total.eps>
-Underfull \hbox (badness 1590) in paragraph at lines 164--168
+Underfull \hbox (badness 1590) in paragraph at lines 212--216
 \T1/ptm/m/n/10 mark [[]], run-ning 4KB se-quen-tial writes, 4KB ran-dom
  []
 
@@ -757,6 +771,20 @@ Overfull \hbox (328.52673pt too wide) in paragraph at lines 4--9
  []
 
 [5]
+
+LaTeX Warning: Text page 6 contains only floats.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Warning: Text page 6 contains only floats.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
 Underfull \hbox (badness 10000) in paragraph at lines 11--14
 []\T1/ptm/m/n/10 Jens Axboe.  fio - flex-i-ble i/o tester.
  []
@@ -803,7 +831,7 @@ Overfull \hbox (305.83655pt too wide) in paragraph at lines 51--56
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
-[6] [7]
+[7]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
  (./dawid_fast.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 127.
@@ -820,12 +848,12 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
  ) 
 Here is how much of TeX's memory you used:
- 9570 strings out of 480609
- 155085 string characters out of 5903655
- 465215 words of memory out of 5000000
- 25255 multiletter control sequences out of 15000+600000
+ 9587 strings out of 480609
+ 155789 string characters out of 5903655
+ 466215 words of memory out of 5000000
+ 25267 multiletter control sequences out of 15000+600000
  564098 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 50i,10n,52p,1655b,546s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,10n,52p,1655b,550s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dawid_fast.dvi (7 pages, 55560 bytes).
+Output written on dawid_fast.dvi (7 pages, 57576 bytes).

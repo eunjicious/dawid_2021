@@ -13,6 +13,53 @@
     \label{fig_dawid_archi}
 \end{figure}
 
+
+\begin{figure*}[!t]
+    \centering{}
+	\subfloat[Random] { 
+	    \includegraphics[width=0.3\textwidth]{expr/all_220525/perf/RAND_1G/perf_RAND_1G.eps}
+	} 
+	\subfloat[JESD] { 
+	    \includegraphics[width=0.3\textwidth]{expr/all_220525/perf/JESD_1G/perf_JESD_1G.eps}
+	}
+	\subfloat[TPC-C] { 
+	    \includegraphics[width=0.3\textwidth]{expr/all_220525/perf/TPCC_1G/perf_OLTP_1G.eps}
+	}
+
+    \caption{\textbf{IOPS with an 1GB write buffer}}
+\end{figure*} 
+
+
+\begin{figure*}[!t]
+    \centering{}
+	\subfloat[Random] { 
+	    \includegraphics[width=0.3\textwidth]{expr/all_220525/perf/RAND_1G/wt.eps}
+	} 
+	\subfloat[JESD] { 
+	    \includegraphics[width=0.3\textwidth]{expr/all_220525/perf/JESD_1G/wt.eps}
+	}
+    \caption{\textbf{IOPS with an 1GB write buffer}}
+\end{figure*} 
+
+
+\begin{figure*}[!t]
+    \centering{}
+	\subfloat[Random] { 
+	    \includegraphics[width=0.3\textwidth]{expr/all_220525/perf/JESD_40M/perf_JESD_40M.eps}
+	} 
+	\subfloat[JESD] { 
+	    \includegraphics[width=0.3\textwidth]{expr/all_220525/perf/JESD_40M/perf_JESD_40M.eps}
+	}
+	\subfloat[TPC-C] { 
+	    \includegraphics[width=0.3\textwidth]{expr/all_220525/perf/TPCC_40M/perf_OLTP_40M.eps}
+	}
+
+    \caption{\textbf{IOPS with an 64MB write buffer}}
+\end{figure*} 
+
+
+
+\iffalse
 \begin{figure*}[!t]
     \centering{}
 	\subfloat[Sequential] { 
@@ -26,6 +73,7 @@
 	}
     \caption{\textbf{IOPS}}
 \end{figure*} 
+\fi
 %
 %
 %\iffalse

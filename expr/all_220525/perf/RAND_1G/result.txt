@@ -1,0 +1,6 @@
+PROT FIFO DAWID
+prot1 37.4 53.4 
+prot5 40.9 55.3 
+prot10 46.6 58.6 
+prot50 77.1 69.1 
+prot100 76.5 69.3 
