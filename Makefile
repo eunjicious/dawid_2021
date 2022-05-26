@@ -11,7 +11,7 @@
 # make pdf      # make pdf
 #
 
-MAIN		= dawid_fast
+MAIN		= dawid_mascots
 
 all: dvi ps pdf
 

@@ -1,3 +1,3 @@
 make clean
 make
-open dawid_fast.pdf
+open dawid_mascots.pdf

@@ -1,0 +1,158 @@
+\begin{thebibliography}{10}
+
+\bibitem{anandtech18samsung}
+AnandTech.
+\newblock Samsung 30.72 {TB} {SSDs}: Mass production of {PM1643} begins.
+\newblock
+  \url{https://www.anandtech.com/show/12448/samsung-begins-mass-production-of-pm1643-sas-ssds-with-3072-tb-capacity},
+  2018.
+
+\bibitem{fio-bench}
+Jens Axboe.
+\newblock fio - flexible i/o tester.
+\newblock \url{https://github.com/axboe/fio}, 2021.
+
+\bibitem{busche2014design}
+Christoph Busche, Laia Vil{\`a}-Nadal, Jun Yan, Haralampos~N Miras, De-Liang
+  Long, Vihar~P Georgiev, Asen Asenov, Rasmus~H Pedersen, Nikolaj Gadegaard,
+  Muhammad~M Mirza, et~al.
+\newblock Design and fabrication of memory devices based on nanoscale
+  polyoxometalate clusters.
+\newblock {\em Nature}, 515(7528):545--549, 2014.
+
+\bibitem{ChenLZ19tc}
+Xubin Chen, Yin Li, and Tong Zhang.
+\newblock Reducing flash memory write traffic by exploiting a few {MBs} of
+  capacitor-powered write buffer inside solid-state drives (ssds).
+\newblock {\em {IEEE} Trans. Computers}, 68(3):426--439, 2019.
+\newblock \url{https://doi.org/10.1109/TC.2018.2871683}.
+
+\bibitem{cheong2018flash}
+Wooseong Cheong, Chanho Yoon, Seonghoon Woo, Kyuwook Han, Daehyun Kim,
+  Chulseung Lee, Youra Choi, Shine Kim, Dongku Kang, Geunyeong Yu, et~al.
+\newblock A flash memory controller for 15$\mu$s ultra-low-latency ssd using
+  high-speed 3d nand flash with 3$\mu$s read time.
+\newblock In {\em 2018 IEEE International Solid-State Circuits
+  Conference-(ISSCC)}, pages 338--340. IEEE, 2018.
+
+\bibitem{council1990tpc}
+Transaction Processing~Performance Council.
+\newblock Tpc benchmark c standard specification, 1990.
+
+\bibitem{GuoYZC13date}
+Jie Guo, Jun Yang, Youtao Zhang, and Yiran Chen.
+\newblock Low cost power failure protection for {MLC} {NAND} flash storage
+  systems with {PRAM/DRAM} hybrid buffer.
+\newblock In {\em Design, Automation and Test in Europe, {DATE} 13, Grenoble,
+  France, March 18-22, 2013}, pages 859--864, 2013.
+\newblock \url{https://doi.org/10.7873/DATE.2013.181}.
+
+\bibitem{gupta2009dftl}
+Aayush Gupta, Youngjae Kim, and Bhuvan Urgaonkar.
+\newblock Dftl: a flash translation layer employing demand-based selective
+  caching of page-level address mappings.
+\newblock {\em Acm Sigplan Notices}, 44(3):229--240, 2009.
+
+\bibitem{huang2011life}
+Jiaoying Huang, Liang Mei, and Cheng Gao.
+\newblock Life prediction of tantalum capacitor based on gray theory
+  optimization model.
+\newblock In {\em 2011 IEEE International Conference on Quality and
+  Reliability}, pages 166--171. IEEE, 2011.
+
+\bibitem{HuangWQLS15hpcc}
+Min Huang, Yi~Wang, Liyan Qiao, Duo Liu, and Zili Shao.
+\newblock {SmartBackup}: An efficient and reliable backup strategy for solid
+  state drives with backup capacitors.
+\newblock In {\em 17th {IEEE} International Conference on High Performance
+  Computing and Communications, {HPCC} 2015, 7th {IEEE} International Symposium
+  on Cyberspace Safety and Security, {CSS} 2015, and 12th {IEEE} International
+  Conference on Embedded Software and Systems, {ICESS} 2015, New York, NY, USA,
+  August 24-26, 2015}, pages 746--751, 2015.
+\newblock \url{https://doi.org/10.1109/HPCC-CSS-ICESS.2015.180}.
+
+\bibitem{jiang2011s}
+Song Jiang, Lei Zhang, XinHao Yuan, Hao Hu, and Yu~Chen.
+\newblock {S-FTL}: An efficient address translation for flash memory by
+  exploiting spatial locality.
+\newblock In {\em 2011 IEEE 27th Symposium on Mass Storage Systems and
+  Technologies (MSST)}, pages 1--12. IEEE, 2011.
+
+\bibitem{KangLMKO14sigmod}
+Woon{-}Hak Kang, Sang{-}Won Lee, Bongki Moon, Yang{-}Suk Kee, and Moonwook Oh.
+\newblock Durable write cache in flash memory {SSD} for relational and nosql
+  databases.
+\newblock In {\em ACM International Conference on Management of Data (SIGMOD)},
+  pages 529--540, 2014.
+\newblock \url{https://doi.org/10.1145/2588555.2595632}.
+
+\bibitem{KimK15sac}
+Dongwook Kim and Sooyong Kang.
+\newblock Dual region write buffering: making large-scale nonvolatile buffer
+  using small capacitor in {SSD}.
+\newblock In {\em Proceedings of the 30th Annual {ACM} Symposium on Applied
+  Computing, Salamanca, Spain, April 13-17, 2015}, pages 2039--2046, 2015.
+\newblock \url{https://doi.org/10.1145/2695664.2695830}.
+
+\bibitem{kim2017shrd}
+Hyukjoong Kim, Dongkun Shin, Yun~Ho Jeong, and Kyung~Ho Kim.
+\newblock {SHRD}: Improving spatial locality in flash storage accesses by
+  sequentializing in host and randomizing in device.
+\newblock In {\em 15th USENIX Conference on File and Storage Technologies
+  (FAST)}, pages 271--284, 2017.
+
+\bibitem{lee2021spartanssd}
+Hyeon~Gyu Lee, Juwon Lee, Minwook Kim, Donghwa Shin, Sungjin Lee, Bryan~S Kim,
+  Eunji Lee, and Sang~Lyul Min.
+\newblock Spartanssd: a reliable ssd under capacitance constraints.
+\newblock In {\em 2021 IEEE/ACM International Symposium on Low Power
+  Electronics and Design (ISLPED)}, pages 1--6. IEEE, 2021.
+
+\bibitem{li2018case}
+Huaicheng Li, Mingzhe Hao, Michael~Hao Tong, Swaminathan Sundararaman, Matias
+  Bj{\o}rling, and Haryadi~S Gunawi.
+\newblock The {CASE} of {FEMU}: Cheap, accurate, scalable and extensible flash
+  emulator.
+\newblock In {\em 16th {USENIX} Conference on File and Storage Technologies
+  (FAST)}, pages 83--90, 2018.
+
+\bibitem{ni2017hash}
+Fan Ni, Chunyi Liu, Yang Wang, Chengzhong Xu, Xiao Zhang, and Song Jiang.
+\newblock A hash-based space-efficient page-level {FTL} for large-capacity
+  {SSDs}.
+\newblock In {\em 2017 International Conference on Networking, Architecture,
+  and Storage (NAS)}, pages 1--6. IEEE, 2017.
+
+\bibitem{9365809}
+Jae-Woo Park, Doogon Kim, Sunghwa Ok, Jaebeom Park, Taeheui Kwon, Hyunsoo Lee,
+  Sungmook Lim, Sun-Young Jung, Hyeongjin Choi, Taikyu Kang, Gwan Park,
+  Chul-Woo Yang, Jeong-Gil Choi, Gwihan Ko, Jaehyeon Shin, Ingon Yang, Junghoon
+  Nam, Hyeokchan Sohn, Seok-In Hong, Yohan Jeong, Sung-Wook Choi, Changwoon
+  Choi, Hyun-Soo Shin, Junyoun Lim, Dongkyu Youn, Sanghyuk Nam, Juyeab Lee,
+  Myungkyu Ahn, Hoseok Lee, Seungpil Lee, Jongmin Park, Kichang Gwon, Woopyo
+  Jeong, Jungdal Choi, Jinkook Kim, and Kyo-Won Jin.
+\newblock 30.1 a 176-stacked 512gb 3b/cell 3d-nand flash with 10.8gb/mm2
+  density with a peripheral circuit under cell array architecture.
+\newblock In {\em 2021 IEEE International Solid- State Circuits Conference
+  (ISSCC)}, volume~64, pages 422--423, 2021.
+
+\bibitem{samsung2011}
+Samsung.
+\newblock Samsung {SSD} 830 series.
+\newblock
+  \url{https://www.samsung.com/us/support/owners/product/128gb-ssd-830-series},
+  2011.
+
+\bibitem{samsung_ratio}
+Samsung.
+\newblock Samsung {V-NAND SSD 860 QVO}.
+\newblock
+  \url{https://www.samsung.com/semiconductor/global.semi.static/Samsung\%20SSD\%20860\%20QVO\%20Data\%20Sheet_Rev1.pdf},
+  2013.
+
+\bibitem{sysbench}
+Sysbench.
+\newblock Sysbench.
+\newblock \url{https://github.com/akopytov/sysbench.git}, 2022.
+
+\end{thebibliography}
