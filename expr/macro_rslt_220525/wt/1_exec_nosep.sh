@@ -4,7 +4,7 @@ OPERATION="OLTP"
 
 TARGET="FIFO DAWID"
 
-BUFF_SIZE="40" 
+BUFF_SIZE="40 1" 
 
 #ofile="total.rslt"
 

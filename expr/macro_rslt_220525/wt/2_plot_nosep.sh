@@ -2,7 +2,7 @@
 #benchs="rw sw synths synthr synthz realw realf realw_1 realf_1 reallr_1 realtpc_1"
 #benchs="realw_opt_1 realf_opt_1 reallr_opt_1 realtpc_opt_1"
 #benchs="realw_opt realf_opt reallr_opt realtpc_opt" 
-benchs="OLTP_40"
+benchs="OLTP_40 OLTP_1"
 
 
 #for bench in $@;
