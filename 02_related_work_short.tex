@@ -1,0 +1,157 @@
+\section{Related work}
+
+This paper builds upon several prior work done on SSDs. In this section, we briefly outline them and discuss our work in relation to them.
+
+\subsection{Mapping Table}
+The large memory footprint of the mapping table has been a drawback for SSDs.
+Several works attempted to reduce the memory usage of the mapping table. 
+D-FTL performs on-demand paging for the mapping table using DRAM as a translation cache~\cite{gupta2009dftl}.
+It maintains the entire mapping table in flash memory, caching a subset of the translation information in the limited size of DRAM.
+This scheme trade-offs the performance with the memory usage for high-capacity SSDs and it can deliver a poor performance under the workloads with weak locality. 
+
+HP-FTL saves the internal memory space by adopting the hash-based mapping. In the page-level FTL, each entry of the mapping table is typically 4byte-long which represents the PPA (Physical Page Address) for the LPA (Logical Page Address)~\cite{ni2017hash}. 
+HP-FTL determines the physical block to place the incoming data using a hash function. To reduce a hash-collision, HP-FTL use multiple hash functions and each entry of the mapping table maintains the hash function ID effectively used and the physical page offset within the block. As an example, when 4 hash functions are used and a block consists of 64 pages, each entry requires 8-bit only. This size is one fourth of the original one. However, this approach significantly increases the GC(Garbage-Collection) overhead because it randomly scatters writes onto the contiguous LPNs. 
+In addition, the fully associative secondary mapping table, which is used to resolve the hash collision, offsets the benefit of the hash-based mapping by maintaining both LPA and PPA information in the table. 
+These works are orthogonal with capacitance-saving techniques that care about the persistence management of the buffered data within DRAM.
+
+S-FTL proposed a method for efficiently caching the mapping table in a small amount of DRAM cache~\cite{jiang2011s}. S-FTL uses an extent-like data structure to reduce the in-cache translation memory footprint. It also holds the translation updates in DRAM to reduce the write-back traffic associated with the mapping table. When a dirty mapping page needs to be evicted, S-FTL flushes the mapping table page into flash memory when the number of dirty entries of the page goes beyond the threshold; otherwise, it evicts the page without flushing, keeping the dirty entries within DRAM. The dirty entries are reflected to the mapping table page when it is loaded later. 
+
+SHRD~\cite{kim2017shrd} studied the sequentializing scheme to reduce the write-back overhead of the demand-loading mapping table. They argue that the random writes make dirty entries sparsely dispersed among the mapping pages, decreasing the cache hit ratio of mapping table significantly. To relieve this problem, they transform the random writes into the sequential pattern by maintaining a log buffer in SSD. That is, the random writes are temporarily redirected into the log buffer mapped with sequential LPN(Logical Page Number)s and the redirection information is maintained in a device driver to service the read requests correctly. 
+The mapping table entries for the original LPNs of buffered writes are updated in the order of the original LPN when the log buffer is exhausted. This scheme improves the spatial locality of mapping entry updates, achieving the higher performance of SSD when the demand-loading mapping table is in use. 
+
+S-FTL and SHRD have a similarity with our policy in that they also attempt to aggregate the dirty entry updates for a mapping table to reduce a write traffic associated with a mapping table. However, they essentially tackle the write-back cost of the cached mapping table, not considering capacitance constraints. 
+% our policy essentially differs from S-FTL in that we reschedule the ingress requests such that the buffering effect is maximized under capacitance constraints. 
+% S-FTL과 SHRD 모두 mapping table 을 캐슁하는 상황에서 write-back overhead 를 줄이기 위한 연구임 (즉, 배터리 이슈는 아님). S-FTL은 mapping table dirty page 를 flush 하는 비용을 줄이기 위해서 dirty page entries 의 숫자가 특정 threshold 가 넘어야만 flush 를 수행함. SHRD 는 디바이스에 로깅. 충분한 reordering 을 통해 mapping table 의 dirtiness 가 증가하도록 해서 write-back efficiency 를 증가시킴. 
+
+\iffalse
+SHRD~\cite{kim2017shrd} pointed out that the mapping table size proportionally increases with the SSD capacity and thus 가 SSD 의 scalability 를 향상시키는 데에 큰 걸림돌이라고 지적함. DRAM 전체에 mapping table 을 유지하는 것은 비용이 많이 들어감. 이에 demand paging 으로 mapping table 을 small DRAM으로 caching 할 때, random writes 가 mapping table 의 spatial locality 를 저하시키는 문제를 지적함. 이에 user request 를 충분히 buffering 하여 reordering 하면 spatial locality 를 올릴 수 있다는 점에 착안하여, SSD의 일부 영역을 sequentializing 을 위한 log area 로 둠. random 패턴으로 유입되는 write 의 LPN을 임시로 sequential LPN 으로 맵핑하여 보관. original LPN to temporal LPN 정보는 device driver 에서 유지. Log Area 공간이 다 차면 그 때 가서 original LPN에 대한 entry 를 mapping table 에서 업데이트. Log area 를 충분히 키워서 버퍼링 효과를 높이면 spatial locality 가 좋아진다는 주장임. 우리거랑 key idea 측면에서 유사성이 있음. 우리는 user buffer 를 키워서 reordering 수행. map table 의 locality 를 올리는 것임. 그렇기 때문에 추가적인 redirection 을 device driver 에서 수행하지 않음. 그보다는 우린 배터리 용량 관점에서 reordering 기법을 이용함. 통상 성능과 신뢰성이 중요한 Enterprised-SSD 에서는 mapping table 전체를 배터리로 보호함. 그 환경에서는 caching eviction 에 의한 write traffic 이 중요하지 않으나 battery 이슈는 존재. 
+\fi
+
+\iffalse
+SHRD (FAST ‘17): 호스트에서 저링 하는 것과 비슷. 임시로 sequential LPN 할당 (저널 주소로 생각하면 됨) 하고 데이터를 특정 영역 (임시 Sequential LPN 이 나타낼 수 있는 최대 영역)에 씀. 이게 넘어가면 임시 LPN을 원래의 LPN으로 업데이트. 이 때 원래의 LPN을 sorting 해서 업데이트. (user request 에 write buffer 쓰지 않음.) ⇒ 어떻게 보면 우리 것과 비슷.  
+\fi
+
+\iffalse
+이에 write-back overhead 를 줄이기 위한 다앙햔 기법이 제안되었음. 디테일은 기법마다 차이가 있으나 실제 원리는 비슷함. 버퍼링을 통해 translation update 를 aggregate 시켜 flash memory 로 가는 쓰기량을 절감하는 방식임. 버퍼링 효과를 내는 방식으로 저널링을 쓰기도 하고, sequential LPN을 가상으로 부여하는 방법을 쓰기도 하는 것임. 
+
+\EUNJI{여기서부터는 introduction 에 쓰는 것도 좋아 보임.}
+우리가 제안하는 기법은 이 두 기법 사이에 있음. 보호가 가능한 분량 만큼에 대해서는 write-back 이 필요없으나, 해당 크기를 넘어서는 상황에서는 mapping table 의 효율적인 write-back 이 요구됨. 특히, 배터리가 전혀 없는  스토리지와 달리, 배터리로 보호되는 SSD는 버퍼에 쓰여진 데이터에 대해서도 모두 영속성을 보장하기 때문에 보호 가능한 범위를 벗어나는 순간 즉각적인 write-back 이 필요하다. 
+
+이러한 상황을 고려했을 때, 버퍼 관리 기법에서 추구해야할 특성은 두가지로 생각해볼 수 있다. 
+
+1) 매 순간 평균 dirty memory footprint 가 작아야 하고,  
+2) 버퍼링 write-back cost 를 줄일 수 있도록 최대한 updates 를 aggregate 시킬 수 있어야 함. 
+
+
+제안하는 기법은 상기 두 개의 목표를 달성하기 위해, 동일한 mapping table page 에 업데이트를 필요로하는 write 를 그룹핑하고, dirty memory footprint 의 증가를 가장 적게 일으키도록 write 
+4GB인데 4KB 단위로 맵핑 테이블 유지하면, 1M 개의 entry. 4byte 면 4MB 임. 
+
+\EUNJI{우리가 탐색하고자 하는 기법은 기존의 상황에서 배터리 제한적으로 보호되는 버퍼를 가정. constraint 가 하나 더 늘어남. 이 경우 write-back의 delay 발생 시 이미 사용자에게는 persistent 하다고 보장된 데이터를 loss 하거나 전체 SSD를 모두 scan 해야 하는 비용이 발생할 수 있어,  }
+% SSD 맵핑 테이블의 쓰기 트래픽을 줄이려는 연구는 지난 십년간 연구의 단골 소재였다. 
+
+
+% S-FTL (MSST ‘11): 더티 엔트리들을 모아서 메모리에 들고 있다가 각 페이지의 더티 엔트리가 일정 수준 이상이 되면 write-back (은: 메모리는 배터리로 보호되나?) . Cache 에 있던 mapping table 쓸 때에도 더티 페이지 신경 안쓰고 쫓아내고 나중에 다시 읽어왔을 때 기록 (은: 그러니까 해당 맵핑 테이블에 속한 애들이 메모리에 더티한 채로 있어도 일단 내쫓음.). 
+% ⇒ 캐쉬 크기 가변적. 언제 올라올지 모르고 완성도 낮음. 
+
+% 맵테이블의 write-back 오버헤드 줄이는 연구. 겉보기에는 다른데 사실은 다 Logging 기법을 이용해 버퍼링 효과를 높이는 방식임. 
+Spartan (ISLPED ‘20): 저널을 두고 mapping entry 를 저널에 썼다가 저널이 꽉차면 checkpoint or journal flush. 
+\fi
+
+
+\subsection{Capacitance Constraints}
+The need for reducing the energy consumption needed for power-loss protection
+arises in different contexts. A few studies reduce the total energy consumption
+by speeding up the back-up process at a power failure using the fast media. Guo
+et al. reduce the capacitance requirement by writing back the volatile buffer
+data into PRAM (Phase Change Random Access Memory), which is faster and uses
+lower power than NAND flash~\cite{GuoYZC13date}. They argue that this reduction
+enables to replace the supercapacitors that are suffering from serious aging
+problems with the regular capacitors, which have more reliable
+characteristics~\cite{huang2011life}. This consequently enhances the robustness
+of storage device.  As a similar approach, Smartbackup~\cite{HuangWQLS15hpcc}
+proposes dynamic NAND channel allocation and SLC (single-level cell) mode
+programs to make the dump process shorter at sudden power-off. It makes full
+use of available SSD channels and dynamically adjusts these channels based on
+the available power of the capacitor to exploit the nature of high parallelism
+on NAND flash arrays.  In addition, as the SLC mode program shows significantly
+shorter time than subsequent MLC, TLC, or QLC mode, it programs the target page
+to dump in SLC mode to achieve shorter time required for dumping process.
+%However, because of inherent trade-off imposed by SLC mode program, the size of
+%effective storage space decreases and this causes additional overhead for space
+%management.
+
+
+Another approach to reducing the capacitor size is protecting a part of the 
+volatile buffer. DRWB (Dual-Region Write Buffer) divides the internal-SSD
+buffer into small protected region (backed by a capacitor) and large
+unprotected region and when the data on unprotected region is updated, the 
+delta for the page is logged in the protected region~\cite{KimK15sac}.  With
+this differential logging, DRWB logically realizes the non-volatile buffer
+using a small size of capacitor. However, the proposed technique only regards
+the user data, having no consideration on the metadata such as mapping table, 
+despite that it actually accounts for most of the internal buffer of SSDs.  Furthermore,
+commercial SSDs typically do not cache read data in the buffer because the host
+memory can serve as a cache memory of the storage device. For these reasons,
+the effectiveness of DRWB may be limited in practical environment. 
+
+\iffalse
+In line with this, Kang et al. present an SSD prototype with durable cache,
+called DuraSSD, to enhance the write performance in database and NoSQL systems.
+They observe that frequent cache flushing of SSD which is requested to
+guarantee the atomicity and durability of transactions, makes a long write
+latency and imposes a serious performance degradation~\cite{KangLMKO14sigmod}. To
+resolve the problem, they maintain the internal-SSD cache
+durable by using the partially protected DRAM with a small size of tantalum
+capacitors. DuraSSD maintains a group of user data pages and a page mapping
+table in DRAM cache; on the power-failure, it flushes all of the user data and
+dirty mapping entries into the dump area in flash memory, because flushing
+the entire mapping table requires excessive time and energy.  On recovery,
+Dura-SSD re-writes the user data in dump area to their permanent location in
+NAND flash with mapping table updates, and it merges dirty mapping entries with
+its permanent copy.
+
+Spartan-SSD shares similarities with DuraSSD in that they both selectively
+protect the user data, but as shown in the performance evaluation, it has
+notable differences. When the working-set size goes beyond the protected buffer
+size by capacitors, DuraSSD incurs a serious performance decrease, while
+Spartan-SSD invariantly provides excellent performance across the various
+workloads, even without any additional capacitors.
+\fi
+
+\iffalse
+\subsection{Maintaining Capacitor Aging}
+Another group of studies attack the capacitor aging problem.  Alcicek et al.
+demonstrate the ultracapacitor aging according to the temperature through
+experimental measurements~\cite{alcicek2007experimental} and Hannonen
+et al. present a method to detect the capacitor degradation using the
+variations of the output voltage at the dc-dc converter~\cite{TIA2016}. Gao et
+al. detect the current available capacitence and bound the number of dirty
+pages under the limit so as to prevent a data loss against the capacitor
+aging~\cite{GaoSDLXS18glvlsi, GaoSLLXYZ19tcad}. They run a periodic background
+write-back process to detect the dirty page budget dynamically, and activate
+the write-back process when the number of dirty pages approaches the budget
+closely. Spartan-SSD assumes an overly-charged capacitor enough to provide a
+sufficient capacitence during the SSD lifetime, which is like a commercial SSD.
+\fi
+
+% \subsection{Write Buffer in Scalable Storage}
+%% 은: 고용량 SSD 에서 제한된 write buffer 를 효율적으로 활용하고자 하는 연구. 
+%% RFLUSH 는 고용량 SSD 에서 write buffer 가 커질 거라는 거. 
+Some studies explore ways of using the internal write buffer efficiently in
+scalable SSDs. Chen et al. project that even the high capacity of SSDs will use
+the small size of write buffer because the capacitor that protects the buffer
+does not scale well due to the cost, size, and reliability
+constraints~\cite{ChenLZ19tc}. Nevertheless, they observe that the small sized
+write buffer can be effective for reducing write traffic in particular
+applications that perform journaling heavily. Motivated by this observation,
+they present the application-SSD co-design to reduce the data writes buffered
+for heavy logging/journaling applications. They propose to protect write-hot
+log/journal data with capacitors while the log/journal data being durable.  In
+addition, they propose NVMe interface extension for host to notify SSDs the
+ranges of write-hot LBAs for more efficient protection by capacitors with
+reduced complexity of hot/cold separation.  It reduced substantial amount of
+flash memory write traffic with few megabytes of capacitor-powered write
+buffer, but it is specific to heavy log/journal applications and requires
+change of application code to benefit from its scheme.
+
+SpartanSSD~\cite{lee2021spartanssd}

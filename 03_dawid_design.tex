@@ -7,6 +7,7 @@
 \end{figure*}
 
 \section{Design}
+\iffalse
 This section describes the design and implementation of \ours{} buffer in detail. 
 \S~\ref{subsec:overview} overviews the overall architecture of the in-storage buffer under capacitance constraints, and \S~\ref{subsec:lind_sched} presents the I/O scheduling algorithm
 to reduce the write traffic in \ours{}.
@@ -78,6 +79,7 @@ during the operation of flash memories
 
 \subsection{Least Increase of Dirtiness Scheduling}
 \label{subsec:lind_sched}
+\fi
 \ours{} partially protects the mapping table with limited capacitance. 
 When the dirty pages of mapping table become more than the maximum number of protected pages, 
 \ours{} flushes them to flash memory based on the LRU (Least-recently Used) algorithm. 
