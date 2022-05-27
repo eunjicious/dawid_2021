@@ -1,9 +1,9 @@
 \section{Conclusion}
-In this paper, we present the design, implementation, and evaluation of JellyFish, 
-a skip list that reduces the performance overheads for MVCC.
-JellyFish separates per-key updates from the key indexing, 
-allowing fast list traversals, efficient point queries, and fewer pointer changes for updates.
-The benefits of our design are amplified as the memory size increases, 
-and our evaluation results show that JellyFish not only improves the throughput,
-but also the latency significantly.
-
+In this paper, we present Hexa's design, implementation, 
+and evaluation to reduce performance overhead due to metadata flush in 
+a situation where PLP is partially supported on enterprise-class SSDs. 
+Our desing operates using only a small amount of Capacitor's capacity compared
+to the previous one. It also minimizes the impact of metadata by buffering requests using the 
+scalability of the write buffer. 
+Our evaluation results show that Hexa improves performance in situations where requests are randomly generated. 
+In addition, JESD and real-benchmark results comfirm that there are advantages in a real-world environment.
