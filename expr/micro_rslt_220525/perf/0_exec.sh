@@ -8,7 +8,7 @@ POLICY='FIFO DAWID'
 DEVICE_SZ=16
 
 for WK in $WORKLOAD; do
-	echo "PROT F64M F1G D64M D1G" > "$WK"_result.txt 
+	echo "PROT F64M F1G H64M H1G" > "$WK"_result.txt 
 	#for PR in $PROT; do
 	for PR in $PROT; do
 		#rsltDir=./"$PR"
