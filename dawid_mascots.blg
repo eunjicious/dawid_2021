@@ -1,46 +1,46 @@
 This is BibTeX, Version 0.99d (TeX Live 2020)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: dawid_fast.aux
+The top-level auxiliary file: dawid_mascots.aux
 The style file: plain.bst
-Database file #1: dawid_fast.bib
-You've used 21 entries,
+Database file #1: dawid_mascots.bib
+You've used 24 entries,
             2118 wiz_defined-function locations,
-            620 strings with 9837 characters,
-and the built_in function-call counts, 10109 in all, are:
-= -- 954
-> -- 647
+            633 strings with 10326 characters,
+and the built_in function-call counts, 10733 in all, are:
+= -- 1014
+> -- 668
 < -- 13
-+ -- 260
-- -- 236
-* -- 740
-:= -- 1615
-add.period$ -- 72
-call.type$ -- 21
-change.case$ -- 179
++ -- 269
+- -- 242
+* -- 758
+:= -- 1720
+add.period$ -- 81
+call.type$ -- 24
+change.case$ -- 191
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 339
-empty$ -- 689
-format.name$ -- 236
-if$ -- 2139
+cite$ -- 24
+duplicate$ -- 360
+empty$ -- 755
+format.name$ -- 242
+if$ -- 2277
 int.to.chr$ -- 0
-int.to.str$ -- 21
+int.to.str$ -- 24
 missing$ -- 15
-newline$ -- 112
-num.names$ -- 42
-pop$ -- 228
+newline$ -- 127
+num.names$ -- 48
+pop$ -- 252
 preamble$ -- 1
-purify$ -- 158
+purify$ -- 167
 quote$ -- 0
-skip$ -- 279
+skip$ -- 300
 stack$ -- 0
-substring$ -- 518
-swap$ -- 130
+substring$ -- 533
+swap$ -- 133
 text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 84
+type$ -- 96
 warning$ -- 0
-while$ -- 83
-width$ -- 23
-write$ -- 241
+while$ -- 89
+width$ -- 26
+write$ -- 271

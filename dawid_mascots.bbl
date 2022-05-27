@@ -71,6 +71,13 @@ Min Huang, Yi~Wang, Liyan Qiao, Duo Liu, and Zili Shao.
   August 24-26, 2015}, pages 746--751, 2015.
 \newblock \url{https://doi.org/10.1109/HPCC-CSS-ICESS.2015.180}.
 
+\bibitem{intel2014}
+Intel.
+\newblock Power loss imminent({PLI}) technology.
+\newblock
+  \url{https://www.intel.com/content/www/us/en/solid-state-drives/ssd-power-loss-imminent-technology-brief.html},
+  2014.
+
 \bibitem{jiang2011s}
 Song Jiang, Lei Zhang, XinHao Yuan, Hao Hu, and Yu~Chen.
 \newblock {S-FTL}: An efficient address translation for flash memory by
@@ -116,6 +123,13 @@ Huaicheng Li, Mingzhe Hao, Michael~Hao Tong, Swaminathan Sundararaman, Matias
 \newblock In {\em 16th {USENIX} Conference on File and Storage Technologies
   (FAST)}, pages 83--90, 2018.
 
+\bibitem{micron2014}
+{Micron}.
+\newblock How {Micron} {SSDs} handle unexpected power loss.
+\newblock
+  \url{https://www.micron.com/-/media/client/global/documents/products/white-paper/ssd_power_loss_protection_white_paper_lo.pdf},
+  2014.
+
 \bibitem{ni2017hash}
 Fan Ni, Chunyi Liu, Yang Wang, Chengzhong Xu, Xiao Zhang, and Song Jiang.
 \newblock A hash-based space-efficient page-level {FTL} for large-capacity
@@ -149,6 +163,12 @@ Samsung.
 \newblock
   \url{https://www.samsung.com/semiconductor/global.semi.static/Samsung\%20SSD\%20860\%20QVO\%20Data\%20Sheet_Rev1.pdf},
   2013.
+
+\bibitem{samsungplp2016}
+{Samsung}.
+\newblock Power loss protection in ssds - how ssds are protecting data
+  integrity.
+\newblock A Samsung Electronics White Paper, 2016.
 
 \bibitem{sysbench}
 Sysbench.

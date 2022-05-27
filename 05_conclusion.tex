@@ -1,9 +1,22 @@
 \section{Conclusion}
-In this paper, we present Hexa's design, implementation, 
-and evaluation to reduce performance overhead due to metadata flush in 
-a situation where PLP is partially supported on enterprise-class SSDs. 
-Our desing operates using only a small amount of Capacitor's capacity compared
-to the previous one. It also minimizes the impact of metadata by buffering requests using the 
-scalability of the write buffer. 
-Our evaluation results show that Hexa improves performance in situations where requests are randomly generated. 
-In addition, JESD and real-benchmark results comfirm that there are advantages in a real-world environment.
+
+In this paper, we raised an issue about capacitance constraints in scalable
+SSDs and presented a novel SSD design called \ours{} to overcome the
+limitation.  \ours{}-SSD protects a part of the buffer, but reduces the dirty
+memory footprint by exploiting the increasing queue depth of the storage
+interfaces. We implemented a \ours{}-SSD prototype in FEMU, an open-source SSD
+development framework. Performance evaluation using the prototype shows that \ours{}-SSD 
+delivers only XX\%-XX\% performance slowdown when capacitance is reduced to 1\%, 
+while conventional SSD using FIFO decreases performance by XX\%.
+
+\iffalse
+Hexa's design, implementation, and evaluation to
+reduce performance overhead due to metadata flush in a situation where PLP is
+partially supported on enterprise-class SSDs.  Our desing operates using only a
+small amount of Capacitor's capacity compared to the previous one. It also
+minimizes the impact of metadata by buffering requests using the scalability of
+the write buffer.  Our evaluation results show that Hexa improves performance
+in situations where requests are randomly generated.  In addition, JESD and
+real-benchmark results comfirm that there are advantages in a real-world
+environment.
+\fi

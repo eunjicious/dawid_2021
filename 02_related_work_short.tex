@@ -1,5 +1,6 @@
 \section{Related work}
 
+\iffalse
 This paper builds upon several prior work done on SSDs. In this section, we briefly outline them and discuss our work in relation to them.
 
 \subsection{Mapping Table}
@@ -59,6 +60,7 @@ Spartan (ISLPED ‘20): 저널을 두고 mapping entry 를 저널에 썼다가 �
 
 
 \subsection{Capacitance Constraints}
+\fi
 The need for reducing the energy consumption needed for power-loss protection
 arises in different contexts. A few studies reduce the total energy consumption
 by speeding up the back-up process at a power failure using the fast media. Guo
@@ -154,4 +156,15 @@ flash memory write traffic with few megabytes of capacitor-powered write
 buffer, but it is specific to heavy log/journal applications and requires
 change of application code to benefit from its scheme.
 
-SpartanSSD~\cite{lee2021spartanssd}
+SpartanSSD~\cite{lee2021spartanssd}, which is most related with our work,
+pinpoints capacitance constraints in scalable SSDs and reduces capacitance
+requirements by making use of elastic journaling. Spartan-SSD logs the mapping
+information updates into the in-device journal so that the writes to the
+mapping table can be buffered. They use a hybrid journal that is backed by a
+small size of DRAM and flash memory. This hybrid journal is highly flexible in
+terms of capacity, and thus, it enables a timely checkpoint that reflects a log
+data to the mapping table and flushes dirty map pages into NAND flash chips.
+Although Spartan-SSD also reduces translation-related writes under capacitance
+constratins, it not only have double write for maping information updates, but
+also it essentially increases a recovery time, which could be highly harmful
+when the multiple SSDs are running simultaneously. 

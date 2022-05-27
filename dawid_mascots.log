@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  26 MAY 2022 19:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  27 MAY 2022 20:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -244,48 +244,197 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+\epsfxsize=\dimen169
+\epsfysize=\dimen170
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/endnotes/endnotes.sty
+Package: endnotes 2020-01-02 endnotes package
+\c@endnote=\count198
+\endnotesep=\dimen171
+\@enotes=\write3
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/cjk-ko/kotex.sty
+Package: kotex 2015/04/19 v1.6 Korean TeX (ko.TeX)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/kotex-utf/kotex.cfg)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/kotex-utf/kotexutf.sty
+Package: kotexutf 2015/07/18 v2.1.1 typesetting UTF-8 Korean documents
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks22
+\inpenc@posthook=\toks23
+)
+(/usr/local/texlive/2020/texmf-dist/tex/plain/kotex-plain/kotexutf-core.tex
+\unih@ngulpoint=\count199
+\dhucs@emph@raise=\dimen172
+)
+Now handling font encoding LUC ...
+... processing UTF-8 mapping file for font encoding LUC
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/kotex-utf/lucenc.dfu
+File: lucenc.dfu 2007/09/05 UTF-8 support for dhucs
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+3001 (decimal 12289)
+   defining Unicode char U+3002 (decimal 12290)
+   defining Unicode char U+3008 (decimal 12296)
+   defining Unicode char U+3009 (decimal 12297)
+   defining Unicode char U+300A (decimal 12298)
+   defining Unicode char U+300B (decimal 12299)
+   defining Unicode char U+300C (decimal 12300)
+   defining Unicode char U+300D (decimal 12301)
+   defining Unicode char U+300E (decimal 12302)
+   defining Unicode char U+300F (decimal 12303)
+   defining Unicode char U+3010 (decimal 12304)
+   defining Unicode char U+3011 (decimal 12305)
+   defining Unicode char U+3014 (decimal 12308)
+   defining Unicode char U+3015 (decimal 12309)
+   defining Unicode char U+3016 (decimal 12310)
+   defining Unicode char U+3017 (decimal 12311)
+   defining Unicode char U+3018 (decimal 12312)
+   defining Unicode char U+3019 (decimal 12313)
+   defining Unicode char U+301A (decimal 12314)
+   defining Unicode char U+301B (decimal 12315)
+   defining Unicode char U+FF01 (decimal 65281)
+   defining Unicode char U+FF08 (decimal 65288)
+   defining Unicode char U+FF09 (decimal 65289)
+   defining Unicode char U+FF0C (decimal 65292)
+   defining Unicode char U+FF0E (decimal 65294)
+   defining Unicode char U+FF1A (decimal 65306)
+   defining Unicode char U+FF1B (decimal 65307)
+   defining Unicode char U+FF1C (decimal 65308)
+   defining Unicode char U+FF1D (decimal 65309)
+   defining Unicode char U+FF1E (decimal 65310)
+   defining Unicode char U+FF1F (decimal 65311)
+   defining Unicode char U+FF3B (decimal 65339)
+   defining Unicode char U+FF3D (decimal 65341)
+   defining Unicode char U+FF5B (decimal 65371)
+   defining Unicode char U+FF5D (decimal 65373)
+   defining Unicode char U+FF61 (decimal 65377)
+   defining Unicode char U+FF62 (decimal 65378)
+   defining Unicode char U+FF63 (decimal 65379)
+   defining Unicode char U+FF64 (decimal 65380)
+   defining Unicode char U+FF65 (decimal 65381)
+)
+\@josa=\count266
+\josatoks=\toks24
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/cjk-ko/kolabels-utf.sty
+Package: kolabels-utf 2015/03/20 v1.5 UTF-8 Hangul item labels
+)))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen173
+\captionmargin@=\dimen174
+\captionwidth=\dimen175
+\caption@tempdima=\dimen176
+\caption@indent=\dimen177
+\caption@parindent=\dimen178
+\caption@hangindent=\dimen179
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
+lfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace
+ {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptio
+nsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspac
+e \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\nor
+malfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\n
+ormalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONcon
+ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
+\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi 
+\fi  on input line 1082.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count267
+\c@continuedfloat=\count268
+)
+\c@KVtest=\count269
+\sf@farskip=\skip55
+\sf@captopadj=\dimen180
+\sf@capskip=\skip56
+\sf@nearskip=\skip57
+\c@subfigure=\count270
+\c@subfigure@save=\count271
+\c@lofdepth=\count272
+\c@subtable=\count273
+\c@subtable@save=\count274
+\c@lotdepth=\count275
+\sf@top=\skip58
+\sf@bottom=\skip59
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write4
+
+Excluding comment 'comment')
+(/usr/local/texlive/2020/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+
+
+Package natbib Warning: The `cite' package should not be used
+(natbib)                with natbib. Use option `sort' instead.
+
+\bibhang=\skip60
+\bibsep=\skip61
+LaTeX Info: Redefining \cite on input line 694.
+LaTeX Info: Redefining \citenum on input line 708.
+\c@NAT@ctr=\count276
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 File: l3backend-dvips.def 2020-03-12 L3 backend support: dvips
 \l__pdf_internal_box=\box49
-\g__pdf_backend_object_int=\count198
+\g__pdf_backend_object_int=\count277
 \l__pdf_backend_content_box=\box50
 \l__pdf_backend_model_box=\box51
-\g__pdf_backend_annotation_int=\count199
-\g__pdf_backend_link_int=\count266
-\g__pdf_backend_link_sf_int=\count267
+\g__pdf_backend_annotation_int=\count278
+\g__pdf_backend_link_int=\count279
+\g__pdf_backend_link_sf_int=\count280
 )
 (./dawid_mascots.aux)
 \openout1 = `dawid_mascots.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 29.
+LaTeX Font Info:    Trying to load font information for LUC+nanummj on input li
+ne 29.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
+File: lucnanummj.fd 2013/02/12 v0.1 Nanum Myeongjo font definitions
+)
+LaTeX Font Info:    ... okay on input line 29.
 
 -- Lines per column: 56 (exact).
-LaTeX Font Info:    Trying to load font information for U+msa on input line 60.
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 60.
-
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 60.
-
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
 (./00_abstract.tex
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 6
 .
@@ -293,7 +442,79 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 6
 (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ))
-(./dawid_mascots.bbl
+(./01_intro.tex
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
+0.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 94.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 94.
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (4.21457pt too wide) in paragraph at lines 94--111
+ [][] 
+ []
+
+[1
+
+
+]) (./02_related_work_short.tex) (./03_dawid_design.tex
+File: figure/dawid_algo.eps Graphic file (type eps)
+
+<figure/dawid_algo.eps>
+Overfull \hbox (6.0pt too wide) in paragraph at lines 90--91
+ [][] 
+ []
+
+[2]) (./04_eval_new.tex
+File: figure/dawid_ssd_archi_new.eps Graphic file (type eps)
+ <figure/dawid_ssd_archi_new.eps>
+File: figure/dawid_ds.eps Graphic file (type eps)
+ <figure/dawid_ds.eps>
+File: expr/micro_rslt_220525/perf/perf_RAND.eps Graphic file (type eps)
+
+<expr/micro_rslt_220525/perf/perf_RAND.eps>
+File: expr/micro_rslt_220525/perf/perf_JESD.eps Graphic file (type eps)
+
+<expr/micro_rslt_220525/perf/perf_JESD.eps>
+File: expr/macro_rslt_220525/perf/perf_OLTP.eps Graphic file (type eps)
+
+<expr/macro_rslt_220525/perf/perf_OLTP.eps>
+File: expr/micro_rslt_220525/wt/RAND.eps Graphic file (type eps)
+
+<expr/micro_rslt_220525/wt/RAND.eps>
+File: expr/micro_rslt_220525/wt/JESD.eps Graphic file (type eps)
+ <expr/micro_rslt_220525/wt/JESD.eps>
+File: expr/macro_rslt_220525/wt/OLTP.eps Graphic file (type eps)
+
+<expr/macro_rslt_220525/wt/OLTP.eps>
+! Extra }, or forgotten \endgroup.
+\@endfloatbox ...pagefalse \outer@nobreak \egroup 
+                                                  \color@endbox 
+l.47 \end{figure*}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \vbox (badness 1062) has occurred while \output is active []
+
+ [3]
+Underfull \vbox (badness 4378) has occurred while \output is active []
+
+ [4])
+(./05_conclusion.tex) (./dawid_mascots.bbl
 ! Undefined control sequence.
 l.7   \url
           {https://www.anandtech.com/show/12448/samsung-begins-mass-producti...
@@ -303,6 +524,26 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+[]\OT1/ptm/m/n/10 AnandTech.  Sam-sung 30.72 TB SSDs:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+\OT1/ptm/m/n/10 Mass pro-duc-tion of PM1643 be-gins.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+\OT1/ptm/m/n/10 https://www.anandtech.com/show/12448/samsung-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+\OT1/ptm/m/n/10 begins-mass-production-of-pm1643-sas-ssds-with-3072-
+ []
+
 ! Undefined control sequence.
 l.13 \newblock \url
                    {https://github.com/axboe/fio}, 2021.
@@ -311,6 +552,16 @@ of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
+[]\OT1/ptm/m/n/10 Jens Axboe.  fio - flex-i-ble i/o tester.
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 16--22
+[]\OT1/ptm/m/n/10 Christoph Busche, Laia Vil[]a-Nadal, Jun Yan, Har-
+ []
 
 ! Undefined control sequence.
 l.28 \newblock \url
@@ -339,8 +590,37 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+Underfull \hbox (badness 1400) in paragraph at lines 64--73
+\OT1/ptm/m/n/10 strat-egy for solid state drives with backup ca-pac-i-
+ []
+
 ! Undefined control sequence.
-l.87 \newblock \url
+l.78   \url
+           {https://www.intel.com/content/www/us/en/solid-state-drives/ssd-p...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--80
+[]\OT1/ptm/m/n/10 Intel.  Power loss im-mi-nent(PLI) tech-nol-ogy.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--80
+\OT1/ptm/m/n/10 https://www.intel.com/content/www/us/en/solid-state-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--80
+\OT1/ptm/m/n/10 drives/ssd-power-loss-imminent-technology-brief.html,
+ []
+
+! Undefined control sequence.
+l.94 \newblock \url
                    {https://doi.org/10.1145/2588555.2595632}.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -349,26 +629,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 82--88
-[]\OT1/ptm/m/n/8 Woon-Hak Kang, Sang-Won Lee, Bongki Moon, Yang-Suk Kee,
+Underfull \hbox (badness 5359) in paragraph at lines 89--95
+\OT1/ptm/m/n/10 Suk Kee, and Moon-wook Oh.  Durable write
  []
 
 ! Undefined control sequence.
-l.95 \newblock \url
-                   {https://doi.org/10.1145/2695664.2695830}.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[1
-
-
-]
-! Undefined control sequence.
-l.143   \url
-            {https://www.samsung.com/us/support/owners/product/128gb-ssd-830...
+l.102 \newblock \url
+                    {https://doi.org/10.1145/2695664.2695830}.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -376,19 +643,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--145
-[]\OT1/ptm/m/n/8 Samsung.  Sam-sung SSD 830 se-ries.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 140--145
-\OT1/ptm/m/n/8 https://www.samsung.com/us/support/owners/product/128gb-ssd-830-
-
+Underfull \hbox (badness 1406) in paragraph at lines 112--117
+\OT1/ptm/m/n/10 Shin, Sungjin Lee, Bryan S Kim, Eu-nji Lee, and
  []
 
 ! Undefined control sequence.
-l.150   \url
-            {https://www.samsung.com/semiconductor/global.semi.static/Samsun...
+l.130   \url
+            {https://www.micron.com/-/media/client/global/documents/products...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -398,13 +659,13 @@ and I'll forget about whatever was undefined.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.150 ...ng\%20SSD\%20860\%20QVO\%20Data\%20Sheet_
-                                                  Rev1.pdf},
+l.130 ...lobal/documents/products/white-paper/ssd_
+                                                  power_loss_protection_whit...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.150 ...\%20860\%20QVO\%20Data\%20Sheet_Rev1.pdf}
+l.130 ...power_loss_protection_white_paper_lo.pdf}
                                                   ,
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -415,7 +676,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.152 
+l.132 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -423,7 +684,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.152 
+l.132 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -432,25 +693,110 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--152
-[]\OT1/ptm/m/n/8 Samsung.  Sam-sung V-NAND SSD 860 QVO.
+Underfull \hbox (badness 10000) in paragraph at lines 127--132
+[]\OT1/ptm/m/n/10 Micron.  How Mi-cron SSDs han-dle un-ex-
  []
 
 
-Overfull \hbox (196.0357pt too wide) in paragraph at lines 147--152
-\OT1/ptm/m/n/8 https://www.samsung.com/semiconductor/global.semi.static/Samsung
-%20SSD%20860%20QVO%20Data%20Sheet$[]\OML/cmm/m/it/8 ev\OT1/cmr/m/n/8 1\OML/cmm/
-m/it/8 :pdf; \OT1/cmr/m/n/8 2013\OML/cmm/m/it/8 :[]$ 
+Underfull \hbox (badness 10000) in paragraph at lines 127--132
+\OT1/ptm/m/n/10 pected power loss.  https://www.micron.com/-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--132
+\OT1/ptm/m/n/10 /media/client/global/documents/products/white-
+ []
+
+[5]
+! Undefined control sequence.
+l.157   \url
+            {https://www.samsung.com/us/support/owners/product/128gb-ssd-830...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--159
+[]\OT1/ptm/m/n/10 Samsung.  Sam-sung SSD 830 se-ries.
+ []
+
+
+Overfull \hbox (15.97733pt too wide) in paragraph at lines 154--159
+\OT1/ptm/m/n/10 https://www.samsung.com/us/support/owners/product/128gb-
  []
 
 ! Undefined control sequence.
-l.156 \newblock \url
+l.164   \url
+            {https://www.samsung.com/semiconductor/global.semi.static/Samsun...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.164 ...ng\%20SSD\%20860\%20QVO\%20Data\%20Sheet_
+                                                  Rev1.pdf},
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.164 ...\%20860\%20QVO\%20Data\%20Sheet_Rev1.pdf}
+                                                  ,
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.166 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.166 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 5359) in paragraph at lines 161--166
+[]\OT1/ptm/m/n/10 Samsung.  Sam-sung V-NAND SSD 860 QVO.
+ []
+
+
+Overfull \hbox (302.32385pt too wide) in paragraph at lines 161--166
+\OT1/ptm/m/n/10 https://www.samsung.com/semiconductor/global.semi.static/Samsun
+g%20SSD%20860%20QVO%20Data%20Sheet$[]\OML/cmm/m/it/10 ev\OT1/cmr/m/n/10 1\OML/c
+mm/m/it/10 :pdf; \OT1/cmr/m/n/10 2013\OML/cmm/m/it/10 :[]$ 
+ []
+
+! Undefined control sequence.
+l.176 \newblock \url
                     {https://github.com/akopytov/sysbench.git}, 2022.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--177
+[]\OT1/ptm/m/n/10 Sysbench.  Sys-bench.
+ []
 
 )
 
@@ -464,20 +810,16 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2
+[6
 
-] (./dawid_mascots.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./dawid_mascots.aux) ) 
 Here is how much of TeX's memory you used:
- 3490 strings out of 480609
- 50388 string characters out of 5903655
- 302897 words of memory out of 5000000
- 19369 multiletter control sequences out of 15000+600000
- 561864 words of font info for 95 fonts, out of 8000000 for 9000
+ 5655 strings out of 480609
+ 86747 string characters out of 5903655
+ 343585 words of memory out of 5000000
+ 21449 multiletter control sequences out of 15000+600000
+ 559817 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,11n,37p,236b,292s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,10n,51p,1664b,368s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dawid_mascots.dvi (2 pages, 12312 bytes).
+Output written on dawid_mascots.dvi (6 pages, 40760 bytes).

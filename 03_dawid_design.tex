@@ -1,11 +1,4 @@
 %\begin{figure*}[t!]
-\begin{figure*}
-    \centering{}
-    \includegraphics[width=0.8\textwidth]{figure/dawid_algo.eps}
-    \caption{\textbf{Dawid Buffer Overview.}}
-    \label{fig:dawid_buff_overview}
-\end{figure*}
-
 \section{Design}
 \iffalse
 This section describes the design and implementation of \ours{} buffer in detail. 
@@ -85,14 +78,22 @@ When the dirty pages of mapping table become more than the maximum number of pro
 \ours{} flushes them to flash memory based on the LRU (Least-recently Used) algorithm. 
 Because this flush operation does not arise with SSD using PLP, mitigating the effect of this overhead 
 is a key strategy to achieving high performance under capacitance constraints. 
-To this end, \ours{} presents a cost-effective scheduling scheme for the in-storage buffer, called LIDF (Least Increase of Dirtiness First). 
-LIDF prefers to force the user data that increases the dirtiness of the mapping 
+To this end, \ours{} presents a cost-effective scheduling scheme for the in-storage buffer.
+\ours{} prefers to force the user data that increases the dirtiness of the mapping 
 table the least to flash memory. This scheme reduces the dirty page footprint 
 of the mapping table at a time window by enhancing the locality of updates. 
 As a result, the frequency of flush operation for the mapping table can be 
 largely reduced. 
 
-Figure~\ref{fig:dawid_buff_overview} compares the flush overhead of FIFO and LIDF scheduling in \ours{} buffer. 
+\begin{figure}
+    \centering{}
+    \includegraphics[width=0.5\textwidth]{figure/dawid_algo.eps}
+    \caption{\textbf{\ours{}-SSD buffer management scheme}}
+    \label{fig:dawid_buff_overview}
+\end{figure}
+
+
+Figure~\ref{fig:dawid_buff_overview} compares the flush overhead of \texttt{FIFO} and \ours{} scheduling in SSD buffer. 
 In this example, there are seven write requests 
 in the device queue, sent from host in the following order: \texttt{W(4)}, \texttt{W(17)}, \texttt{W(12)}, \texttt{W(2)}, \texttt{W(6)}, \texttt{W(18)}, and \texttt{W(7)}.  
 The mapping table has one dirty page (\texttt{m0}) 
@@ -103,14 +104,17 @@ time window.
 Consequently, FIFO incurs a total of five flushes of the mapping table page during the write process. 
 
 
-In contrast, LIDF calculates the write cost for each data
-that indicates an increase in the number of dirty pages of the mapping table when it is flushed, and it processes the request with minimum cost first. 
-In this example, the write request \texttt{W(2)} has a top 
-priority because its associated mapping table page (\texttt{m0}) is already dirty, and thus it does not add the dirty pages of the mapping table. 
-Next, the write requests \texttt{W(4)}, \texttt{W(6)}, and \texttt{W(7)} are processed. 
-Because their address mapping entries are located in the same page of the mapping table, the cost of flushing them 
-is reduced to one third. 
-With this policy, LIDF can reduce the footprint of mapping table updates within time intervals, thereby delivering only two flushes of the mapping table for the same task. 
+In contrast, \ours{} calculates the write cost for each data that indicates an
+increase in the number of dirty pages of the mapping table when it is flushed,
+and it processes the request with minimum cost first.  In this example, the
+write request \texttt{W(2)} has a top priority because its associated mapping
+table page (\texttt{m0}) is already dirty, and thus it does not add the dirty
+pages of the mapping table.  Next, the write requests \texttt{W(4)},
+\texttt{W(6)}, and \texttt{W(7)} are processed.  Because their address mapping
+entries are located in the same page of the mapping table, the cost of flushing
+them is reduced to one third.  With this scheme, \ours{} can reduce the footprint
+of mapping table updates within time intervals, thereby delivering only two
+flushes of the mapping table for the same task. 
 
 \iffalse
 \subsection{Eviction Policy}
