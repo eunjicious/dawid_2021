@@ -24,7 +24,7 @@ for op in $OPERATION; do
 				if [[ $ta == "FIFO" ]]; then
 					key="F$bs"
 				else
-					key="D$bs"
+					key="H$bs"
 				fi
 
 				#echo $ta"_"$pe | tr "\n" " ">> $ofile

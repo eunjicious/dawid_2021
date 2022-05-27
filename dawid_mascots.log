@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  27 MAY 2022 20:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  28 MAY 2022 07:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -499,7 +499,7 @@ File: expr/macro_rslt_220525/wt/OLTP.eps Graphic file (type eps)
 ! Extra }, or forgotten \endgroup.
 \@endfloatbox ...pagefalse \outer@nobreak \egroup 
                                                   \color@endbox 
-l.47 \end{figure*}
+l.46 \end{figure*}
                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -511,7 +511,7 @@ deleted material, e.g., by typing `I$}'.
 Underfull \vbox (badness 1062) has occurred while \output is active []
 
  [3]
-Underfull \vbox (badness 4378) has occurred while \output is active []
+Underfull \vbox (badness 5036) has occurred while \output is active []
 
  [4])
 (./05_conclusion.tex) (./dawid_mascots.bbl
