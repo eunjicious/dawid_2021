@@ -1,4 +1,4 @@
-OP="RAND JESD"
+OP="RAND JESD SEQ"
 
 for op in $OP 
 do
