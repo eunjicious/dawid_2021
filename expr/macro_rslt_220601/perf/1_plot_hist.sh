@@ -4,6 +4,7 @@ for op in $OP
 do
 #       datafile=perf_"$op".rslt
         datafile="$op"_result.txt 
+#        datafile="$op"_result_tmp.txt 
         outfile=perf_"$op".eps
     
         ylabel="IOPs"
