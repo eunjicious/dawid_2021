@@ -138,14 +138,19 @@ flushes of the mapping table for the same task.
 \fi
 
 % \section{Implementation}
-We implement \ours{} in \texttt{FEMU}, an open-source SSD development
-framework~\cite{li2018case}. Fig.~\ref{fig_dawid_archi} shows the overall
-architecture of \ours{}-SSD and its internal data structures. As the original
-version of \texttt{FEMU} directly writes data to flash memories without write
-buffering, we extend it to use a small-sized write buffer, which aggregates and  
+Fig.~\ref{fig_dawid_archi} shows the overall
+architecture of \ours{} and its internal data structures. 
+\ours{} is implemented upon \texttt{FEMU}, an open-source SSD development
+framework~\cite{li2018case}. 
+\ours{} uses a small-sized write buffer, which aggregates and  
 batches user writes into the underlying flash memory.  
 
-\ours{}-SSD maintains three different threads that are executing concrrently
+% As the original
+% version of \texttt{FEMU} directly writes data to flash memories without write
+% buffering, we extend it to use a small-sized write buffer, which aggregates and  
+% batches user writes into the underlying flash memory.  
+
+\ours{} maintains three different threads that are executing concrrently
 within SSDs.  The \texttt{nvm\_poller} takes a charge of transferring requests
 between NVMe queues and FTL-internal queues. The FTL-internal queue consists of
 a pair of sub-queues, each of which is named \texttt{to\_ftl} and
