@@ -76,12 +76,10 @@ during the operation of flash memories
 \ours{} partially protects the mapping table with limited capacitance. 
 When the dirty pages of mapping table become more than the maximum number of protected pages, 
 \ours{} flushes them to flash memory based on the LRU (Least-recently Used) algorithm. 
-Because this flush operation does not arise with SSD using PLP, mitigating the effect of this overhead 
-is a key strategy to achieving high performance under capacitance constraints. 
-To this end, \ours{} presents a cost-effective scheduling scheme for the in-storage buffer.
-\ours{} prefers to force the user data that increases the dirtiness of the mapping 
-table the least to flash memory. This scheme reduces the dirty page footprint 
-of the mapping table at a time window by enhancing the locality of updates. 
+Because the flush operation does not arise with SSD using PLP, mitigating the negative impact of  flushing is critical to maintain performance under capacitance constraints. 
+To this end, \ours{} uses a cost-effective scheduling scheme for the in-storage buffer.
+\ours{} prefers to force the user data to flash memory, which increases the dirtiness of mapping table the least. This scheme reduces a dirty memory footprint 
+of the mapping table at any given point of time by enhancing a locality of updates. 
 As a result, the frequency of flush operation for the mapping table can be 
 largely reduced. 
 
@@ -90,31 +88,31 @@ largely reduced.
     \includegraphics[width=0.5\textwidth]{figure/dawid_algo.eps}
     \caption{\textbf{\ours{}-SSD buffer management scheme}}
     \label{fig:dawid_buff_overview}
+    \vspace{-20pt}
 \end{figure}
 
-
-Figure~\ref{fig:dawid_buff_overview} compares the flush overhead of \texttt{FIFO} and \ours{} scheduling in SSD buffer. 
+Figure~\ref{fig:dawid_buff_overview} compares the flush overhead of FIFO-SSD and \ours{}. 
 In this example, there are seven write requests 
 in the device queue, sent from host in the following order: \texttt{W(4)}, \texttt{W(17)}, \texttt{W(12)}, \texttt{W(2)}, \texttt{W(6)}, \texttt{W(18)}, and \texttt{W(7)}.  
 The mapping table has one dirty page (\texttt{m0}) 
 at an initial state. We assume that 2 out of 5 pages of the mapping table are protected. 
-FIFO writes the user data in the buffer to flash memory in arrival order. 
+FIFO-SSD writes the user data in the buffer to flash memory in arrival order. 
 With this scheme, the mapping table would be randomly updated, generating a large number of dirty pages at a 
 time window. 
-Consequently, FIFO incurs a total of five flushes of the mapping table page during the write process. 
+Consequently, FIFO-SSD incurs a total of five flushes of the mapping table page during the write process. 
 
 
 In contrast, \ours{} calculates the write cost for each data that indicates an
 increase in the number of dirty pages of the mapping table when it is flushed,
 and it processes the request with minimum cost first.  In this example, the
 write request \texttt{W(2)} has a top priority because its associated mapping
-table page (\texttt{m0}) is already dirty, and thus it does not add the dirty
-pages of the mapping table.  Next, the write requests \texttt{W(4)},
+table page (\texttt{m0}) is already dirty, and thus it does not add the number of dirty
+translation pages.  Next, the write requests \texttt{W(4)},
 \texttt{W(6)}, and \texttt{W(7)} are processed.  Because their address mapping
 entries are located in the same page of the mapping table, the cost of flushing
-them is reduced to one third.  With this scheme, \ours{} can reduce the footprint
-of mapping table updates within time intervals, thereby delivering only two
-flushes of the mapping table for the same task. 
+them is reduced to one third.  With this scheme, \ours{}
+%can reduce the footprint of mapping table updates within time intervals, thereby delivering 
+delivers only two flushes of the mapping table for the same task. 
 
 \iffalse
 \subsection{Eviction Policy}
@@ -137,13 +135,27 @@ flushes of the mapping table for the same task.
 \end{figure}
 \fi
 
+\begin{figure}[t!]
+    \centering{}
+% 	\subfloat[Architecture] { 
+%     	\includegraphics[width=0.3\textwidth]{figure/dawid_ssd_archi_new.eps}
+% 	} \\
+% 	\subfloat[Data structures for FTL]{ 
+%     	\includegraphics[width=0.3\textwidth]{figure/dawid_ds.eps}
+% 	}
+    % \includegraphics[width=0.4\textwidth]{figure/dawid_ssd_archi.eps}
+    \includegraphics[width=0.3\textwidth]{figure/dawid_ssd_archi_new.eps}
+    \caption{\textbf{\ours{} Architecture.}}
+    \label{fig_dawid_archi}
+    \vspace{-20pt}
+\end{figure}
+
 % \section{Implementation}
 Fig.~\ref{fig_dawid_archi} shows the overall
-architecture of \ours{} and its internal data structures. 
-\ours{} is implemented upon \texttt{FEMU}, an open-source SSD development
+architecture of \ours{}. %and its internal data structures. 
+\ours{} is implemented by extending \texttt{FEMU}, an open-source SSD development
 framework~\cite{li2018case}. 
-\ours{} uses a small-sized write buffer, which aggregates and  
-batches user writes into the underlying flash memory.  
+\ours{} communicates with a host using NVMe storage interfaces and uses a small-sized write buffer, which aggregates and batches user writes into the underlying flash memory.  
 
 % As the original
 % version of \texttt{FEMU} directly writes data to flash memories without write
@@ -166,24 +178,24 @@ buffer with capacitance, data persistency is guaranteed for all acknowledged
 writes.  For read, the \texttt{ftl\_thread} retrieves the requested data by
 consulting the mapping table and transfers it to the host. 
 
-The \texttt{ftl\_flush\_thread} plays a role of writing data from a DRAM-buffer
-into a flash memory.  With the \texttt{FIFO} policy, the user writes are issued
+The \texttt{ftl\_flush\_thread} materializes data from a DRAM-buffer
+into a flash memory.  In FIFO-SSD, the user writes are issued
 to NAND flash memory in the order they arrive into the buffer. However, \ours{}
 flushes buffered writes in the order such that it least increases the dirty memory
 footprint of the mapping table.  To realize this design, \ours{} maintains two
 data structures, as depicted in Fig.~\ref{fig_dawid_archi}(b). First, \textit{a
-zero-cost list} that holds the indexes to tranlsation pages that is already
+zero-cost list} that holds the indexes to translation pages that are already
 in a dirty state, and second, \textit{a max binary heap} that
 maintains the indexes to translation pages sorted by the number of buffered
 user write requests associated with that page.  
 
 %When there is sufficient bandwidth at underlying NAND flash subsystem for writes, 
-When a half of the write buffer becomes occupied, flushing is invoked. \ours{}-SSD
-first flushes user data whose translation pages in the zero-cost list, and then
+When a half of the write buffer becomes occupied, flushing is invoked. \ours{}
+first flushes the user data whose translation pages in the zero-cost list, and then
 persists user data as their translation pages are ordered by the max binary
-heap. By doing so, each user write minimizes the number of eventual
-translation page write, and each translation page write maximizes the number of
-persisted mapping entries. These data structures are updated by the \texttt{ftl\_thread} 
+heap. 
+%By doing so, each user write minimizes the number of eventual translation page write, and each translation page write maximizes the number of persisted mapping entries. 
+These data structures are updated by the \texttt{ftl\_thread} 
 when a write request arrives at SSD. 
 To exploit the SSD internal parallelism, we send data to flash memory in
 batches by the number of NAND flash chips that can be written simultaneously.
