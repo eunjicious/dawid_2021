@@ -74,7 +74,9 @@ lower power than NAND flash~\cite{GuoYZC13date}.
 % of storage device.  As a similar approach, 
 Smartbackup~\cite{HuangWQLS15hpcc}
 proposes dynamic NAND channel allocation and SLC (single-level cell) mode
-programs to make the dump process shorter at sudden power-off. It makes full
+programs to make the dump process shorter at sudden power-off. 
+\iffalse
+It makes full
 use of available SSD channels and dynamically adjusts these channels based on
 the available power of the capacitor to exploit the nature of high parallelism
 on NAND flash arrays.  In addition, as the SLC mode program shows significantly
@@ -83,13 +85,14 @@ to dump in SLC mode to achieve shorter time required for dumping process.
 %However, because of inherent trade-off imposed by SLC mode program, the size of
 %effective storage space decreases and this causes additional overhead for space
 %management.
+\fi
 
 
 Another approach to reducing the capacitor size is protecting a part of the 
 volatile buffer. DRWB (Dual-Region Write Buffer)~\cite{KimK15sac} divides the internal-SSD
 buffer into small protected region and large unprotected region. When the data on unprotected region is updated, DRWN logs delta for the page in the protected region. With
 this differential logging, DRWB logically realizes the non-volatile buffer
-using a small size of capacitor. However, the proposed technique only regards
+using a small size of capacitor. However, DRWB only regards
 the user data, having no consideration on the metadata such as mapping table, 
 despite that it actually accounts for most of the internal buffer of SSDs.  Furthermore,
 commercial SSDs typically do not cache read data in the buffer because the host
@@ -140,20 +143,27 @@ sufficient capacitance during the SSD lifetime, which is like a commercial SSD.
 %% 은: 고용량 SSD 에서 제한된 write buffer 를 효율적으로 활용하고자 하는 연구. 
 %% RFLUSH 는 고용량 SSD 에서 write buffer 가 커질 거라는 거. 
 Some studies explore ways of using the internal write buffer efficiently in
-scalable SSDs. Chen et al. project that even the high capacity of SSDs will use
+% scalable SSDs.
+There are a few studies that raised an issue about capacitance constraints in scalable SSDs.  
+Chen et al. project that even the high capacity of SSDs will use
 the small size of write buffer because the capacitor protecting a buffer
 does not scale well due to the cost, size, and reliability
 constraints~\cite{ChenLZ19tc}. Nevertheless, they observe that the small sized
 write buffer can be effective for reducing write traffic in particular
 applications that perform journaling heavily. Motivated by this observation,
 they present the application-SSD co-design to reduce the data writes buffered
-for heavy journaling applications. They propose to protect write-hot
+for heavy journaling applications. 
+\iffalse
+They propose to protect write-hot
 log/journal data with capacitors while the journal data being durable.  In
 addition, they propose NVMe interface extension for host to notify SSDs the
 ranges of write-hot LBAs for more efficient protection by capacitors with
 reduced complexity of hot/cold separation. 
 % It reduced substantial amount of flash memory write traffic with few megabytes of capacitor-powered write buffer, but 
-Despite a large reduction in write traffic, it has a weakness that it is specific to heavy journal applications and requires change of application code to benefit from its scheme.
+Despite a large reduction in write traffic, it 
+\fi
+However, they inherently have a weakness that the proposed scheme is specific to heavy journal applications and requires change of application code.
+%to benefit from its scheme.
 
 SpartanSSD~\cite{lee2021spartanssd}, which is most related with our work,
 pinpoints capacitance constraints in scalable SSDs and reduces capacitance
