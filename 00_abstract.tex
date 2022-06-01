@@ -1,12 +1,17 @@
 %\section*{Abstract}
 \begin{abstract}
+\iffalse
 The growth in SSD capacity is reaching its limit 
 due to the stunted growth of capacitors---electrical components that store charge 
 to protect data for the volatile memory in case of power loss. 
+\fi
 This paper presents \ours{}, a novel SSD-internal DRAM management scheme 
 that allows the SSD capacity to scale beyond the slow growth of capacitors. 
-\ours{} suppresses an increase of the dirty memory footprint within buffer 
-using the deep queues available in today's storage interfaces.
-We implement our design in \texttt{FEMU}, an open-source SSD development framework
-and demonstrate that \ours{} delivers IOPS close to 90\% of performance at only 1\% of capacitance compared to the existing scheme. 
+\ours{} judiciously manages the dirty memory footprint within the SSD-internal buffer 
+by using a low-overhead data reordering scheme on
+the deep queues available in today's storage interfaces.
+In doing so, our design guarantees crash consistency 
+while using fraction of the capacitors compared to the state-of-the-art designs. 
+We implement our design in \texttt{FEMU} %, an open-source SSD development framework,
+and demonstrate that \ours{} delivers IOPS close to 90\% of the performance at only 1\% of capacitance compared to the existing scheme. 
 \end{abstract}

@@ -19,7 +19,7 @@
 The enterprise-class SSDs adopt the capacitor to protect data durability in case of power crash. 
 This technique is called Power-Loss Protection (PLP)~\cite{micron2014, intel2014, samsungplp2016} and it is needed because SSDs use a DRAM as an internal buffer for absorbing user writes and caching translation information (also known as mapping table). 
 If they are not protected, SSDs will have not only a data loss and/or corruption but also a long recovery time to build an up-to-date  mapping table by scanning entire flash drives.
-To preclude this situation, the enterprise-class SSDs rely on the capacitors that reserves energy to safely persist data of the volatile buffer in a power loss.
+To preclude this situation, the enterprise-class SSDs rely on the capacitors that reserve energy to safely persist data of the volatile buffer in a power loss.
 
 % In addition, the adoption of capacitors enables an SSD to ignore the \texttt{FLUSH} command that explicitly requests all data in the volatile buffer to be made durable.
 % This property increases the buffering effect in SSD significantly, leading to both less write traffic and a shorter operation latency.
@@ -40,7 +40,8 @@ In 2011, a typical 2.5-inch SSD had 256GB capacity, but
 by 2018, a high-capacity SSD boasted a 30TB, expanding by 100× over the past ten years
 ~\cite{samsung2011, anandtech18samsung}. 
 This remarkable growth of the device-capacity is thanks to the advanced scaling technologies 
-such as nanoscale fabrication~\cite{busche2014design} and multi-layer stacking~\cite{9365809}. 
+such as nanoscale fabrication%~\cite{busche2014design}
+and multi-layer stacking. %~\cite{9365809}. 
 Al(aluminum) and Ta(tantalum)-electrolytic capacitors used in SSDs 
 have increased in density by tenfold from 1960 to 2005. 
 This is approximately 50x slower than the SSD density increase rate.
@@ -64,6 +65,7 @@ the entire buffer is fully protected by capacitors.
 
 % This paper presents a device-internal buffer architecture called \ours{}
 % for the SSDs under capacitance constraints. \ours{} only XXX. 
+
 \iffalse
 This paper presents \ours{}, a novel SSD-internal DRAM management scheme 
 that allows the SSD capacity to scale beyond the slow growth of capacitors. 
@@ -71,8 +73,8 @@ SSD-internal DRAM is used for
 (1) caching translation information (also known as mapping table) and (2) buffering user writes. 
 In typical SSD designs, most of the capacitance is used for protecting the mapping table (to keep as many translation entries in DRAM) 
 and the buffer for user writes is kept at a minimal (just enough to hide the flash program latency)~\cite{KangLMKO14sigmod}. 
-As an example, Samsung PM1643 30.72TB and PM1633a 15.36TB house 40GB and 16GB DRAM, respectively~\cite{anandtech18samsung}. 
-(typically 0.1\% of storage capacity~\cite{samsung_ratio, ni2017hash})
+% As an example, Samsung PM1643 30.72TB and PM1633a 15.36TB house 40GB and 16GB DRAM, respectively~\cite{anandtech18samsung}. 
+% (typically 0.1\% of storage capacity~\cite{samsung_ratio, ni2017hash})
 \fi
 This paper presents \ours{}, a novel SSD-internal DRAM management scheme 
 that allows the SSD capacity to scale beyond the slow growth of capacitors. 
@@ -80,9 +82,13 @@ SSD-internal DRAM is used for
 (1) caching translation information (also known as mapping table) and (2) buffering user writes. 
 In typical SSD designs, most of the DRAM is used for caching the mapping table and 
 and the buffer for user writes is kept at a minimal (just enough to hide the flash program latency)~\cite{KangLMKO14sigmod}. 
-As an example, Samsung PM1633a 15.36TB SSD houses 16GB DRAM~\cite{anandtech18samsung}. 
-Given that the mapping table size is typically 0.1\% of storage capacity~\cite{samsung_ratio, ni2017hash}, 
-we can assume that only 4\% of DRAM is used for a write buffer. 
+% As an example, Samsung PM1643 30.72TB and PM1633a 15.36TB house 40GB and 16GB DRAM, respectively~\cite{anandtech18samsung}. 
+% (typically 0.1\% of storage capacity~\cite{samsung_ratio, ni2017hash})
+
+
+% As an example, Samsung PM1633a 15.36TB SSD houses 16GB DRAM~\cite{anandtech18samsung}. 
+% Given that the mapping table size is typically 0.1\% of storage capacity~\cite{samsung_ratio, ni2017hash}, 
+% we can assume that only 4\% of DRAM is used for a write buffer. 
 
 \begin{table}[b]
     \centering
@@ -106,23 +112,44 @@ we can assume that only 4\% of DRAM is used for a write buffer.
         \footnotesize{DC1000B} & \footnotesize{Kingston} & \footnotesize{Enterprise} & \footnotesize{Full} & \footnotesize{Tantalum} \\ \hline
         \footnotesize{DC S3700, S3500} & \footnotesize{Intel} & \footnotesize{Enterprise} & \footnotesize{Full} & \footnotesize{Aluminum} \\ \hline
     \end{tabular}
-    \caption{\textbf{Power Loss Protection in SSDs~\cite{micron2014, intel2014, samsungplp2016}}. 
-    \EUNJI{This table is also included in ISLPED paper. Should we take it out?}
-	}
+    \caption{\textbf{Power Loss Protection in SSDs~\cite{micron2014, intel2014, samsungplp2016}}.}
     \label{ssd_plp}
-    \vspace{-20pt}
+    \vspace{-20pt}  
 \end{table}
-As opposed to a memory pressure, the negative impact of data loss is equally serious for both data. Because an SSD writes the associated LPN (Logical Page Number) in the OOB (Out-of-band) area of the physical page, it is virtually possible to recover the up-to-date mapping table by scanning the entire NAND flash memory. However, because it takes prohibitively long, particularly for the scalable SSDs, PLP-SSD snapshots an entire mapping table into the specific area in NAND flash in a power loss and loads it into DRAM at a reboot. The user data also offers no alternative but for PLP as it cannot be recovered after a crash. For the PLP-SSD, the host system ensures reliability assuming that all acknowledged data survive a power outage, and thus, the loss of user data can lead to a catastrophic result. 
+\iffalse
+\textcolor{red}{
+As opposed to a memory pressure, the negative impact of data loss is equally serious for both data. Because an SSD writes the associated LPN (Logical Page Number) in the OOB (Out-of-band) area of the physical page, it is virtually possible to recover the up-to-date mapping table by scanning the entire NAND flash memory. However, because it takes prohibitively long, particularly for the scalable SSDs, PLP-SSD snapshots an entire mapping table into the specific area in NAND flash in a power loss and loads it into DRAM at a reboot. The user data also offers no alternative but for PLP as it cannot be recovered after a crash. For the PLP-SSD, the host system ensures reliability assuming that all acknowledged data survive a power outage, and thus, the loss of user data can lead to a catastrophic result.
+}
+\fi
 
 % \ours{} applies this compromise only to the metadata, while protecting the user data entirely. 
 % The data write is not only synchronous with the user request, which hampers user experiences seriously when delayed, but also unrecoverable in the event of the power crash. 
 
-With these properties in mind, we invent an in-device buffer management mechanism for SSD under capacitance constraints. \ours{} partially protects the mapping table, 
-while fully protecting user data under capacitance constraints. 
-If the number of dirty pages in mapping table goes beyond the limit, 
-changes are immediately flushed to NAND flash. 
-Instead, \ours{} buffers more user writes so that mapping entry eviction becomes more efficient by aggregating dirty updates. 
-This substantially reduces the amount of mapping table-related write traffic, and in turn, improves the overall performance under capacitance constraints. 
+\textcolor{orange}{However, in our design,
+we take a radically different approach. \ours{} protects a fraction of the mapping table. 
+We buffer more user writes so that mapping entry eviction becomes more efficient
+by aggregating dirty updates. This substantially reduces the
+amount of mapping table-related write traffic, and in turn,
+improves the overall performance.}
+%  and persists changes to a NAND flash memory if the dirty memory footprint overflows. 
+% while fully protecting the user data. 
+% \textcolor{orange}{The write latency of user data affects user experience significantly,
+% it is hard to compromise it for reducing capacitance.}
+% Instead, \ours{} buffers more user writes so that mapping entry eviction becomes more efficient by aggregating dirty updates. 
+% This substantially reduces the amount of mapping table-related write traffic, and in turn, improves the overall performance under capacitance constraints. 
+
+To realize this design, 
+\ours{} maintains two data structures: first, \textit{a zero-cost list} 
+that holds the write requests whose mapping entry is already in a dirty translation page, 
+and second, \textit{a max binary heap} that maintains the indexes to translation pages
+sorted by the number of buffered user write requests associated with that page. 
+% We term this policy Least Increase of Dirtiness (LID) scheduling.
+When there is sufficient bandwidth at underlying NAND flash subsystem for writes, 
+\ours{} first flushes user data from the  zero-cost list,
+and then persists the dirty translation pages as ordered by the max binary heap. 
+By doing so, each user write minimizes the number of eventual translation page write, 
+and each translation page write maximizes the number of persisted mapping entries. 
+
 
 \ours{} is built upon the current trend of increasing the queue depth of the storage interfaces. SATA and SAS support a single queue with 32 and 245 commands, but NVMe has 
 up to 65,535 queues with as many as 65,536 commands per queue. 

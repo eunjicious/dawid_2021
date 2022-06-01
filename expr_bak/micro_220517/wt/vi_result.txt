@@ -1,6 +1,0 @@
-PROT FIFO DAWID
-pt1 0 0 
-pt5 0 0 
-pt10 0 0 
-pt50 0 0 
-pt100 0 0 
