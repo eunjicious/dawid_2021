@@ -20,7 +20,10 @@ The enterprise-class SSDs adopt the capacitor to protect data durability in case
 This technique is called Power-Loss Protection (PLP)~\cite{micron2014, intel2014, samsungplp2016} and it is needed because SSDs use a DRAM as an internal buffer for absorbing user writes and caching translation information (also known as mapping table). 
 If they are not protected, SSDs will have not only a data loss and/or corruption but also a long recovery time to build an up-to-date  mapping table by scanning entire flash drives.
 To preclude this situation, the enterprise-class SSDs rely on the capacitors that reserve energy to safely persist data of the volatile buffer in a power loss.
-
+\textcolor{orange}{
+Table I summarizes the policies for power loss protection (PLP) across several SSDs. While client SSDs such as the Samsung 950Pro and Micron M5001 forgo PLP, enterprise SSDs use capacitors that supply enough energy during powerloss to persist all data in the volatile memory to a temporary location in flash.
+(EJ: ISLPED 논문에서 긁어와서 좀 바꿔야 할듯..)
+}
 % In addition, the adoption of capacitors enables an SSD to ignore the \texttt{FLUSH} command that explicitly requests all data in the volatile buffer to be made durable.
 % This property increases the buffering effect in SSD significantly, leading to both less write traffic and a shorter operation latency.
 
