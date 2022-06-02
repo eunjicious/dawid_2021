@@ -1,5 +1,15 @@
 \section{Conclusion}
+This paper presented a novel SSD design called \ours{}.
+\ours{} protects a fraction of the storage-internal buffer to overcome capacitance constraints
+in high-capacity SSDs. \ours{} maintains performance by reducing a dirty memory footprint 
+of in-DRAM data through the cost-effective re-ordering, which underlies the increasing queue depth of the storage interfaces. 
+%We implemented a \ours{}-SSD prototype in FEMU, an open-source SSD
+%development framework. 
+Performance evaluation with various workloads shows that \ours{} offers 
+up to 42.7\% higher IOPS and 49\% less write traffic when the capacitance is highly limited.
+% delivers only XX\%-XX\% performance slowdown when capacitance is reduced to 1\%, while conventional SSD using FIFO decreases performance by XX\%.
 
+\iffalse
 In this paper, we raised an issue about capacitance constraints in scalable
 SSDs and presented a novel SSD design called \ours{} to overcome the
 limitation.  \ours{}-SSD protects a part of the buffer, but reduces the dirty
@@ -8,6 +18,7 @@ interfaces. We implemented a \ours{}-SSD prototype in FEMU, an open-source SSD
 development framework. Performance evaluation using the prototype shows that \ours{}-SSD 
 delivers only XX\%-XX\% performance slowdown when capacitance is reduced to 1\%, 
 while conventional SSD using FIFO decreases performance by XX\%.
+\fi
 
 \iffalse
 Hexa's design, implementation, and evaluation to
