@@ -22,22 +22,32 @@ for op in $OPERATION; do
 		for ta in $TARGET; do
 			for bs in $BUFF_SIZE; do
 				if [[ $ta == "FIFO" ]]; then
-					key="F$bs"
+					#key="F$bs"
+					if [[ $bs == "40" ]]; then 
+						key="F64"
+					else 
+						key="F$bs"
+					fi
 				else
-					key="H$bs"
+					#key="H$bs"
+					if [[ $bs == "40" ]]; then
+						key="H64"
+					else 
+						key="H$bs"
+					fi
 				fi
 
 				#echo $ta"_"$pe | tr "\n" " ">> $ofile
 				if [[ $pe == "1" ]] ; then
-					echo $key"_1" | tr "\n" " " >> $ofile
+					echo $key"_1%" | tr "\n" " " >> $ofile
 				elif [[ $pe == "5" ]] ; then
-					echo $key"_5" | tr "\n" " " >> $ofile
+					echo $key"_5%" | tr "\n" " " >> $ofile
 				elif [[ $pe == "10" ]] ; then
-					echo $key"_10" | tr "\n" " " >> $ofile
+					echo $key"_10%" | tr "\n" " " >> $ofile
 				elif [[ $pe == "50" ]] ; then
-					echo $key"_50" | tr "\n" " " >> $ofile
+					echo $key"_50%" | tr "\n" " " >> $ofile
 				elif [[ $pe == "100" ]] ; then
-					echo $key"_100" | tr "\n" " " >> $ofile
+					echo $key"_100%" | tr "\n" " " >> $ofile
 				fi
 	
 				#cat $pe"_fio_"$op"_"$ta"_1_16_2.wt" | awk '{print $3,$6,$9,$12}' >> $ofile
