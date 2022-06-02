@@ -107,12 +107,12 @@
 We perform the experiments on a machine with a 20-core Intel Xeon(R) Silver
 4114 CPU running at 2.2GHz and 84GB memory. We run FEMU (QEMU-based SSD
 emulator) configured to use 10 cores, 4GB DRAM for main memory, and 16GB DRAM
-for SSD emulation. We use page-level mapping and caches all translation pages in DRAM. 
+for SSD emulation. We use a page-level mapping and caches all translation pages in DRAM. 
 The NAND flash chips include 8 channels and 8 flash
 LUNs per channel. The page size is 8KB and the per-block pages are 256. The
 read and write latency is set to 60us and 700us,
 respectively~\cite{cheong2018flash}. We use the greedy algorithm for
-GC(Garbage-Collection) and use Ext4 as a file system. 
+GC(Garbage-Collection) and mount an Ext4 file system on the device.
 % , which selects the least utilized block as a victim for cleaning. 
 % The Ext4 file system is mounted on the emulated SSD.  
 %Other configuration uses default settings of FEMU 
@@ -132,7 +132,7 @@ and perform 0.1 million of write queries using 10 threads.
 For the performance comparison, we also implemented an FIFO-SSD that processes 
 write requests in arrival order.  
 
-Fig.\ref{fig_perf_iops} shows the IOPS and write traffic of FIFO-SSD and \ours{} (denoted with a prefix F and H) when varying the protected ratio of a mapping table from 1\% to 100. 
+Fig.\ref{fig_perf_iops} shows the IOPS and WAF (Write Amplification Factor) of FIFO-SSD and \ours{} (denoted with a prefix F and H) when varying the protected ratio of a mapping table from 1\% to 100\%. 
 We study two different sizes of write
 buffer, 64MB and 1GB, to investigate the effectiveness of \ours{} with respect
 to the queue depth. 
@@ -142,22 +142,26 @@ to the queue depth.
 이에 protected ratio 가 1\% 이고 WB가 1GB일 때, WAF를 기존 2.3 인 것을 1.5로 낮춤. 
 이에 따른 성능향상도 1.4x 가 됨. 
 \fi
-
-The random workload improves the most with \ours{} because it natively has low spatial locality.
-With re-ordering, \ours{} significantly reduces the flush overhead of translation updates, and thus it 
-lowers WAF from 2.3 to 1.5 and enhances IOPS by 42.7\% when the protection ratio is 1\%. 
+As the figure shows, the random workload improves the most with \ours{}. 
+This workload natively has low spatial locality, and thus it benefits enormously from the re-ordering of \ours{}. In particular, the performance greatly improves when the buffer size is large. 
+Consequently, \ours{} with 1GB buffer lowers WAF from 2.3 to 1.5 and enhances IOPS by 42.7\% when the protection ratio is 1\%. 
 \iffalse
 JESD에서도 전체적인 트렌드는 비슷하나 write traffic 의 감소폭과 성능향상폭은 다소 줄어들었다. 
 그 이유는 JESD워크로드가 원래random 보다 mapping table update 에 locality 가 있기 때문임. 
 이에 protected ratio 가 1\% 일때 WAF는 1.8과 1.7이던 것이 1.3과 1.5로 감소함. 
 성능은 최대 13\% 향상됨. 
 \fi
-For JESD, the result shows the same general trends as for the random workload, but the benefit 
-becomes smaller as it has more skewed access pattern.
+For JESD, the result shows the same general trends as for the random workload, while the performance gain
+becomes smaller as it has more skewed access patterns. 
 
+TPC-C exhibits the disparate outcome. Although it reduces write amplification by up to 7\% in \ours, the performance has no remarkable improvement with it. 
+Furthermore, IOPS buffer size is small. 
+
+\iffalse
 TPC-C는 WAF는 최대 7\% 까지 감소시켰으나 성능은 \ours{}와 FIFO-SSD가 거의 비슷하게 관찰됨. 
 그 이유는 TPC-C 자체도 지역성이 높아 re-ordering 으로 인한 write traffic 감소폭도 작고, FIO benchmark (얘는 direct 로 실행)와 달리 상위 소프트웨어 스택이 높아서 백그라운드로 동작하는 ssd 내부의 write traffic 변화가 민감하게 user-perceived performance 에 영향을 끼치지 않는 것으로 파악되었다. 
 한편, 다른 워크로드와는 달리 버퍼가 작을 때 성능이 더 좋았다. 정확한 이유는 모르겠으나, 버퍼 크기가 커짐에 따라 FTL 내의 자료구조가 복잡해져 소프트웨어 오버헤드가 성능에 영향을 끼친 것으로 추측된다. 
+\fi
 
 \iffalse
 When the protected ratio is less than 10\%, \ours{} has improved the performance by up to XX\% compared to the existing FIFO version.
