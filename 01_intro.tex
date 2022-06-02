@@ -16,10 +16,24 @@
 % have been equipped with a small size of volatile buffer in front of the persistent disk. 
 % By using them as a read cache and a write buffer, they hide a long latency of the physical storage medium 
 % as well as mitigating an endurance limitation of the worn-out devices.}
+\iffalse
 The enterprise-class SSDs adopt the capacitor to protect data durability in case of power crash. 
 This technique is called Power-Loss Protection (PLP)~\cite{micron2014, intel2014, samsungplp2016} and it is needed because SSDs use a DRAM as an internal buffer for absorbing user writes and caching translation information (also known as mapping table). 
 If they are not protected, SSDs will have not only a data loss and/or corruption but also a long recovery time to build an up-to-date  mapping table by scanning entire flash drives.
 To preclude this situation, the enterprise-class SSDs rely on the capacitors that reserve energy to safely persist data of the volatile buffer in a power loss.
+\textcolor{orange}{
+Table I summarizes the policies for power loss protection (PLP) across several SSDs. While client SSDs such as the Samsung 950Pro and Micron M5001 forgo PLP, enterprise SSDs use capacitors that supply enough energy during powerloss to persist all data in the volatile memory to a temporary location in flash.
+(EJ: ISLPED 논문에서 긁어와서 좀 바꿔야 할듯..)
+}
+\fi
+
+Charge-storing capacitors are central to the reliability of and data integrity in SSDs 
+as they provide enough energy to safely persist data stored in volatile DRAM during a power crash. 
+Without capacitors, an SSD cannot implement Power-Loss Protection (PLP)~\cite{micron2014, intel2014, samsungplp2016}, 
+and would require the SSD to perform a long and arduous recovery process by scanning all the pages in the SSD to rebuild the logical to physical mapping table. 
+As shown in Table~\ref{ssd_plp}, 
+while client-class SSDs may forgo the implementation of PLP due to size and cost limitations, 
+using capacitors is a must in enterprise-class SSDs. 
 
 % In addition, the adoption of capacitors enables an SSD to ignore the \texttt{FLUSH} command that explicitly requests all data in the volatile buffer to be made durable.
 % This property increases the buffering effect in SSD significantly, leading to both less write traffic and a shorter operation latency.
@@ -34,20 +48,20 @@ To preclude this situation, the enterprise-class SSDs rely on the capacitors tha
 % To overcome this limitation without sacrificing performance, 
 However, the heavy reliance on capacitors is no longer sustainable as the increase in SSD far outpaces 
 the increase in capacitor density.
-The SSD has increased significantly in density for the past decade. 
+%The SSD has increased significantly in density for the past decade. 
 In 2011, a typical 2.5-inch SSD had 256GB capacity, but
 %the world's first 2TB SSD was released in 2013~\cite{foremay2013}, but 
-by 2018, a high-capacity SSD boasted a 30TB, expanding by 100× over the past ten years
+by 2018, a high-capacity SSD boasted a 30TB, expanding by 100$\times$ over the past ten years
 ~\cite{samsung2011, anandtech18samsung}. 
-This remarkable growth of the device-capacity is thanks to the advanced scaling technologies 
-such as nanoscale fabrication%~\cite{busche2014design}
-and multi-layer stacking. %~\cite{9365809}. 
-Al(aluminum) and Ta(tantalum)-electrolytic capacitors used in SSDs 
-have increased in density by tenfold from 1960 to 2005. 
-This is approximately 50x slower than the SSD density increase rate.
-Given that the internal buffer size increases in proportion to the storage capacity~\cite{ni2017hash},
-the slow scaling of capacitors will eventually limit the amount of DRAM that can be used in an SSD. 
-This, in turn, will also limit the storage capacity as the size of DRAM and aggregate flash capacity proportionally scale. 
+This remarkable growth in the SSD's capacity is thanks to the vertical stacking of layers that break the process scaling limit and multi-level cells that store multiple bits in a given transistor.
+On the other hand, Al(aluminum) and Ta(tantalum)-electrolytic capacitors used in SSDs 
+have increased in density only by tenfold across four decades,
+approximately a 50$\times$ slower rate per year. 
+%This is approximately 50$\times$ slower than the SSD density increase rate.
+%Given that the internal buffer size increases in proportion to the storage capacity,
+The slow scaling of capacitors will eventually limit the percentage of DRAM that can be protected by PLP.
+Without a scheme to ensure the durability of data in a capacitor-constrained setting, 
+this, in turn, will also limit the storage capacity as the size of DRAM and aggregate flash capacity proportionally scale~\cite{ni2017hash}. 
 % ~\cite{samsung_ratio, ni2017hash}
 
 \iffalse
@@ -76,13 +90,14 @@ In typical SSD designs, most of the capacitance is used for protecting the mappi
 and the buffer for user writes is kept at a minimal (just enough to hide the flash program latency)~\cite{KangLMKO14sigmod}. 
 % As an example, Samsung PM1643 30.72TB and PM1633a 15.36TB house 40GB and 16GB DRAM, respectively~\cite{anandtech18samsung}. 
 % (typically 0.1\% of storage capacity~\cite{samsung_ratio, ni2017hash})
-\fi
+
 This paper presents \ours{}, a novel SSD-internal DRAM management scheme 
 that allows the SSD capacity to scale beyond the slow growth of capacitors. 
 SSD-internal DRAM is used for 
 (1) caching translation information (also known as mapping table) and (2) buffering user writes. 
 In typical SSD designs, most of the DRAM is used for caching the mapping table and 
 and the buffer for user writes is kept at a minimal (just enough to hide the flash program latency)~\cite{KangLMKO14sigmod}. 
+\fi
 % As an example, Samsung PM1643 30.72TB and PM1633a 15.36TB house 40GB and 16GB DRAM, respectively~\cite{anandtech18samsung}. 
 % (typically 0.1\% of storage capacity~\cite{samsung_ratio, ni2017hash})
 
@@ -93,6 +108,8 @@ and the buffer for user writes is kept at a minimal (just enough to hide the fla
 
 \begin{table}[b]
     \centering
+        \caption{Power Loss Protection in SSDs~\cite{micron2014, intel2014, samsungplp2016}.}
+    \label{ssd_plp}
     \fontsize{11}{11}
     \small
 	% Model Manufacturer Category PLP-Support Capacitor 
@@ -113,8 +130,7 @@ and the buffer for user writes is kept at a minimal (just enough to hide the fla
         \footnotesize{DC1000B} & \footnotesize{Kingston} & \footnotesize{Enterprise} & \footnotesize{Full} & \footnotesize{Tantalum} \\ \hline
         \footnotesize{DC S3700, S3500} & \footnotesize{Intel} & \footnotesize{Enterprise} & \footnotesize{Full} & \footnotesize{Aluminum} \\ \hline
     \end{tabular}
-    \caption{\textbf{Power Loss Protection in SSDs~\cite{micron2014, intel2014, samsungplp2016}}.}
-    \label{ssd_plp}
+
     \vspace{-20pt}  
 \end{table}
 \iffalse
@@ -124,20 +140,31 @@ As opposed to a memory pressure, the negative impact of data loss is equally ser
 \fi
 
 % \ours{} applies this compromise only to the metadata, while protecting the user data entirely. 
-% The data write is not only synchronous with the user request, which hampers user experiences seriously when delayed, but also unrecoverable in the event of the power crash. 
+% The data write is not only synchronous with the user request, which hampers user experiences seriously when delayed, but also unrecoverable in the event of the power crash.
 
+\iffalse
 \textcolor{orange}{However, in our design,
 we take a radically different approach. \ours{} protects a fraction of the mapping table. 
 We buffer more user writes so that mapping entry eviction becomes more efficient
 by aggregating dirty updates. This substantially reduces the
 amount of mapping table-related write traffic, and in turn,
 improves the overall performance.}
+\fi
+
+This paper presents \ours{}, a novel SSD-internal DRAM management scheme 
+that allows the SSD capacity to scale beyond the slow growth of capacitors. 
+\ours{} uses a radically different approach to managing the SSD-internal DRAM. 
+Rather than caching most of the mapping table and minimally buffering user writes~\cite{KangLMKO14sigmod}, 
+we buffer more user writes so that the number of modified mapping pages is small. 
+This substantially reduces the amount of mapping table-related write traffic, 
+and in turn, improves the overall performance.
 %  and persists changes to a NAND flash memory if the dirty memory footprint overflows. 
 % while fully protecting the user data. 
 % \textcolor{orange}{The write latency of user data affects user experience significantly,
 % it is hard to compromise it for reducing capacitance.}
 % Instead, \ours{} buffers more user writes so that mapping entry eviction becomes more efficient by aggregating dirty updates. 
 % This substantially reduces the amount of mapping table-related write traffic, and in turn, improves the overall performance under capacitance constraints. 
+Our approach of buffering more user writes is enabled by the current trend of increasing the queue depth of the storage interfaces: NVMe has up to 65,535 queues with as many as 65,536 commands per queue. This extension allows SSDs to further optimize the internal activities by taking advantage of the outstanding request information.
 
 To realize this design, 
 \ours{} maintains two data structures: first, \textit{a zero-cost list} 
@@ -145,19 +172,20 @@ that holds the write requests whose mapping entry is already in a dirty translat
 and second, \textit{a max binary heap} that maintains the indexes to translation pages
 sorted by the number of buffered user write requests associated with that page. 
 % We term this policy Least Increase of Dirtiness (LID) scheduling.
-When there is sufficient bandwidth at underlying NAND flash subsystem for writes, 
+When there is sufficient bandwidth at the underlying NAND flash subsystem for writes, 
 \ours{} first flushes user data from the  zero-cost list,
 and then persists the dirty translation pages as ordered by the max binary heap. 
 By doing so, each user write minimizes the number of eventual translation page write, 
 and each translation page write maximizes the number of persisted mapping entries. 
-
-
+\iffalse
 \ours{} is built upon the current trend of increasing the queue depth of the storage interfaces. SATA and SAS support a single queue with 32 and 245 commands, but NVMe has 
 up to 65,535 queues with as many as 65,536 commands per queue. 
 This extension allows SSDs to further optimize the internal activities by taking advantage of the outstanding request information.
-
+\fi
+\EUNJI{
 We implement \ours{} in \texttt{FEMU}, an open-source SSD development framework~\cite{li2018case}.
-The performance evaluation with various workloads shows that \ours{} offers 82\% and 94\% of IOPS of the full-protection SSD when a protected ratio is 1\% and 10\%, while a conventional SSD provides 69\% and 81\% of performance.  
+The performance evaluation with various workloads shows that \ours{} offers 82\% and 94\% of IOPS of the full-protection SSD when a protected ratio is 1\% and 10\%, while a conventional SSD provides 69\% and 81\% of performance.
+}
 
 
 \iffalse
