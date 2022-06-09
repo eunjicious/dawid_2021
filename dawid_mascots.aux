@@ -1,51 +1,32 @@
 \relax 
 \citation{micron2014,intel2014,samsungplp2016}
 \citation{samsung2011,anandtech18samsung}
-\citation{busche2014design}
-\citation{9365809}
-\citation{samsung_ratio,ni2017hash}
+\citation{ni2017hash}
+\citation{micron2014,intel2014,samsungplp2016}
+\citation{micron2014,intel2014,samsungplp2016}
 \citation{KangLMKO14sigmod}
-\citation{anandtech18samsung}
-\citation{samsung_ratio,ni2017hash}
-\citation{micron2014,intel2014,samsungplp2016}
-\citation{micron2014,intel2014,samsungplp2016}
 \citation{li2018case}
+\citation{GuoYZC13date,HuangWQLS15hpcc}
+\citation{GuoYZC13date}
+\citation{HuangWQLS15hpcc}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces \textbf  {Power Loss Protection in SSDs\nobreakspace  {}\cite  {micron2014, intel2014, samsungplp2016}}. \leavevmode {\color  {blue}EJ: This table is also included in ISLPED paper. Should we take it out?} \relax }}{1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related work}{1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Power Loss Protection in SSDs\nobreakspace  {}\cite  {micron2014, intel2014, samsungplp2016}.\relax }}{1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{ssd_plp}{{I}{1}}
-\citation{GuoYZC13date}
-\citation{huang2011life}
-\citation{HuangWQLS15hpcc}
 \citation{KimK15sac}
 \citation{ChenLZ19tc}
 \citation{lee2021spartanssd}
-\@writefile{toc}{\contentsline {section}{\numberline {II}Related work}{2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textbf  {\texttt  {Hexa}{}-SSD buffer management scheme}\relax }}{2}\protected@file@percent }
-\newlabel{fig:dawid_buff_overview}{{1}{2}}
-\@writefile{toc}{\contentsline {section}{\numberline {III}Design}{2}\protected@file@percent }
 \citation{li2018case}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Implementation}{3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textbf  {\texttt  {Hexa}{}-SSD} Internals.\relax }}{3}\protected@file@percent }
-\newlabel{fig_dawid_archi}{{2}{3}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Architecture}}}{3}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Data structures for FTL}}}{3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Design and Implementation}{2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textbf  {\texttt  {Hexa}-SSD{} buffer management scheme.}\relax }}{2}\protected@file@percent }
+\newlabel{fig:dawid_buff_overview}{{1}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textbf  {\texttt  {Hexa}-SSD{} Architecture.}\relax }}{2}\protected@file@percent }
+\newlabel{fig_dawid_archi}{{2}{2}}
 \citation{cheong2018flash}
-\citation{fio-bench}
 \citation{council1990tpc}
-\citation{sysbench}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \textbf  {IOPS}:\textit  {F and H denotes FIFO and HEXA.}\relax }}{4}\protected@file@percent }
-\newlabel{fig_perf_iops}{{3}{4}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Random}}}{4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {JESD}}}{4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {TPC-C}}}{4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces \textbf  {Write Traffic.} \textit  {UD - User Data, MD - Mapping Data, GUD - GC Write for User Data, GMD - GC Write for Mapping Data.}\relax }}{4}\protected@file@percent }
-\newlabel{fig_perf_wt}{{IV}{4}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Random}}}{4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {JESD}}}{4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {TPC-C}}}{4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {V}Evaluation}{4}\protected@file@percent }
-\bibstyle{plain}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Evaluation}{3}\protected@file@percent }
+\bibstyle{ieeetr}
 \bibdata{dawid_mascots}
 \bibcite{anandtech18samsung}{{1}{}{{}}{{}}}
 \bibcite{fio-bench}{{2}{}{{}}{{}}}
@@ -60,12 +41,16 @@
 \bibcite{intel2014}{{11}{}{{}}{{}}}
 \bibcite{jiang2011s}{{12}{}{{}}{{}}}
 \bibcite{KangLMKO14sigmod}{{13}{}{{}}{{}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \textbf  {IOPS and WAF.} From left: Random, JESD, and TPC-C.\relax }}{4}\protected@file@percent }
+\newlabel{fig_perf_iops}{{3}{4}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {IOPS}}}{4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Write Traffic (UD: User Data, MD: Mapping Data, GUD/GMD: GC for User/Mapping Data)}}}{4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{4}\protected@file@percent }
 \bibcite{KimK15sac}{{14}{}{{}}{{}}}
 \bibcite{kim2017shrd}{{15}{}{{}}{{}}}
 \bibcite{lee2021spartanssd}{{16}{}{{}}{{}}}
 \bibcite{li2018case}{{17}{}{{}}{{}}}
 \bibcite{micron2014}{{18}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{5}\protected@file@percent }
 \bibcite{ni2017hash}{{19}{}{{}}{{}}}
 \bibcite{9365809}{{20}{}{{}}{{}}}
 \bibcite{samsung2011}{{21}{}{{}}{{}}}

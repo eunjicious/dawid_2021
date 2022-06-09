@@ -51,7 +51,7 @@ the increase in capacitor density.
 %The SSD has increased significantly in density for the past decade. 
 In 2011, a typical 2.5-inch SSD had 256GB capacity, but
 %the world's first 2TB SSD was released in 2013~\cite{foremay2013}, but 
-by 2018, a high-capacity SSD boasted a 30TB, expanding by 100$\times$ over the past ten years
+by 2018, a high-capacity SSD boasted 30TB, expanding by 100$\times$ over the past ten years
 ~\cite{samsung2011, anandtech18samsung}. 
 This remarkable growth in the SSD's capacity is thanks to the vertical stacking of layers that break the process scaling limit and multi-level cells that store multiple bits in a given transistor.
 On the other hand, Al(aluminum) and Ta(tantalum)-electrolytic capacitors used in SSDs 
@@ -178,15 +178,15 @@ and then persists the dirty translation pages as ordered by the max binary heap.
 By doing so, each user write minimizes the number of eventual translation page write, 
 and each translation page write maximizes the number of persisted mapping entries. 
 \iffalse
-\ours{} is built upon the current trend of increasing the queue depth of the storage interfaces. SATA and SAS support a single queue with 32 and 245 commands, but NVMe has 
+\ours{} is built upon the current trend of increasing the queue depth of storage interfaces. SATA and SAS support a single queue with 32 and 245 commands, but NVMe has 
 up to 65,535 queues with as many as 65,536 commands per queue. 
 This extension allows SSDs to further optimize the internal activities by taking advantage of the outstanding request information.
 \fi
-\EUNJI{
-We implement \ours{} in \texttt{FEMU}, an open-source SSD development framework~\cite{li2018case}.
-The performance evaluation with various workloads shows that \ours{} offers 82\% and 94\% of IOPS of the full-protection SSD when a protected ratio is 1\% and 10\%, while a conventional SSD provides 69\% and 81\% of performance.
-}
-
+We implement \ours{} in FEMU, an open-source SSD development
+framework~\cite{li2018case}. The performance evaluation with various workloads
+shows that \ours{} offers 82\% of IOPS of the full-protection SSD when a
+protected ratio is equal to or smaller than 10\%, while a conventional SSD
+provides 74\% of performance.
 
 \iffalse
 However, in our design, we take a radically different approach. 

@@ -61,19 +61,21 @@ Spartan (ISLPED ‘20): 저널을 두고 mapping entry 를 저널에 썼다가 �
 
 \subsection{Capacitance Constraints}
 \fi
-The need to reduce the energy consumption for power-loss protection
-arises in different contexts. A few studies reduce the total energy consumption
-by speeding up the backup process upon power failure using fast media~\cite{GuoYZC13date,HuangWQLS15hpcc}. 
-Guo et al.~\cite{GuoYZC13date} reduce the capacitance requirement by writing back the volatile buffer
-data into PRAM (Phase Change Random Access Memory), which is faster and uses
-lower power than NAND flash. 
+The need to reduce the energy consumption for power-loss protection arises in
+different contexts. In a few studies, the total energy consumption was reduced
+\EUNJI{past? present?}
+by speeding up the backup process upon power failure using fast
+media~\cite{GuoYZC13date,HuangWQLS15hpcc}.  Guo et al.~\cite{GuoYZC13date}
+reduce the capacitance requirement by writing back the volatile buffer data
+into Phase Change Random Access Memory (PRAM), which is faster and uses less 
+power than NAND flash does. 
 % They argue that this reduction
 % enables to replace the supercapacitors that are suffering from serious aging
 % problems with the regular capacitors, which have more reliable
 % characteristics~\cite{huang2011life}. This consequently enhances the robustness
 % of storage device.  As a similar approach, 
 Smartbackup~\cite{HuangWQLS15hpcc}
-proposes dynamic NAND channel allocation and SLC (single-level cell) mode
+proposes dynamic NAND channel allocation and single-level cell (SLC) mode
 programs to make the dump process shorter at sudden power-off. 
 \iffalse
 It makes full
@@ -99,8 +101,14 @@ commercial SSDs typically do not cache read data in the buffer because the host
 memory can serve as a cache memory of the storage device. For these reasons,
 the effectiveness of DRWB may be limited in practical environment. 
 \fi
-Another approach to reducing the capacitor size is achieved by only protecting a small portion of the volatile buffer. DRWB (Dual-Region Write Buffer)~\cite{KimK15sac} divides the internal-SSD buffer into a small protected region and a large unprotected region. When the data on the unprotected region is updated, DRWB logs the delta for the page in the protected region. However, DRWB only performs this for the user data, having no consideration for the metadata such as mapping table, despite that it actually accounts for most of the internal buffer of SSDs. 
-\iffalse
+Another approach to reducing the capacitor size is achieved by only protecting
+a small portion of the volatile buffer. A Dual-Region Write
+Buffer (DRWB)~\cite{KimK15sac} divides the internal-SSD buffer into a small protected
+region and a large unprotected region. When the data on the unprotected region
+is updated, DRWB logs the delta for the page in the protected region. However,
+DRWB only performs this for the user data, having no consideration for the
+metadata such as mapping tables, despite that it actually accounts for most of
+the internal buffer of SSDs.  \iffalse
 Furthermore, commercial SSDs typically do not cache read data in the buffer because the host memory can serve as a cache memory of the storage device. For these reasons, the effectiveness of DRWB may be limited in a practical environment.
 \fi
 
@@ -144,7 +152,13 @@ closely. Spartan-SSD assumes an overly-charged capacitor enough to provide a
 sufficient capacitance during the SSD lifetime, which is like a commercial SSD.
 \fi
 
-Prior work by Chen et. al~\cite{ChenLZ19tc} has also addressed the challenge of capacitance constraints for scalable SSDs: they observe that the small-sized write buffer can be effective for reducing write traffic in particular applications that perform journaling heavily. Motivated by this observation, they present the application-SSD co-design to reduce the data writes buffered for heavy journaling applications. However, their approach is only applicable to systems that perform journaling and require changes to the application code. 
+Prior work by Chen et. al~\cite{ChenLZ19tc} has also addressed the challenge of
+capacitance constraints for scalable SSDs. They observed that a small
+write buffer can be effective for reducing write traffic in particular
+applications that perform heavy journaling. Motivated by this observation,
+they present an application-SSD co-design to reduce the data writes buffered
+for heavy journaling applications. However, their approach is only applicable
+to systems that perform journaling and require changes to the application code. 
 
 \iffalse
 % \subsection{Write Buffer in Scalable Storage}
@@ -178,10 +192,10 @@ pinpoints capacitance constraints in scalable SSDs and reduces capacitance
 requirements by making use of elastic journaling. SpartanSSD logs the mapping
 information updates into the in-device journal so that the writes to the
 mapping table can be buffered. They use a hybrid journal that is backed by a
-small size of DRAM and flash memory. This hybrid journal is highly flexible in
-terms of capacity, and thus, it enables a timely checkpoint that reflects the log
+small DRAM and flash memory. This hybrid journal is highly flexible in
+terms of capacity; thus, it enables a timely checkpoint that reflects the log
 data to the mapping table and flushes dirty map pages into NAND flash chips.
 Although SpartanSSD also reduces translation-related writes under capacitance
 constraints, it has double write for mapping information updates, and more importantly,
-it increases a recovery time, which could be highly harmful
+it increases the recovery time, which could be extremely harmful
 when the multiple SSDs are running simultaneously. 

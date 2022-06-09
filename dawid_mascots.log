@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  28 MAY 2022 10:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.11.16)  9 JUN 2022 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -435,86 +435,80 @@ LaTeX Font Info:    ... okay on input line 29.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 7
+1.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 71.
+
 (./00_abstract.tex
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 6
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 8
 .
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-))
-(./01_intro.tex
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
-0.
- (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 94.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
+
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 94.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (4.21457pt too wide) in paragraph at lines 94--111
+))
+(./01_intro.tex
+Overfull \hbox (4.21457pt too wide) in paragraph at lines 118--133
  [][] 
  []
 
-[1
+
+Underfull \hbox (badness 1360) in paragraph at lines 154--168
+[]\OT1/ptm/m/n/10 This pa-per presents \OT1/pcr/m/n/10 Hexa\OT1/ptm/m/n/10 -SSD
+, a novel SSD-internal
+ []
+
+) (./02_related_work_short.tex [1
 
 
-]) (./02_related_work_short.tex) (./03_dawid_design.tex
+]) (./03_dawid_design.tex
 File: figure/dawid_algo.eps Graphic file (type eps)
 
 <figure/dawid_algo.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 90--91
+Overfull \hbox (6.0pt too wide) in paragraph at lines 91--92
  [][] 
  []
 
-[2]) (./04_eval_new.tex
 File: figure/dawid_ssd_archi_new.eps Graphic file (type eps)
- <figure/dawid_ssd_archi_new.eps>
-File: figure/dawid_ds.eps Graphic file (type eps)
- <figure/dawid_ds.eps>
-File: expr/micro_rslt_220525/perf/perf_RAND.eps Graphic file (type eps)
+<figure/dawid_ssd_archi_new.eps> [2]
+Underfull \hbox (badness 3312) in paragraph at lines 184--194
+[]\OT1/ptm/m/n/10 The \OT1/pcr/m/n/10 ftl_flush_thread \OT1/ptm/m/n/10 ma-te-ri
+-al-izes data from a
+ []
 
-<expr/micro_rslt_220525/perf/perf_RAND.eps>
+) (./04_eval_new.tex
+File: expr/micro_rslt_220525/perf/perf_RAND.eps Graphic file (type eps)
+ <expr/micro_rslt_220525/perf/perf_RAND.eps>
 File: expr/micro_rslt_220525/perf/perf_JESD.eps Graphic file (type eps)
 
 <expr/micro_rslt_220525/perf/perf_JESD.eps>
-File: expr/macro_rslt_220525/perf/perf_OLTP.eps Graphic file (type eps)
+File: expr/macro_rslt_220601/perf/perf_OLTP.eps Graphic file (type eps)
 
-<expr/macro_rslt_220525/perf/perf_OLTP.eps>
-File: expr/micro_rslt_220525/wt/RAND.eps Graphic file (type eps)
+<expr/macro_rslt_220601/perf/perf_OLTP.eps>
+File: expr/micro_rslt_220601/waf/RAND.eps Graphic file (type eps)
 
-<expr/micro_rslt_220525/wt/RAND.eps>
-File: expr/micro_rslt_220525/wt/JESD.eps Graphic file (type eps)
- <expr/micro_rslt_220525/wt/JESD.eps>
-File: expr/macro_rslt_220525/wt/OLTP.eps Graphic file (type eps)
+<expr/micro_rslt_220601/waf/RAND.eps>
+File: expr/micro_rslt_220601/waf/JESD.eps Graphic file (type eps)
+ <expr/micro_rslt_220601/waf/JESD.eps>
+File: expr/macro_rslt_220601/waf/OLTP.eps Graphic file (type eps)
 
-<expr/macro_rslt_220525/wt/OLTP.eps>
-! Extra }, or forgotten \endgroup.
-\@endfloatbox ...pagefalse \outer@nobreak \egroup 
-                                                  \color@endbox 
-l.46 \end{figure*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-Underfull \vbox (badness 1062) has occurred while \output is active []
-
- [3]
-Underfull \vbox (badness 5036) has occurred while \output is active []
-
- [4])
-(./05_conclusion.tex) (./dawid_mascots.bbl
+<expr/macro_rslt_220601/waf/OLTP.eps> [3]) (./05_conclusion.tex)
+(./dawid_mascots.bbl
 ! Undefined control sequence.
 l.7   \url
           {https://www.anandtech.com/show/12448/samsung-begins-mass-producti...
@@ -526,22 +520,22 @@ and I'll forget about whatever was undefined.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
-[]\OT1/ptm/m/n/10 AnandTech.  Sam-sung 30.72 TB SSDs:
+[]\OT1/ptm/m/n/9 AnandTech.  Sam-sung 30.72 TB SSDs:
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
-\OT1/ptm/m/n/10 Mass pro-duc-tion of PM1643 be-gins.
+\OT1/ptm/m/n/9 Mass pro-duc-tion of PM1643 be-gins.
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
-\OT1/ptm/m/n/10 https://www.anandtech.com/show/12448/samsung-
+\OT1/ptm/m/n/9 https://www.anandtech.com/show/12448/samsung-begins-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
-\OT1/ptm/m/n/10 begins-mass-production-of-pm1643-sas-ssds-with-3072-
+\OT1/ptm/m/n/9 mass-production-of-pm1643-sas-ssds-with-3072-tb-capacity,
  []
 
 ! Undefined control sequence.
@@ -553,16 +547,6 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--14
-[]\OT1/ptm/m/n/10 Jens Axboe.  fio - flex-i-ble i/o tester.
- []
-
-
-Underfull \hbox (badness 1817) in paragraph at lines 16--22
-[]\OT1/ptm/m/n/10 Christoph Busche, Laia Vil[]a-Nadal, Jun Yan, Har-
- []
-
 ! Undefined control sequence.
 l.28 \newblock \url
                    {https://doi.org/10.1109/TC.2018.2871683}.
@@ -571,6 +555,22 @@ of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 24--29
+[]\OT1/ptm/m/n/9 Xubin Chen, Yin Li, and Tong Zhang.  Re-duc-ing
+ []
+
+
+Underfull \hbox (badness 5036) in paragraph at lines 24--29
+\OT1/ptm/m/n/9 flash mem-ory write traf-fic by ex-ploit-ing a few MBs
+ []
+
+
+Underfull \hbox (badness 3646) in paragraph at lines 24--29
+\OT1/ptm/m/n/9 (ssds).  \OT1/ptm/m/it/9 IEEE Trans. Com-put-ers\OT1/ptm/m/n/9 ,
+ 68(3):426--439, 2019.
+ []
 
 ! Undefined control sequence.
 l.48 \newblock \url
@@ -590,11 +590,6 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Underfull \hbox (badness 1400) in paragraph at lines 64--73
-\OT1/ptm/m/n/10 strat-egy for solid state drives with backup ca-pac-i-
- []
-
 ! Undefined control sequence.
 l.78   \url
            {https://www.intel.com/content/www/us/en/solid-state-drives/ssd-p...
@@ -606,17 +601,12 @@ and I'll forget about whatever was undefined.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 75--80
-[]\OT1/ptm/m/n/10 Intel.  Power loss im-mi-nent(PLI) tech-nol-ogy.
+[]\OT1/ptm/m/n/9 Intel.  Power loss im-mi-nent(PLI) tech-nol-ogy.
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 75--80
-\OT1/ptm/m/n/10 https://www.intel.com/content/www/us/en/solid-state-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--80
-\OT1/ptm/m/n/10 drives/ssd-power-loss-imminent-technology-brief.html,
+\OT1/ptm/m/n/9 https://www.intel.com/content/www/us/en/solid-state-
  []
 
 ! Undefined control sequence.
@@ -629,10 +619,9 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 5359) in paragraph at lines 89--95
-\OT1/ptm/m/n/10 Suk Kee, and Moon-wook Oh.  Durable write
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [4]
 ! Undefined control sequence.
 l.102 \newblock \url
                     {https://doi.org/10.1145/2695664.2695830}.
@@ -643,8 +632,20 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 1406) in paragraph at lines 112--117
-\OT1/ptm/m/n/10 Shin, Sungjin Lee, Bryan S Kim, Eu-nji Lee, and
+Underfull \hbox (badness 1635) in paragraph at lines 97--103
+\OT1/ptm/m/n/9 ca-pac-i-tor in SSD.  In \OT1/ptm/m/it/9 Pro-ceed-ings of the 30
+th An-nual
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--103
+\OT1/ptm/m/it/9 ACM Sym-po-sium on Ap-plied Com-put-ing, Sala-manca,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--103
+\OT1/ptm/m/it/9 Spain, April 13-17, 2015\OT1/ptm/m/n/9 , pages 2039--2046, 2015
+.
  []
 
 ! Undefined control sequence.
@@ -694,20 +695,19 @@ my insertion and my current dilemma will both disappear.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 127--132
-[]\OT1/ptm/m/n/10 Micron.  How Mi-cron SSDs han-dle un-ex-
+[]\OT1/ptm/m/n/9 Micron.  How Mi-cron SSDs han-dle un-ex-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 127--132
-\OT1/ptm/m/n/10 pected power loss.  https://www.micron.com/-
+\OT1/ptm/m/n/9 pected power loss.  https://www.micron.com/-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 127--132
-\OT1/ptm/m/n/10 /media/client/global/documents/products/white-
+\OT1/ptm/m/n/9 /media/client/global/documents/products/white-
  []
 
-[5]
 ! Undefined control sequence.
 l.157   \url
             {https://www.samsung.com/us/support/owners/product/128gb-ssd-830...
@@ -719,12 +719,12 @@ and I'll forget about whatever was undefined.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 154--159
-[]\OT1/ptm/m/n/10 Samsung.  Sam-sung SSD 830 se-ries.
+[]\OT1/ptm/m/n/9 Samsung.  Sam-sung SSD 830 se-ries.
  []
 
 
-Overfull \hbox (15.97733pt too wide) in paragraph at lines 154--159
-\OT1/ptm/m/n/10 https://www.samsung.com/us/support/owners/product/128gb-
+Underfull \hbox (badness 10000) in paragraph at lines 154--159
+\OT1/ptm/m/n/9 https://www.samsung.com/us/support/owners/product/128gb-
  []
 
 ! Undefined control sequence.
@@ -773,15 +773,15 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 5359) in paragraph at lines 161--166
-[]\OT1/ptm/m/n/10 Samsung.  Sam-sung V-NAND SSD 860 QVO.
+Underfull \hbox (badness 10000) in paragraph at lines 161--166
+[]\OT1/ptm/m/n/9 Samsung.  Sam-sung V-NAND SSD 860 QVO.
  []
 
 
-Overfull \hbox (302.32385pt too wide) in paragraph at lines 161--166
-\OT1/ptm/m/n/10 https://www.samsung.com/semiconductor/global.semi.static/Samsun
-g%20SSD%20860%20QVO%20Data%20Sheet$[]\OML/cmm/m/it/10 ev\OT1/cmr/m/n/10 1\OML/c
-mm/m/it/10 :pdf; \OT1/cmr/m/n/10 2013\OML/cmm/m/it/10 :[]$ 
+Overfull \hbox (248.91884pt too wide) in paragraph at lines 161--166
+\OT1/ptm/m/n/9 https://www.samsung.com/semiconductor/global.semi.static/Samsung
+%20SSD%20860%20QVO%20Data%20Sheet$[]\OML/cmm/m/it/9 ev\OT1/cmr/m/n/9 1\OML/cmm/
+m/it/9 :pdf; \OT1/cmr/m/n/9 2013\OML/cmm/m/it/9 :[]$ 
  []
 
 ! Undefined control sequence.
@@ -792,11 +792,6 @@ of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 174--177
-[]\OT1/ptm/m/n/10 Sysbench.  Sys-bench.
- []
 
 )
 
@@ -810,16 +805,16 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[6
+[5
 
 ] (./dawid_mascots.aux) ) 
 Here is how much of TeX's memory you used:
- 5655 strings out of 480609
- 86747 string characters out of 5903655
+ 5645 strings out of 480609
+ 86639 string characters out of 5903655
  343585 words of memory out of 5000000
- 21449 multiletter control sequences out of 15000+600000
- 559817 words of font info for 89 fonts, out of 8000000 for 9000
+ 21441 multiletter control sequences out of 15000+600000
+ 559503 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  50i,10n,51p,1664b,368s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dawid_mascots.dvi (6 pages, 40760 bytes).
+Output written on dawid_mascots.dvi (5 pages, 36728 bytes).
