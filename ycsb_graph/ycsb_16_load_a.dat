@@ -1,6 +1,0 @@
-# engine load_a color
-LMDB 0.52 8
-LevelDB 8.43 8
-Wiredtiger 9.37 8
-RocksDB 11.19 8
-JFDB 11.34 8

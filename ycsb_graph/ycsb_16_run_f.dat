@@ -1,2 +1,0 @@
-RUN_F LMDB LevelDB Wiredtiger RocksDB JFDB
-RUN_F 0.22 6.63 22.71 26.09 50.27
